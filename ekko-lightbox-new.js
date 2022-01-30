@@ -25,7 +25,6 @@ const Lightbox = (($) => {
         maxWidth: 9999,
         maxHeight: 9999,
         showArrows: true, //display the left / right arrows or not
-        hideArrowsOnVideo: false, //hide the left / right arrows for videos
         wrapping: true, //if true, gallery loops infinitely
         type: null, //force the lightbox into image / youtube mode. if null, or not image|youtube|vimeo; detect it
         alwaysShowClose: false, //always show the close button, even if there is no title
@@ -127,7 +126,7 @@ const Lightbox = (($) => {
 
                 // add the directional arrows to the modal
                 if (this._config.showArrows && this._$galleryItems.length > 1) {
-                    this._$lightboxContainer.prepend(`<div class="ekko-lightbox-nav-overlay"><a href="#">${this._config.leftArrow}</a><a href="#">${this._config.rightArrow}</a></div>`)
+                    this._$lightboxContainer.append(`<div class="ekko-lightbox-nav-overlay"><a href="#">${this._config.leftArrow}</a><a href="#">${this._config.rightArrow}</a></div>`)
                     this._$modalArrows = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay').first()
                     this._$lightboxContainer.on('click', 'a:first-child', event => {
                         event.preventDefault()
@@ -333,7 +332,6 @@ const Lightbox = (($) => {
             this._$modalDialog.removeClass("imageLoading");
             this._$modalDialog.removeClass("imageLoaded");
             this._$modalDialog.removeClass("imageStretched");
-            this._$modalDialog.removeClass("isVideo");
 
             // ### End added by DhyMik in v.5.5.0-dhymik:
 
@@ -415,7 +413,7 @@ const Lightbox = (($) => {
             var videoMaxDimension = Math.max(width, height);
             var screenMaxDimension = Math.max(screenWidth, screenHeight);
 
-            return screenMaxDimension / videoMaxDimension;
+            return screenMaxDimension / videoMaxDimension * 2;
         }
 
         _updateTitleAndFooter() {
@@ -468,9 +466,8 @@ const Lightbox = (($) => {
             $containerForElement.html(`<iframe width="${width}" height="${height}" src="${id}embed/" frameborder="0" allowfullscreen></iframe>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
-            if (this._$modalArrows && this._config.hideArrowsOnVideo) //hide the arrows when showing video
+            if (this._$modalArrows) //hide the arrows when showing video
                 this._$modalArrows.css('display', 'none');
-            this._$modalDialog.addClass("isVideo");
             this._toggleLoading(false);
             return this;
         }
@@ -487,9 +484,8 @@ const Lightbox = (($) => {
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><iframe width="${width}" height="${height}" src="${url}" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
-            if (this._$modalArrows && this._config.hideArrowsOnVideo)
+            if (this._$modalArrows)
                 this._$modalArrows.css('display', 'none'); //hide the arrows when showing video
-            this._$modalDialog.addClass("isVideo");
             this._toggleLoading(false);
             return this;
         }
@@ -517,9 +513,8 @@ const Lightbox = (($) => {
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><${mediaType} width="${width}" height="${height}" preload="auto" autoplay controls class="embed-responsive-item"><source src="${url}" type="${contentType}">${this._config.strings.type}</${mediaType}></div>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
-            if (this._$modalArrows && this._config.hideArrowsOnVideo)
+            if (this._$modalArrows)
                 this._$modalArrows.css('display', 'none'); //hide the arrows when showing video
-            this._$modalDialog.addClass("isVideo");
             this._toggleLoading(false);
             return this;
         }
@@ -551,7 +546,6 @@ const Lightbox = (($) => {
 
             if (this._$modalArrows) //hide the arrows when remote content
                 this._$modalArrows.css('display', 'none')
-            this._$modalDialog.addClass("isVideo");
 
             this._resize(width, height);
             return this;
@@ -734,7 +728,7 @@ const Lightbox = (($) => {
             this._$modalDialog.addClass("imageLoading");
             // temporarily stretches img parent containers so element dimensions can be determined.
 
-            var modalDialogOuterWidthExcludingMargins = this._$modalDialog.outerWidth(false);
+            var modalDialogOuterWidth = this._$modalDialog.outerWidth(false);
             var modalImageContainerInnerWidth = this._$lightboxContainer.innerWidth();
 
             var modalDialogOuterHeightExcludingMargins = this._$modalDialog.outerHeight(false);
@@ -744,13 +738,13 @@ const Lightbox = (($) => {
             this._$modalDialog.removeClass("imageLoading");
 
             // the width difference between image container and .modal-dialog element (excluding its margin), which gets the 'max-width' inline style added
-            var widthInnerSpacing = modalDialogOuterWidthExcludingMargins - modalImageContainerInnerWidth;
+            var widthInnerSpacing = modalDialogOuterWidth - modalImageContainerInnerWidth;
 
             // the height difference between .moda-dialog element (excluding its margins) and the image container element, which gets the 'height' inline style added
             var heightInnerSpacing = modalDialogOuterHeightExcludingMargins - modalImageContainerInnerHeight;
             var heightOuterSpacing = modalDialogOuterHeightIncludingMargins - modalImageContainerInnerHeight;
 
-            let maxWidth = Math.min(modalDialogOuterWidthExcludingMargins, this._config.doc.body.clientWidth, this._config.maxWidth)
+            let maxWidth = Math.min(width + widthInnerSpacing, this._config.doc.body.clientWidth, this._config.maxWidth)
 
             // if width > the available space, scale down the expected width and height
 
@@ -771,7 +765,7 @@ const Lightbox = (($) => {
             if (this._titleIsShown)
                 headerHeight = this._$modalHeader.outerHeight(true) || 67
 
-            let maxHeight = Math.min(height, window.innerHeight - heightOuterSpacing - headerHeight - footerHeight, this._config.maxHeight - heightInnerSpacing - headerHeight - footerHeight);
+            let maxHeight = Math.min(height, $(window).height() - heightOuterSpacing - headerHeight - footerHeight, this._config.maxHeight - heightInnerSpacing - headerHeight - footerHeight);
 
             if (height > maxHeight) {
                 // if height > the available height, scale down the width
@@ -781,17 +775,7 @@ const Lightbox = (($) => {
             this._$lightboxContainer.css('height', maxHeight)
             this._$modalDialog.css('flex', '1').css('maxWidth', width);
 
-            if (this._config.debug) {
-                var message = "window width: " + $(window).width()
-                    + ",\nwindow height: " + $(window).height()
-                    + ",\nwindow screen width: " + window.screen.width
-                    + ",\nwindow screen height: " + window.screen.height
-                    + ",\nwindow inner width: " + window.innerWidth
-                    + ",\nwindow inner height: " + window.innerHeight
-                    + ",\n maxheight: " + maxHeight;
-
-                this._$modalArrows[0].childNodes[0].innerText = message;
-            }
+            alert("window height: " + $(window).height() + ",\nwindow creen height: " + window.screen.height + ",\n maxheight: " + maxHeight);
 
             let modal = this._$modal.data('bs.modal');
             if (modal) {

@@ -4,7 +4,11 @@ module.exports = function (grunt) {
     grunt.initConfig({
         banner:
             '/*!\n' +
-            ' * Lightbox for Bootstrap by @ashleydw\n' +
+			' * Lightbox for Bootstrap by @ashleydw\n' +
+			' * Ekko Lightbox v.5.5.0-dhymik' +
+			' * https://github.com/dhymik/lightbox\n' +
+			' * based on:' +
+			' * Ekko Lightbox v.5.5.0-dhymik' +
             ' * https://github.com/ashleydw/lightbox\n' +
             ' *\n' +
             ' * License: https://github.com/ashleydw/lightbox/blob/master/LICENSE\n' +
@@ -20,7 +24,9 @@ module.exports = function (grunt) {
 	    babel: {
 		    options: {
 			    sourceMap: true,
-			    modules: 'ignore'
+				//modules: 'ignore',
+				presets: ['@babel/preset-env'],
+				plugins: ["@babel/plugin-transform-modules-commonjs"]
 		    },
 		    dist: {
 			    files: {
