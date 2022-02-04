@@ -85,6 +85,7 @@ var Lightbox = function ($) {
       _classCallCheck(this, Lightbox);
 
       this._config = $.extend({}, Default, config);
+      this._$modalNavLayer = null;
       this._$modalArrows = null;
       this._$debugInfo = null;
       this._galleryIndex = 0;
@@ -126,9 +127,14 @@ var Lightbox = function ($) {
         $(document).on('keydown.ekkoLightbox', this._navigationalBinder.bind(this)); // add the directional arrows to the modal
 
         if (this._config.showArrows && this._$galleryItems.length > 1) {
-          this._$lightboxContainer.prepend("<div class=\"ekko-lightbox-nav-overlay\"><a href=\"#\">".concat(this._config.leftArrow, "</a><a href=\"#\">").concat(this._config.rightArrow, "</a></div>"));
+          // add the navigation layer with full surface links
+          this._$lightboxContainer.prepend("<div class=\"ekko-lightbox-nav-overlay\"><a href=\"#\"></a><a href=\"#\"></a></div>");
 
-          this._$modalArrows = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay').first();
+          this._$modalNavLayer = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay').first(); // add the link arrows suitable also for video overlay
+
+          this._$lightboxContainer.append("<div class=\"ekko-lightbox-nav-arrows\"><a href=\"#\">".concat(this._config.leftArrow, "</a><a href=\"#\">").concat(this._config.rightArrow, "</a></div>"));
+
+          this._$modalArrows = this._$lightboxContainer.find('div.ekko-lightbox-nav-arrows').first(); // add the click event handlers to all links
 
           this._$lightboxContainer.on('click', 'a:first-child', function (event) {
             event.preventDefault();
@@ -138,6 +144,19 @@ var Lightbox = function ($) {
           this._$lightboxContainer.on('click', 'a:last-child', function (event) {
             event.preventDefault();
             return _this.navigateRight();
+          }); // add the hover event handlers to nav surface links, adding hover class to arrow links
+
+
+          this._$modalNavLayer.find('a:first-child').hover(function () {
+            _this._$modalArrows.find('a:first-child').addClass('hover');
+          }, function () {
+            _this._$modalArrows.find('a:first-child').removeClass('hover').filter('[class=""]').removeAttr('class');
+          });
+
+          this._$modalNavLayer.find('a:last-child').hover(function () {
+            _this._$modalArrows.find('a:last-child').addClass('hover');
+          }, function () {
+            _this._$modalArrows.find('a:last-child').removeClass('hover').filter('[class=""]').removeAttr('class');
           });
 
           this.updateNavigation();
@@ -475,7 +494,7 @@ var Lightbox = function ($) {
 
         this._config.onContentLoaded.call(this);
 
-        if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
+        if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
 
@@ -501,7 +520,7 @@ var Lightbox = function ($) {
 
         this._config.onContentLoaded.call(this);
 
-        if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
+        if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
 
@@ -541,7 +560,7 @@ var Lightbox = function ($) {
 
         this._config.onContentLoaded.call(this);
 
-        if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
+        if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
 
@@ -578,7 +597,7 @@ var Lightbox = function ($) {
           this._config.onContentLoaded.call(this);
         }
 
-        if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
+        if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
 
@@ -646,7 +665,7 @@ var Lightbox = function ($) {
 
           if ($containerForImage) {
             $containerForImage.html(image);
-            if (_this4._$modalArrows) _this4._$modalArrows.css('display', '');
+            if (_this4._$modalNavLayer) _this4._$modalNavLayer.css('display', '');
             /* ***** determine image dimensions ****
              * 
              * If image dimensions can be determined 
@@ -824,7 +843,8 @@ var Lightbox = function ($) {
        _$lightboxContainerOne: Container of the first lightbox element
        _$lightboxContainerTwo: Container of the second lightbox element
        _$lightboxBody: First element in the container
-       _$modalArrows: The overlayed arrows container
+       _$modalNavLayer: The navigation container, overlaid for images, underlaid for videos
+       _$modalArrows: The overlayed arrows container, always overlaid
          _$galleryItems: Other <a>'s available for this gallery
        _galleryName: Name of the current data('gallery') showing
        _galleryIndex: The current index of the _$galleryItems being shown

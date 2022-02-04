@@ -64,7 +64,8 @@ const Lightbox = (($) => {
          _$lightboxContainerOne: Container of the first lightbox element
          _$lightboxContainerTwo: Container of the second lightbox element
          _$lightboxBody: First element in the container
-         _$modalArrows: The overlayed arrows container
+         _$modalNavLayer: The navigation container, overlaid for images, underlaid for videos
+         _$modalArrows: The overlayed arrows container, always overlaid
 
          _$galleryItems: Other <a>'s available for this gallery
          _galleryName: Name of the current data('gallery') showing
@@ -81,6 +82,7 @@ const Lightbox = (($) => {
 
         constructor($element, config) {
             this._config = $.extend({}, Default, config)
+            this._$modalNavLayer = null
             this._$modalArrows = null
             this._$debugInfo = null;
             this._galleryIndex = 0
@@ -132,8 +134,16 @@ const Lightbox = (($) => {
 
                 // add the directional arrows to the modal
                 if (this._config.showArrows && this._$galleryItems.length > 1) {
-                    this._$lightboxContainer.prepend(`<div class="ekko-lightbox-nav-overlay"><a href="#">${this._config.leftArrow}</a><a href="#">${this._config.rightArrow}</a></div>`)
-                    this._$modalArrows = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay').first()
+
+                    // add the navigation layer with full surface links
+                    this._$lightboxContainer.prepend(`<div class="ekko-lightbox-nav-overlay"><a href="#"></a><a href="#"></a></div>`)
+                    this._$modalNavLayer = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay').first()
+
+                    // add the link arrows suitable also for video overlay
+                    this._$lightboxContainer.append(`<div class="ekko-lightbox-nav-arrows"><a href="#">${this._config.leftArrow}</a><a href="#">${this._config.rightArrow}</a></div>`)
+                    this._$modalArrows = this._$lightboxContainer.find('div.ekko-lightbox-nav-arrows').first()
+
+                    // add the click event handlers to all links
                     this._$lightboxContainer.on('click', 'a:first-child', event => {
                         event.preventDefault()
                         return this.navigateLeft()
@@ -142,6 +152,25 @@ const Lightbox = (($) => {
                         event.preventDefault()
                         return this.navigateRight()
                     })
+
+                    // add the hover event handlers to nav surface links, adding hover class to arrow links
+                    this._$modalNavLayer.find('a:first-child').hover(
+                        () => {
+                            this._$modalArrows.find('a:first-child').addClass('hover');
+                        },
+                        () => {
+                            this._$modalArrows.find('a:first-child').removeClass('hover').filter('[class=""]').removeAttr('class');
+                        }
+                    );
+                    this._$modalNavLayer.find('a:last-child').hover(
+                        () => {
+                            this._$modalArrows.find('a:last-child').addClass('hover');
+                        },
+                        () => {
+                            this._$modalArrows.find('a:last-child').removeClass('hover').filter('[class=""]').removeAttr('class');
+                        }
+                    );
+
                     this.updateNavigation()
                 }
             }
@@ -473,7 +502,7 @@ const Lightbox = (($) => {
             $containerForElement.html(`<iframe width="${width}" height="${height}" src="${id}embed/" frameborder="0" allowfullscreen></iframe>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
-            if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
+            if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
             this._toggleLoading(false);
             return this;
@@ -491,7 +520,7 @@ const Lightbox = (($) => {
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><iframe width="${width}" height="${height}" src="${url}" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
-            if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
+            if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
             this._toggleLoading(false);
             return this;
@@ -520,7 +549,7 @@ const Lightbox = (($) => {
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><${mediaType} width="${width}" height="${height}" preload="auto" autoplay controls class="embed-responsive-item"><source src="${url}" type="${contentType}">${this._config.strings.type}</${mediaType}></div>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
-            if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
+            if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
             this._toggleLoading(false);
             return this;
@@ -551,7 +580,7 @@ const Lightbox = (($) => {
                 this._config.onContentLoaded.call(this);
             }
 
-            if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
+            if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
 
             this._resize(width, height);
@@ -625,7 +654,7 @@ const Lightbox = (($) => {
 
                     $containerForImage.html(image);
 
-                    if (this._$modalArrows) this._$modalArrows.css('display', '');
+                    if (this._$modalNavLayer) this._$modalNavLayer.css('display', '');
 
                     /* ***** determine image dimensions ****
                      * 
