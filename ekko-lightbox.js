@@ -19,7 +19,7 @@ const Lightbox = (($) => {
     const JQUERY_NO_CONFLICT = $.fn[NAME]
 
     const Default = {
-        debug: false,
+        debug: 0,   // 0: no debug, 1: on-screen info, 2: on-screen plus pop-ups
         title: '',
         footer: '',
         maxWidth: 9999,
@@ -82,6 +82,7 @@ const Lightbox = (($) => {
         constructor($element, config) {
             this._config = $.extend({}, Default, config)
             this._$modalArrows = null
+            this._$debugInfo = null;
             this._galleryIndex = 0
             this._galleryName = null
             this._titleIsShown = false
@@ -109,6 +110,10 @@ const Lightbox = (($) => {
             $(this._config.doc.body).append(`<div id="${this._modalId}" class="ekko-lightbox modal fade" tabindex="-1" tabindex="-1" role="dialog" aria-hidden="true">${dialog}</div>`)
 
             this._$modal = $(`#${this._modalId}`, this._config.doc)
+
+            if (this._config.debug > 0) this._$modal.append(`<div class="modal-debug-info"></div>`);
+            this._$debugInfo = this._$modal.find('.modal-debug-info').first();
+
             this._$modalDialog = this._$modal.find('.modal-dialog').first()
             this._$modalContent = this._$modal.find('.modal-content').first()
             this._$modalBody = this._$modal.find('.modal-body').first()
@@ -468,8 +473,7 @@ const Lightbox = (($) => {
             $containerForElement.html(`<iframe width="${width}" height="${height}" src="${id}embed/" frameborder="0" allowfullscreen></iframe>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
-            if (this._$modalArrows && this._config.hideArrowsOnVideo) //hide the arrows when showing video
-                this._$modalArrows.css('display', 'none');
+            if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
             this._toggleLoading(false);
             return this;
@@ -487,8 +491,7 @@ const Lightbox = (($) => {
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><iframe width="${width}" height="${height}" src="${url}" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
-            if (this._$modalArrows && this._config.hideArrowsOnVideo)
-                this._$modalArrows.css('display', 'none'); //hide the arrows when showing video
+            if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
             this._toggleLoading(false);
             return this;
@@ -517,8 +520,7 @@ const Lightbox = (($) => {
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><${mediaType} width="${width}" height="${height}" preload="auto" autoplay controls class="embed-responsive-item"><source src="${url}" type="${contentType}">${this._config.strings.type}</${mediaType}></div>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
-            if (this._$modalArrows && this._config.hideArrowsOnVideo)
-                this._$modalArrows.css('display', 'none'); //hide the arrows when showing video
+            if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
             this._toggleLoading(false);
             return this;
@@ -549,8 +551,7 @@ const Lightbox = (($) => {
                 this._config.onContentLoaded.call(this);
             }
 
-            if (this._$modalArrows) //hide the arrows when remote content
-                this._$modalArrows.css('display', 'none')
+            if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
 
             this._resize(width, height);
@@ -624,8 +625,7 @@ const Lightbox = (($) => {
 
                     $containerForImage.html(image);
 
-                    if (this._$modalArrows)
-                        this._$modalArrows.css('display', '') // remove display to default to css property
+                    if (this._$modalArrows) this._$modalArrows.css('display', '');
 
                     /* ***** determine image dimensions ****
                      * 
@@ -675,7 +675,7 @@ const Lightbox = (($) => {
 
                     if (clientWidth > 0 && clientHeight > 0) {
                         // we found image dimensions
-                        if (this._config.debug) alert(
+                        if (this._config.debug > 1) alert(
                             "imageWidth: " + imageWidth + ", \\n" +
                             "imageHeight: " + imageHeight + ", \\n" +
                             "imgWidth: " + imgWidth + ", \\n" +
@@ -686,7 +686,7 @@ const Lightbox = (($) => {
                     else {
                         // we did not find image dimensions, use stretch method
                         this._$modalDialog.addClass("imageStretched");
-                        if (this._config.debug) alert("imageStretched");
+                        if (this._config.debug > 1) alert("imageStretched");
                     }
 
                     this._$modalDialog.addClass("imageLoaded");
@@ -727,7 +727,7 @@ const Lightbox = (($) => {
             this._wantedWidth = width;
             this._wantedHeight = height;
 
-            if (this._config.debug) alert("wanted width: " + this._wantedWidth + ", wanted height: " + this._wantedHeight);
+            if (this._config.debug > 1) alert("wanted width: " + this._wantedWidth + ", wanted height: " + this._wantedHeight);
 
             let imageAspecRatio = width / height;
 
@@ -781,7 +781,7 @@ const Lightbox = (($) => {
             this._$lightboxContainer.css('height', maxHeight)
             this._$modalDialog.css('flex', '1').css('maxWidth', width);
 
-            if (this._config.debug) {
+            if (this._config.debug > 0 && this._$debugInfo) {
                 var message = "window width: " + $(window).width()
                     + ",\nwindow height: " + $(window).height()
                     + ",\nwindow screen width: " + window.screen.width
@@ -790,7 +790,7 @@ const Lightbox = (($) => {
                     + ",\nwindow inner height: " + window.innerHeight
                     + ",\n maxheight: " + maxHeight;
 
-                this._$modalArrows[0].childNodes[0].innerText = message;
+                this._$debugInfo.text(message);
             }
 
             let modal = this._$modal.data('bs.modal');

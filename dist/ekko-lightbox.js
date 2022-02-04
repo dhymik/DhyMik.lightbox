@@ -39,7 +39,8 @@ var Lightbox = function ($) {
   var NAME = 'ekkoLightbox';
   var JQUERY_NO_CONFLICT = $.fn[NAME];
   var Default = {
-    debug: false,
+    debug: 0,
+    // 0: no debug, 1: on-screen info, 2: on-screen plus pop-ups
     title: '',
     footer: '',
     maxWidth: 9999,
@@ -85,6 +86,7 @@ var Lightbox = function ($) {
 
       this._config = $.extend({}, Default, config);
       this._$modalArrows = null;
+      this._$debugInfo = null;
       this._galleryIndex = 0;
       this._galleryName = null;
       this._titleIsShown = false;
@@ -106,6 +108,8 @@ var Lightbox = function ($) {
       var dialog = "<div class=\"modal-dialog ".concat(vertical, "\" role=\"document\"><div class=\"modal-content\">").concat(header).concat(body).concat(footer, "</div></div>");
       $(this._config.doc.body).append("<div id=\"".concat(this._modalId, "\" class=\"ekko-lightbox modal fade\" tabindex=\"-1\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">").concat(dialog, "</div>"));
       this._$modal = $("#".concat(this._modalId), this._config.doc);
+      if (this._config.debug > 0) this._$modal.append("<div class=\"modal-debug-info\"></div>");
+      this._$debugInfo = this._$modal.find('.modal-debug-info').first();
       this._$modalDialog = this._$modal.find('.modal-dialog').first();
       this._$modalContent = this._$modal.find('.modal-content').first();
       this._$modalBody = this._$modal.find('.modal-body').first();
@@ -471,8 +475,7 @@ var Lightbox = function ($) {
 
         this._config.onContentLoaded.call(this);
 
-        if (this._$modalArrows && this._config.hideArrowsOnVideo) //hide the arrows when showing video
-          this._$modalArrows.css('display', 'none');
+        if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
 
@@ -498,7 +501,7 @@ var Lightbox = function ($) {
 
         this._config.onContentLoaded.call(this);
 
-        if (this._$modalArrows && this._config.hideArrowsOnVideo) this._$modalArrows.css('display', 'none'); //hide the arrows when showing video
+        if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
 
@@ -538,7 +541,7 @@ var Lightbox = function ($) {
 
         this._config.onContentLoaded.call(this);
 
-        if (this._$modalArrows && this._config.hideArrowsOnVideo) this._$modalArrows.css('display', 'none'); //hide the arrows when showing video
+        if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
 
@@ -575,8 +578,7 @@ var Lightbox = function ($) {
           this._config.onContentLoaded.call(this);
         }
 
-        if (this._$modalArrows) //hide the arrows when remote content
-          this._$modalArrows.css('display', 'none');
+        if (this._$modalArrows) this._$modalArrows.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
 
@@ -644,8 +646,7 @@ var Lightbox = function ($) {
 
           if ($containerForImage) {
             $containerForImage.html(image);
-            if (_this4._$modalArrows) _this4._$modalArrows.css('display', ''); // remove display to default to css property
-
+            if (_this4._$modalArrows) _this4._$modalArrows.css('display', '');
             /* ***** determine image dimensions ****
              * 
              * If image dimensions can be determined 
@@ -691,14 +692,14 @@ var Lightbox = function ($) {
 
             if (clientWidth > 0 && clientHeight > 0) {
               // we found image dimensions
-              if (_this4._config.debug) alert("imageWidth: " + imageWidth + ", \\n" + "imageHeight: " + imageHeight + ", \\n" + "imgWidth: " + imgWidth + ", \\n" + "imgHeight: " + imgHeight + ".");
+              if (_this4._config.debug > 1) alert("imageWidth: " + imageWidth + ", \\n" + "imageHeight: " + imageHeight + ", \\n" + "imgWidth: " + imgWidth + ", \\n" + "imgHeight: " + imgHeight + ".");
 
               _this4._resize(clientWidth, clientHeight);
             } else {
               // we did not find image dimensions, use stretch method
               _this4._$modalDialog.addClass("imageStretched");
 
-              if (_this4._config.debug) alert("imageStretched");
+              if (_this4._config.debug > 1) alert("imageStretched");
             }
 
             _this4._$modalDialog.addClass("imageLoaded");
@@ -742,7 +743,7 @@ var Lightbox = function ($) {
         height = height * scalingFactor;
         this._wantedWidth = width;
         this._wantedHeight = height;
-        if (this._config.debug) alert("wanted width: " + this._wantedWidth + ", wanted height: " + this._wantedHeight);
+        if (this._config.debug > 1) alert("wanted width: " + this._wantedWidth + ", wanted height: " + this._wantedHeight);
         var imageAspecRatio = width / height;
 
         this._$modalDialog.addClass("imageLoading"); // temporarily stretches img parent containers so element dimensions can be determined.
@@ -789,9 +790,10 @@ var Lightbox = function ($) {
 
         this._$modalDialog.css('flex', '1').css('maxWidth', width);
 
-        if (this._config.debug) {
+        if (this._config.debug > 0 && this._$debugInfo) {
           var message = "window width: " + $(window).width() + ",\nwindow height: " + $(window).height() + ",\nwindow screen width: " + window.screen.width + ",\nwindow screen height: " + window.screen.height + ",\nwindow inner width: " + window.innerWidth + ",\nwindow inner height: " + window.innerHeight + ",\n maxheight: " + maxHeight;
-          this._$modalArrows[0].childNodes[0].innerText = message;
+
+          this._$debugInfo.text(message);
         }
 
         var modal = this._$modal.data('bs.modal');
