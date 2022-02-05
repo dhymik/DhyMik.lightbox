@@ -63,6 +63,8 @@ const Lightbox = (($) => {
             _$modalFooter: The .modal-footer
          _$lightboxContainerOne: Container of the first lightbox element
          _$lightboxContainerTwo: Container of the second lightbox element
+         _$lightboxContainerCurrent: the container in use
+         _$lightboxContainerUnUsed: the currently unused container
          _$lightboxBody: First element in the container
          _$modalNavLayer: The navigation container, overlaid for images, underlaid for videos
          _$modalArrows: The overlayed arrows container, always overlaid
@@ -125,6 +127,8 @@ const Lightbox = (($) => {
             this._$lightboxContainer = this._$modalBody.find('.ekko-lightbox-container').first()
             this._$lightboxBodyOne = this._$lightboxContainer.find('> div:first-child').first()
             this._$lightboxBodyTwo = this._$lightboxContainer.find('> div:last-child').first()
+            this._$lightboxContainerCurrent = this._$lightboxBodyOne;
+            this._$lightboxContainerUnUsed = this._$lightboxBodyTwo;
 
             this._galleryName = this._$element.data('gallery')
             if (this._galleryName) {
@@ -195,7 +199,8 @@ const Lightbox = (($) => {
 
             $(window).on('resize.ekkoLightbox', () => {
                 this._resize(this._wantedWidth, this._wantedHeight)
-            })
+            });
+
             this._$lightboxContainer
                 .on('touchstart', () => {
                     this._touchstartX = event.changedTouches[0].screenX;
@@ -337,26 +342,31 @@ const Lightbox = (($) => {
             return string && string.match(/(\.(mp3|mp4|ogg|webm|wav)((\?|#).*)?$)/i)
         }
 
-        _containerToUse() {
-            // if currently showing an image, fade it out and remove
-            let $toUse = this._$lightboxBodyTwo
-            let $current = this._$lightboxBodyOne
+        _switchContainers() {
 
-            if (this._$lightboxBodyTwo.hasClass('in')) {
-                $toUse = this._$lightboxBodyOne
-                $current = this._$lightboxBodyTwo
+            let $newCurrent = this._$lightboxContainerUnUsed
+            this._$lightboxContainerUnUsed = this._$lightboxContainerCurrent;
+            this._$lightboxContainerCurrent = $newCurrent;
+
+            // switch z-index
+            this._$lightboxContainerCurrent.css("z-index", this._$lightboxContainerUnUsed.css("z-index") + 1);
+            this._$lightboxContainerUnUsed.css("z-index", "auto");
+            this._$lightboxContainerCurrent.css("z-index", 1);
+
+            this._$lightboxContainerUnUsed.removeClass('in show');
+            this._$lightboxContainerCurrent.addClass('in show');
+
+            return;
+        }
+
+        _replaceMarkup() {
+            // if the "data-markup" attribute is set on the <a> tag...
+            if (this._$element[0].hasAttribute("data-markup")) {
+
+                // ...then the "data-markup" attribute value provides the repalcement markup
+                var markup = this._$element.attr("data-markup");
+                this._$lightboxContainerCurrent.html(markup);
             }
-
-            $current.removeClass('in show')
-            setTimeout(() => {
-                if (!this._$lightboxBodyTwo.hasClass('in'))
-                    this._$lightboxBodyTwo.empty()
-                if (!this._$lightboxBodyOne.hasClass('in'))
-                    this._$lightboxBodyOne.empty()
-            }, 500)
-
-            $toUse.addClass('in show')
-            return $toUse
         }
 
         _handle() {
@@ -371,8 +381,14 @@ const Lightbox = (($) => {
 
             // ### End added by DhyMik in v.5.5.0-dhymik:
 
-            let $toUse = this._containerToUse()
+            let $toUse = this._$lightboxContainerUnUsed;
+
+            // fade out header and footer
+            this._$modalHeader.css("opacity", 0);
+            this._$modalFooter.css("opacity", 0);
+
             this._updateTitleAndFooter()
+            this._switchContainers()
 
             let currentRemote = this._$element.attr('data-remote') || this._$element.attr('href')
             let currentType = this._detectRemoteType(currentRemote, this._$element.attr('data-type') || false)
@@ -402,6 +418,15 @@ const Lightbox = (($) => {
                     this._loadRemoteContent(currentRemote, $toUse);
                     break;
             }
+
+            var thisLightbox = this;
+
+            // fade in header and footer after a delay and delete old content
+            setTimeout(function () {
+                thisLightbox._$modalHeader.css("opacity", 1);
+                thisLightbox._$modalFooter.css("opacity", 1);
+                thisLightbox._$lightboxContainerUnUsed.empty();
+            }, 250);
 
             return this;
         }
@@ -495,11 +520,12 @@ const Lightbox = (($) => {
         }
 
         _showInstagramVideo(id, $containerForElement) {
-            // instagram load their content into iframe's so this can be put straight into the element
+            // instagram load their content into iframes so this can be put straight into the element
             let width = this._$element.data('width') || 612
             let height = width + 80;
             id = id.substr(-1) !== '/' ? id + '/' : id; // ensure id has trailing slash
             $containerForElement.html(`<iframe width="${width}" height="${height}" src="${id}embed/" frameborder="0" allowfullscreen></iframe>`);
+            this._replaceMarkup();
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
             if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
@@ -518,6 +544,7 @@ const Lightbox = (($) => {
             // added end.
 
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><iframe width="${width}" height="${height}" src="${url}" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>`);
+            this._replaceMarkup();
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
             if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
@@ -547,6 +574,7 @@ const Lightbox = (($) => {
             // ### added end.
 
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><${mediaType} width="${width}" height="${height}" preload="auto" autoplay controls class="embed-responsive-item"><source src="${url}" type="${contentType}">${this._config.strings.type}</${mediaType}></div>`);
+            this._replaceMarkup();
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
             if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
@@ -583,6 +611,7 @@ const Lightbox = (($) => {
             if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
 
+            this._replaceMarkup();
             this._resize(width, height);
             return this;
         }
@@ -603,7 +632,7 @@ const Lightbox = (($) => {
 
         _error(message) {
             console.error(message);
-            this._containerToUse().html(message);
+            this._$lightboxContainerCurrent.html(message);
             this._resize(300, 300);
             return this;
         }
@@ -721,6 +750,7 @@ const Lightbox = (($) => {
                     this._$modalDialog.addClass("imageLoaded");
 
                     this._toggleLoading(false);
+                    this._replaceMarkup();
                     return this._config.onContentLoaded.call(this);
                 }
             };

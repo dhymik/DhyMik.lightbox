@@ -119,6 +119,8 @@ var Lightbox = function ($) {
       this._$lightboxContainer = this._$modalBody.find('.ekko-lightbox-container').first();
       this._$lightboxBodyOne = this._$lightboxContainer.find('> div:first-child').first();
       this._$lightboxBodyTwo = this._$lightboxContainer.find('> div:last-child').first();
+      this._$lightboxContainerCurrent = this._$lightboxBodyOne;
+      this._$lightboxContainerUnUsed = this._$lightboxBodyTwo;
       this._galleryName = this._$element.data('gallery');
 
       if (this._galleryName) {
@@ -301,26 +303,34 @@ var Lightbox = function ($) {
         return string && string.match(/(\.(mp3|mp4|ogg|webm|wav)((\?|#).*)?$)/i);
       }
     }, {
-      key: "_containerToUse",
-      value: function _containerToUse() {
-        var _this2 = this;
+      key: "_switchContainers",
+      value: function _switchContainers() {
+        var $newCurrent = this._$lightboxContainerUnUsed;
+        this._$lightboxContainerUnUsed = this._$lightboxContainerCurrent;
+        this._$lightboxContainerCurrent = $newCurrent; // switch z-index
 
-        // if currently showing an image, fade it out and remove
-        var $toUse = this._$lightboxBodyTwo;
-        var $current = this._$lightboxBodyOne;
+        this._$lightboxContainerCurrent.css("z-index", this._$lightboxContainerUnUsed.css("z-index") + 1);
 
-        if (this._$lightboxBodyTwo.hasClass('in')) {
-          $toUse = this._$lightboxBodyOne;
-          $current = this._$lightboxBodyTwo;
+        this._$lightboxContainerUnUsed.css("z-index", "auto");
+
+        this._$lightboxContainerCurrent.css("z-index", 1);
+
+        this._$lightboxContainerUnUsed.removeClass('in show');
+
+        this._$lightboxContainerCurrent.addClass('in show');
+
+        return;
+      }
+    }, {
+      key: "_replaceMarkup",
+      value: function _replaceMarkup() {
+        // if the "data-markup" attribute is set on the <a> tag...
+        if (this._$element[0].hasAttribute("data-markup")) {
+          // ...then the "data-markup" attribute value provides the repalcement markup
+          var markup = this._$element.attr("data-markup");
+
+          this._$lightboxContainerCurrent.html(markup);
         }
-
-        $current.removeClass('in show');
-        setTimeout(function () {
-          if (!_this2._$lightboxBodyTwo.hasClass('in')) _this2._$lightboxBodyTwo.empty();
-          if (!_this2._$lightboxBodyOne.hasClass('in')) _this2._$lightboxBodyOne.empty();
-        }, 500);
-        $toUse.addClass('in show');
-        return $toUse;
       }
     }, {
       key: "_handle",
@@ -336,9 +346,15 @@ var Lightbox = function ($) {
         this._$modalDialog.removeClass("isVideo"); // ### End added by DhyMik in v.5.5.0-dhymik:
 
 
-        var $toUse = this._containerToUse();
+        var $toUse = this._$lightboxContainerUnUsed; // fade out header and footer
+
+        this._$modalHeader.css("opacity", 0);
+
+        this._$modalFooter.css("opacity", 0);
 
         this._updateTitleAndFooter();
+
+        this._switchContainers();
 
         var currentRemote = this._$element.attr('data-remote') || this._$element.attr('href');
 
@@ -383,6 +399,15 @@ var Lightbox = function ($) {
             break;
         }
 
+        var thisLightbox = this; // fade in header and footer after a delay and delete old content
+
+        setTimeout(function () {
+          thisLightbox._$modalHeader.css("opacity", 1);
+
+          thisLightbox._$modalFooter.css("opacity", 1);
+
+          thisLightbox._$lightboxContainerUnUsed.empty();
+        }, 250);
         return this;
       }
     }, {
@@ -483,12 +508,14 @@ var Lightbox = function ($) {
     }, {
       key: "_showInstagramVideo",
       value: function _showInstagramVideo(id, $containerForElement) {
-        // instagram load their content into iframe's so this can be put straight into the element
+        // instagram load their content into iframes so this can be put straight into the element
         var width = this._$element.data('width') || 612;
         var height = width + 80;
         id = id.substr(-1) !== '/' ? id + '/' : id; // ensure id has trailing slash
 
         $containerForElement.html("<iframe width=\"".concat(width, "\" height=\"").concat(height, "\" src=\"").concat(id, "embed/\" frameborder=\"0\" allowfullscreen></iframe>"));
+
+        this._replaceMarkup();
 
         this._resize(width, height);
 
@@ -515,6 +542,8 @@ var Lightbox = function ($) {
         height = height * scalingFactor; // added end.
 
         $containerForElement.html("<div class=\"embed-responsive embed-responsive-16by9\"><iframe width=\"".concat(width, "\" height=\"").concat(height, "\" src=\"").concat(url, "\" frameborder=\"0\" allowfullscreen class=\"embed-responsive-item\"></iframe></div>"));
+
+        this._replaceMarkup();
 
         this._resize(width, height);
 
@@ -556,6 +585,8 @@ var Lightbox = function ($) {
 
         $containerForElement.html("<div class=\"embed-responsive embed-responsive-16by9\"><".concat(mediaType, " width=\"").concat(width, "\" height=\"").concat(height, "\" preload=\"auto\" autoplay controls class=\"embed-responsive-item\"><source src=\"").concat(url, "\" type=\"").concat(contentType, "\">").concat(this._config.strings.type, "</").concat(mediaType, "></div>"));
 
+        this._replaceMarkup();
+
         this._resize(width, height);
 
         this._config.onContentLoaded.call(this);
@@ -571,7 +602,7 @@ var Lightbox = function ($) {
     }, {
       key: "_loadRemoteContent",
       value: function _loadRemoteContent(url, $containerForElement) {
-        var _this3 = this;
+        var _this2 = this;
 
         var width = this._$element.data('width') || 560;
         var height = this._$element.data('height') || 560;
@@ -589,7 +620,7 @@ var Lightbox = function ($) {
 
         if (!disableExternalCheck && !this._isExternal(url)) {
           $containerForElement.load(url, $.proxy(function () {
-            return _this3._$element.trigger('loaded.bs.modal');
+            return _this2._$element.trigger('loaded.bs.modal');
           }));
         } else {
           $containerForElement.html("<iframe src=\"".concat(url, "\" frameborder=\"0\" allowfullscreen></iframe>"));
@@ -600,6 +631,8 @@ var Lightbox = function ($) {
         if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
+
+        this._replaceMarkup();
 
         this._resize(width, height);
 
@@ -621,7 +654,7 @@ var Lightbox = function ($) {
       value: function _error(message) {
         console.error(message);
 
-        this._containerToUse().html(message);
+        this._$lightboxContainerCurrent.html(message);
 
         this._resize(300, 300);
 
@@ -640,7 +673,7 @@ var Lightbox = function ($) {
     }, {
       key: "_preloadImage",
       value: function _preloadImage(src, altTag, $containerForImage) {
-        var _this4 = this;
+        var _this3 = this;
 
         $containerForImage = $containerForImage || false;
         var img = new Image();
@@ -649,7 +682,7 @@ var Lightbox = function ($) {
         if ($containerForImage) {
           // if loading takes > 200ms show a loader
           loadingTimeout = setTimeout(function () {
-            $containerForImage.append(_this4._config.loadingMessage);
+            $containerForImage.append(_this3._config.loadingMessage);
           }, 200);
         }
 
@@ -665,7 +698,7 @@ var Lightbox = function ($) {
 
           if ($containerForImage) {
             $containerForImage.html(image);
-            if (_this4._$modalNavLayer) _this4._$modalNavLayer.css('display', '');
+            if (_this3._$modalNavLayer) _this3._$modalNavLayer.css('display', '');
             /* ***** determine image dimensions ****
              * 
              * If image dimensions can be determined 
@@ -684,9 +717,9 @@ var Lightbox = function ($) {
              *   extending over entire screen regardless of image size.
              * */
 
-            _this4._$modalDialog.css('display', _this4._config.verticalAlignCenter ? 'flex' : 'block');
+            _this3._$modalDialog.css('display', _this3._config.verticalAlignCenter ? 'flex' : 'block');
 
-            _this4._$modalDialog.addClass("imageLoading"); // temporarily stretches img parent containers so image dimensions can be determined.
+            _this3._$modalDialog.addClass("imageLoading"); // temporarily stretches img parent containers so image dimensions can be determined.
 
 
             var clientWidth = 0;
@@ -706,34 +739,36 @@ var Lightbox = function ($) {
               clientHeight = imgHeight;
             }
 
-            _this4._$modalDialog.removeClass("imageLoading"); // remove temporary parent container stretch
+            _this3._$modalDialog.removeClass("imageLoading"); // remove temporary parent container stretch
 
 
             if (clientWidth > 0 && clientHeight > 0) {
               // we found image dimensions
-              if (_this4._config.debug > 1) alert("imageWidth: " + imageWidth + ", \\n" + "imageHeight: " + imageHeight + ", \\n" + "imgWidth: " + imgWidth + ", \\n" + "imgHeight: " + imgHeight + ".");
+              if (_this3._config.debug > 1) alert("imageWidth: " + imageWidth + ", \\n" + "imageHeight: " + imageHeight + ", \\n" + "imgWidth: " + imgWidth + ", \\n" + "imgHeight: " + imgHeight + ".");
 
-              _this4._resize(clientWidth, clientHeight);
+              _this3._resize(clientWidth, clientHeight);
             } else {
               // we did not find image dimensions, use stretch method
-              _this4._$modalDialog.addClass("imageStretched");
+              _this3._$modalDialog.addClass("imageStretched");
 
-              if (_this4._config.debug > 1) alert("imageStretched");
+              if (_this3._config.debug > 1) alert("imageStretched");
             }
 
-            _this4._$modalDialog.addClass("imageLoaded");
+            _this3._$modalDialog.addClass("imageLoaded");
 
-            _this4._toggleLoading(false);
+            _this3._toggleLoading(false);
 
-            return _this4._config.onContentLoaded.call(_this4);
+            _this3._replaceMarkup();
+
+            return _this3._config.onContentLoaded.call(_this3);
           }
         };
 
         if ($containerForImage) {
           img.onerror = function () {
-            _this4._toggleLoading(false);
+            _this3._toggleLoading(false);
 
-            return _this4._error(_this4._config.strings.fail + "  ".concat(src));
+            return _this3._error(_this3._config.strings.fail + "  ".concat(src));
           };
         }
 
@@ -842,6 +877,8 @@ var Lightbox = function ($) {
           _$modalFooter: The .modal-footer
        _$lightboxContainerOne: Container of the first lightbox element
        _$lightboxContainerTwo: Container of the second lightbox element
+       _$lightboxContainerCurrent: the container in use
+       _$lightboxContainerUnUsed: the currently unused container
        _$lightboxBody: First element in the container
        _$modalNavLayer: The navigation container, overlaid for images, underlaid for videos
        _$modalArrows: The overlayed arrows container, always overlaid
@@ -857,15 +894,15 @@ var Lightbox = function ($) {
     }, {
       key: "_jQueryInterface",
       value: function _jQueryInterface(config) {
-        var _this5 = this;
+        var _this4 = this;
 
         config = config || {};
         return this.each(function () {
-          var $this = $(_this5);
+          var $this = $(_this4);
 
           var _config = $.extend({}, Lightbox.Default, $this.data(), _typeof(config) === 'object' && config);
 
-          new Lightbox(_this5, _config);
+          new Lightbox(_this4, _config);
         });
       }
     }]);

@@ -12,9 +12,10 @@
             bottom: 0;
             right: 0;
             width: 100%;
+            opacity: 0;
 
             &.show {
-                z-index: 1;
+                opacity: 1;
             }
         }
     }
@@ -106,9 +107,9 @@
         & .modal-content,
         & .modal-body,
         & .ekko-lightbox-container,
-        & .ekko-lightbox-item.fade.in.show,
-        & .ekko-lightbox-item.fade.in.show picture,
-        & .ekko-lightbox-item.fade.in.show img {
+        & .ekko-lightbox-item.fade,
+        & .ekko-lightbox-item.fade picture,
+        & .ekko-lightbox-item.fade img {
             overflow: hidden !important; // we don't want scrollbars
         }
 
@@ -116,12 +117,15 @@
             .modal-body {
                 .ekko-lightbox-container {
                     .ekko-lightbox-item.fade {
+                        img, img[data-sizes="auto"] {
+                            max-width: 100% !important;
+                            max-height: 100% !important;
+                            object-fit: cover;
+                            display: block;
+                        }
+
                         &.in.show {
                             img, img[data-sizes="auto"] {
-                                max-width: 100% !important;
-                                max-height: 100% !important;
-                                display: block;
-                                object-fit: cover;
                             }
                         }
                     }
@@ -147,7 +151,7 @@
             & .modal-content {
                 .modal-body {
                     // remove black backdrop during loading to avoid black frames
-                    background-color: transparent !important;
+                    // background-color: transparent !important;
                 }
             }
         }
