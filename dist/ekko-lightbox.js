@@ -516,8 +516,6 @@ var Lightbox = function ($) {
 
         $containerForElement.html("<iframe width=\"".concat(width, "\" height=\"").concat(height, "\" src=\"").concat(id, "embed/\" frameborder=\"0\" allowfullscreen></iframe>"));
 
-        this._replaceMarkup();
-
         this._resize(width, height);
 
         this._config.onContentLoaded.call(this);
@@ -543,8 +541,6 @@ var Lightbox = function ($) {
         height = height * scalingFactor; // added end.
 
         $containerForElement.html("<div class=\"embed-responsive embed-responsive-16by9\"><iframe width=\"".concat(width, "\" height=\"").concat(height, "\" src=\"").concat(url, "\" frameborder=\"0\" allowfullscreen class=\"embed-responsive-item\"></iframe></div>"));
-
-        this._replaceMarkup();
 
         this._resize(width, height);
 
@@ -585,8 +581,6 @@ var Lightbox = function ($) {
         height = height * scalingFactor; // ### added end.
 
         $containerForElement.html("<div class=\"embed-responsive embed-responsive-16by9\"><".concat(mediaType, " width=\"").concat(width, "\" height=\"").concat(height, "\" preload=\"auto\" autoplay controls class=\"embed-responsive-item\"><source src=\"").concat(url, "\" type=\"").concat(contentType, "\">").concat(this._config.strings.type, "</").concat(mediaType, "></div>"));
-
-        this._replaceMarkup();
 
         this._resize(width, height);
 
@@ -632,8 +626,6 @@ var Lightbox = function ($) {
         if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
 
         this._$modalDialog.addClass("isVideo");
-
-        this._replaceMarkup();
 
         this._resize(width, height);
 

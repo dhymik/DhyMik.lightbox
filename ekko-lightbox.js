@@ -521,7 +521,6 @@ const Lightbox = (($) => {
             let height = width + 80;
             id = id.substr(-1) !== '/' ? id + '/' : id; // ensure id has trailing slash
             $containerForElement.html(`<iframe width="${width}" height="${height}" src="${id}embed/" frameborder="0" allowfullscreen></iframe>`);
-            this._replaceMarkup();
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
             if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
@@ -540,7 +539,6 @@ const Lightbox = (($) => {
             // added end.
 
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><iframe width="${width}" height="${height}" src="${url}" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>`);
-            this._replaceMarkup();
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
             if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
@@ -570,7 +568,6 @@ const Lightbox = (($) => {
             // ### added end.
 
             $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><${mediaType} width="${width}" height="${height}" preload="auto" autoplay controls class="embed-responsive-item"><source src="${url}" type="${contentType}">${this._config.strings.type}</${mediaType}></div>`);
-            this._replaceMarkup();
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
             if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
@@ -607,7 +604,6 @@ const Lightbox = (($) => {
             if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
             this._$modalDialog.addClass("isVideo");
 
-            this._replaceMarkup();
             this._resize(width, height);
             return this;
         }
