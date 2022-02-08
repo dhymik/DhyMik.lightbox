@@ -359,16 +359,6 @@ const Lightbox = (($) => {
             return;
         }
 
-        _replaceMarkup() {
-            // if the "data-markup" attribute is set on the <a> tag...
-            if (this._$element[0].hasAttribute("data-markup")) {
-
-                // ...then the "data-markup" attribute value provides the repalcement markup
-                var markup = this._$element.attr("data-markup");
-                this._$lightboxContainerCurrent.html(markup);
-            }
-        }
-
         _handle() {
 
             // ### Added by DhyMik in v.5.5.0-dhymik:
@@ -668,20 +658,29 @@ const Lightbox = (($) => {
             }
 
             img.onload = () => {
-                if (loadingTimeout)
-                    clearTimeout(loadingTimeout)
-                loadingTimeout = null;
-                let image = $('<img />');
-                image.attr('src', img.src);
-                image.attr('alt', altTag);
-                image.addClass('img-fluid');
-
-                // backward compatibility for bootstrap v3
-                image.css('width', '100% !important');
-
                 if ($containerForImage) {
 
-                    $containerForImage.html(image);
+                    if (loadingTimeout)
+                        clearTimeout(loadingTimeout)
+                    loadingTimeout = null;
+
+                    let image = $('<img />');
+                    image.attr('src', img.src);
+                    image.attr('alt', altTag);
+                    image.addClass('img-fluid');
+
+                    // backward compatibility for bootstrap v3
+                    image.css('width', '100% !important');
+
+                    // if the "data-markup" attribute is set on the <a> tag...
+                    if (this._$element[0].hasAttribute("data-markup")) {
+
+                        // ...then the "data-markup" attribute value provides the repalcement markup
+                        var markup = this._$element.attr("data-markup");
+                        $containerForImage.html(markup);
+                    } else {
+                        $containerForImage.html(image);
+                    }
 
                     if (this._$modalNavLayer) this._$modalNavLayer.css('display', '');
 
@@ -711,11 +710,11 @@ const Lightbox = (($) => {
                     var clientWidth = 0;
                     var clientHeight = 0;
 
-                    // this works in Firefox etc.:
-                    var imageWidth = image[0].width;
-                    var imageHeight = image[0].height;
+                    // this works in Firefox etc. for jpg AND svg:
+                    var imageWidth = $containerForImage.find("img")[0].width;
+                    var imageHeight = $containerForImage.find("img")[0].height;
 
-                    // this works in Chrome etc.:
+                    // this works in Chrome etc. for jpg AND svg:
                     var imgWidth = img.width;
                     var imgHeight = img.height;
 
@@ -732,25 +731,26 @@ const Lightbox = (($) => {
                     // remove temporary parent container stretch
 
                     if (clientWidth > 0 && clientHeight > 0) {
-                        // we found image dimensions
+                        // we found image dimensions...
                         if (this._config.debug > 1) alert(
                             "imageWidth: " + imageWidth + ", \\n" +
                             "imageHeight: " + imageHeight + ", \\n" +
                             "imgWidth: " + imgWidth + ", \\n" +
                             "imgHeight: " + imgHeight + "."
                         );
+                        // ...resize the parent containers accordingly:
                         this._resize(clientWidth, clientHeight);
                     }
                     else {
-                        // we did not find image dimensions, use stretch method
+                        // we did not find image dimensions, use stretch method by css:
                         this._$modalDialog.addClass("imageStretched");
                         if (this._config.debug > 1) alert("imageStretched");
+                        if (window.console) console.log("ekko lightbox: using 'imageStretched' mode for " + img.src);
                     }
 
                     this._$modalDialog.addClass("imageLoaded");
 
                     this._toggleLoading(false);
-                    this._replaceMarkup();
                     return this._config.onContentLoaded.call(this);
                 }
             };

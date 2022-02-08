@@ -322,17 +322,6 @@ var Lightbox = function ($) {
         return;
       }
     }, {
-      key: "_replaceMarkup",
-      value: function _replaceMarkup() {
-        // if the "data-markup" attribute is set on the <a> tag...
-        if (this._$element[0].hasAttribute("data-markup")) {
-          // ...then the "data-markup" attribute value provides the repalcement markup
-          var markup = this._$element.attr("data-markup");
-
-          this._$lightboxContainerCurrent.html(markup);
-        }
-      }
-    }, {
       key: "_handle",
       value: function _handle() {
         // ### Added by DhyMik in v.5.5.0-dhymik:
@@ -687,17 +676,25 @@ var Lightbox = function ($) {
         }
 
         img.onload = function () {
-          if (loadingTimeout) clearTimeout(loadingTimeout);
-          loadingTimeout = null;
-          var image = $('<img />');
-          image.attr('src', img.src);
-          image.attr('alt', altTag);
-          image.addClass('img-fluid'); // backward compatibility for bootstrap v3
-
-          image.css('width', '100% !important');
-
           if ($containerForImage) {
-            $containerForImage.html(image);
+            if (loadingTimeout) clearTimeout(loadingTimeout);
+            loadingTimeout = null;
+            var image = $('<img />');
+            image.attr('src', img.src);
+            image.attr('alt', altTag);
+            image.addClass('img-fluid'); // backward compatibility for bootstrap v3
+
+            image.css('width', '100% !important'); // if the "data-markup" attribute is set on the <a> tag...
+
+            if (_this3._$element[0].hasAttribute("data-markup")) {
+              // ...then the "data-markup" attribute value provides the repalcement markup
+              var markup = _this3._$element.attr("data-markup");
+
+              $containerForImage.html(markup);
+            } else {
+              $containerForImage.html(image);
+            }
+
             if (_this3._$modalNavLayer) _this3._$modalNavLayer.css('display', '');
             /* ***** determine image dimensions ****
              * 
@@ -723,10 +720,10 @@ var Lightbox = function ($) {
 
 
             var clientWidth = 0;
-            var clientHeight = 0; // this works in Firefox etc.:
+            var clientHeight = 0; // this works in Firefox etc. for jpg AND svg:
 
-            var imageWidth = image[0].width;
-            var imageHeight = image[0].height; // this works in Chrome etc.:
+            var imageWidth = $containerForImage.find("img")[0].width;
+            var imageHeight = $containerForImage.find("img")[0].height; // this works in Chrome etc. for jpg AND svg:
 
             var imgWidth = img.width;
             var imgHeight = img.height;
@@ -752,13 +749,12 @@ var Lightbox = function ($) {
               _this3._$modalDialog.addClass("imageStretched");
 
               if (_this3._config.debug > 1) alert("imageStretched");
+              if (window.console) console.log("ekko lightbox: using 'imageStretched' mode for " + img.src);
             }
 
             _this3._$modalDialog.addClass("imageLoaded");
 
             _this3._toggleLoading(false);
-
-            _this3._replaceMarkup();
 
             return _this3._config.onContentLoaded.call(_this3);
           }

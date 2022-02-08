@@ -120,12 +120,15 @@
                         img, img[data-sizes="auto"] {
                             max-width: 100% !important;
                             max-height: 100% !important;
-                            object-fit: cover;
+                            object-fit: contain;
                             display: block;
                         }
 
                         &.in.show {
                             img, img[data-sizes="auto"] {
+                                width: 100%;
+                                height: auto !important;
+                                margin: 0 auto;
                             }
                         }
                     }
@@ -150,8 +153,9 @@
 
             & .modal-content {
                 .modal-body {
-                    // remove black backdrop during loading to avoid black frames
-                    // background-color: transparent !important;
+                    // remove black backdrop during loading and when in stretch mode
+                    // to avoid black frames
+                    background-color: transparent !important;
                 }
             }
         }
