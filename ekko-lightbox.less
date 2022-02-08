@@ -128,6 +128,7 @@
                             img, img[data-sizes="auto"] {
                                 width: 100%;
                                 height: auto !important;
+                                //height: 100%;
                                 margin: 0 auto;
                             }
                         }
@@ -156,6 +157,16 @@
                     // remove black backdrop during loading and when in stretch mode
                     // to avoid black frames
                     background-color: transparent !important;
+                }
+            }
+        }
+
+        &.imageLoaded {
+            & .modal-content {
+                .modal-body {
+                    .ekko-lightbox-item.fade.in.show {
+                        //height: 100%;
+                    }
                 }
             }
         }

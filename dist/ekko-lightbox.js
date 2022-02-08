@@ -480,11 +480,11 @@ var Lightbox = function ($) {
 
           this._$modalFooter.css('display', '').html(caption);
 
-          this._$modalDialog.addClass("FooterIsShown");
+          this._$modalDialog.addClass("footerIsShown");
         } else {
           this._$modalFooter.css('display', 'none');
 
-          this._$modalDialog.removeClass("FooterIsShown");
+          this._$modalDialog.removeClass("footerIsShown");
         }
 
         return this;
