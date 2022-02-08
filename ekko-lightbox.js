@@ -475,17 +475,23 @@ const Lightbox = (($) => {
             if (title || this._config.alwaysShowClose) {
                 this._titleIsShown = true
                 this._$modalHeader.css('display', '').find('.modal-title').html(title || "&nbsp;")
+                this._$modalDialog.addClass("headerIsShown");
             }
-            else
+            else {
                 this._$modalHeader.css('display', 'none')
+                this._$modalDialog.removeClass("headerIsShown");
+            }
 
             this._footerIsShown = false
             if (caption) {
                 this._footerIsShown = true
                 this._$modalFooter.css('display', '').html(caption)
+                this._$modalDialog.addClass("footerIsShown");
             }
-            else
+            else {
                 this._$modalFooter.css('display', 'none')
+                this._$modalDialog.removeClass("footerIsShown");
+            }
 
             return this;
         }

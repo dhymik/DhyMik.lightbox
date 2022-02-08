@@ -465,7 +465,13 @@ var Lightbox = function ($) {
           this._titleIsShown = true;
 
           this._$modalHeader.css('display', '').find('.modal-title').html(title || "&nbsp;");
-        } else this._$modalHeader.css('display', 'none');
+
+          this._$modalDialog.addClass("headerIsShown");
+        } else {
+          this._$modalHeader.css('display', 'none');
+
+          this._$modalDialog.removeClass("headerIsShown");
+        }
 
         this._footerIsShown = false;
 
@@ -473,7 +479,13 @@ var Lightbox = function ($) {
           this._footerIsShown = true;
 
           this._$modalFooter.css('display', '').html(caption);
-        } else this._$modalFooter.css('display', 'none');
+
+          this._$modalDialog.addClass("FooterIsShown");
+        } else {
+          this._$modalFooter.css('display', 'none');
+
+          this._$modalDialog.removeClass("FooterIsShown");
+        }
 
         return this;
       }
@@ -740,12 +752,12 @@ var Lightbox = function ($) {
 
 
             if (clientWidth > 0 && clientHeight > 0) {
-              // we found image dimensions
-              if (_this3._config.debug > 1) alert("imageWidth: " + imageWidth + ", \\n" + "imageHeight: " + imageHeight + ", \\n" + "imgWidth: " + imgWidth + ", \\n" + "imgHeight: " + imgHeight + ".");
+              // we found image dimensions...
+              if (_this3._config.debug > 1) alert("imageWidth: " + imageWidth + ", \\n" + "imageHeight: " + imageHeight + ", \\n" + "imgWidth: " + imgWidth + ", \\n" + "imgHeight: " + imgHeight + "."); // ...resize the parent containers accordingly:
 
               _this3._resize(clientWidth, clientHeight);
             } else {
-              // we did not find image dimensions, use stretch method
+              // we did not find image dimensions, use stretch method by css:
               _this3._$modalDialog.addClass("imageStretched");
 
               if (_this3._config.debug > 1) alert("imageStretched");
