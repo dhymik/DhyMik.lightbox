@@ -12,6 +12,9 @@ const Lightbox = (($) => {
      *    'lightboxFullSize' css class is added to the lighbox <a> tag
      *    
      *    Use this if
+     * 
+     * Changed in 5.5.1-dhymik (2023-04-02):
+     * - Vimeo player url will not break if url contains querystring parameters
      */
 
 
@@ -512,7 +515,7 @@ const Lightbox = (($) => {
         _showVimeoVideo(id, $containerForElement) {
             let width = this._$element.data('width') || 500
             let height = this._$element.data('height') || width / (560 / 315)
-            return this._showVideoIframe(id + '?autoplay=1', width, height, $containerForElement)
+            return this._showVideoIframe(id + (id.includes("?") ? '&' : '?') + 'autoplay=1', width, height, $containerForElement);
         }
 
         _showInstagramVideo(id, $containerForElement) {

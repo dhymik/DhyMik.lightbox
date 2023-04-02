@@ -41,7 +41,7 @@ const prod = {
                             require('autoprefixer')({
                                 browsers: ['last 2 versions']
                             }),
-                            require('cssnano')()
+                            //require('cssnano')()
                         ]
                     }
                 },
