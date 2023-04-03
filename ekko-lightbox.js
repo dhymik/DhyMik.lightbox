@@ -15,6 +15,9 @@ const Lightbox = (($) => {
      * 
      * Changed in 5.5.1-dhymik (2023-04-02):
      * - Vimeo player url will not break if url contains querystring parameters
+     * 
+     * Changed in 5.5.2-dhymik
+     * - added support for webstream.eu videos
      */
 
 
@@ -313,6 +316,8 @@ const Lightbox = (($) => {
 
             if (!type && this._isImage(src))
                 type = 'image';
+            if (!type && this._getWebstreamId(src))
+                type = 'webstream';
             if (!type && this._getYoutubeId(src))
                 type = 'youtube';
             if (!type && this._getVimeoId(src))
@@ -321,7 +326,7 @@ const Lightbox = (($) => {
                 type = 'instagram';
             if (type == 'audio' || type == 'video' || (!type && this._isMedia(src)))
                 type = 'media';
-            if (!type || ['image', 'youtube', 'vimeo', 'instagram', 'media', 'url'].indexOf(type) < 0)
+            if (!type || ['image', 'webstream', 'youtube', 'vimeo', 'instagram', 'media', 'url'].indexOf(type) < 0)
                 type = 'url';
 
             return type;
@@ -386,7 +391,7 @@ const Lightbox = (($) => {
             let currentRemote = this._$element.attr('data-remote') || this._$element.attr('href')
             let currentType = this._detectRemoteType(currentRemote, this._$element.attr('data-type') || false)
 
-            if (['image', 'youtube', 'vimeo', 'instagram', 'media', 'url'].indexOf(currentType) < 0)
+            if (['image', 'webstream', 'youtube', 'vimeo', 'instagram', 'media', 'url'].indexOf(currentType) < 0)
                 return this._error(this._config.strings.type)
 
             switch (currentType) {
@@ -394,6 +399,9 @@ const Lightbox = (($) => {
                     let altTag = this._$element.attr('data-alt') || '';
                     this._preloadImage(currentRemote, altTag, $toUse)
                     this._preloadImageByIndex(this._galleryIndex, 3)
+                    break;
+                case 'webstream':
+                    this._showWebstreamVideo(this._getVimeoId(currentRemote), $toUse);
                     break;
                 case 'youtube':
                     this._showYoutubeVideo(currentRemote, $toUse);
@@ -422,6 +430,10 @@ const Lightbox = (($) => {
             }, 250);
 
             return this;
+        }
+
+        _getWebstreamId(string) {
+            return string && string.indexOf('webstream.eu') > 0 ? string : false
         }
 
         _getYoutubeId(string) {
@@ -499,6 +511,12 @@ const Lightbox = (($) => {
             return this;
         }
 
+        _showWebstreamVideo(id, $containerForElement) {
+            let width = this._$element.data('width') || 500
+            let height = this._$element.data('height') || width / (560 / 315)
+            return this._showVideoIframe(id + "/embed" + (id.includes("?") ? '&' : '?') + 'autoplay=1', width, height, $containerForElement);
+        }
+
         _showYoutubeVideo(remote, $containerForElement) {
             let id = this._getYoutubeId(remote)
             let query = remote.indexOf('&') > 0 ? remote.substr(remote.indexOf('&')) : ''
@@ -541,7 +559,7 @@ const Lightbox = (($) => {
             height = height * scalingFactor;
             // added end.
 
-            $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><iframe width="${width}" height="${height}" src="${url}" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>`);
+            $containerForElement.html(`<div class="embed-responsive embed-responsive-16by9"><iframe width="${width}" height="${height}" src="${url}" frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen class="embed-responsive-item"></iframe></div>`);
             this._resize(width, height);
             this._config.onContentLoaded.call(this);
             if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
