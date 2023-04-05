@@ -401,7 +401,7 @@ const Lightbox = (($) => {
                     this._preloadImageByIndex(this._galleryIndex, 3)
                     break;
                 case 'webstream':
-                    this._showWebstreamVideo(this._getVimeoId(currentRemote), $toUse);
+                    this._showWebstreamVideo(this._getWebstreamId(currentRemote), $toUse);
                     break;
                 case 'youtube':
                     this._showYoutubeVideo(currentRemote, $toUse);
@@ -433,10 +433,12 @@ const Lightbox = (($) => {
         }
 
         _getWebstreamId(string) {
+            /* id is the entire url fetched from data-remote or href attribute */
             return string && string.indexOf('webstream.eu') > 0 ? string : false
         }
 
         _getYoutubeId(string) {
+            /* Youtube id here is just the 11 character video id of the url */
             if (!string)
                 return false;
             let matches = string.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/)
@@ -444,10 +446,12 @@ const Lightbox = (($) => {
         }
 
         _getVimeoId(string) {
+            /* id is the entire url fetched from data-remote or href attribute */
             return string && string.indexOf('vimeo') > 0 ? string : false
         }
 
         _getInstagramId(string) {
+            /* id is the entire url fetched from data-remote or href attribute */
             return string && string.indexOf('instagram') > 0 ? string : false
         }
 

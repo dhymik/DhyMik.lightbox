@@ -1,0 +1,799 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.6.0",
+  "hash": "a1cb1af05434652e0623",
+  "time": 815,
+  "builtAt": 1680536598368,
+  "publicPath": "",
+  "outputPath": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\dist",
+  "assetsByChunkName": {
+    "main": [
+      "ekko-lightbox.css",
+      "ekko-lightbox.js",
+      "ekko-lightbox.css.map",
+      "ekko-lightbox.js.map"
+    ]
+  },
+  "assets": [
+    {
+      "name": "ekko-lightbox.css",
+      "size": 5167,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "ekko-lightbox.js",
+      "size": 19648,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "ekko-lightbox.css.map",
+      "size": 7581,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "ekko-lightbox.js.map",
+      "size": 63609,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "ekko-lightbox.css",
+        "ekko-lightbox.js",
+        "ekko-lightbox.css.map",
+        "ekko-lightbox.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 49144,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "ekko-lightbox.css",
+        "ekko-lightbox.js",
+        "ekko-lightbox.css.map",
+        "ekko-lightbox.js.map"
+      ],
+      "hash": "ba346ed1bda265ce9a57",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "css C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less 0",
+          "name": "css ./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+          "index": 3,
+          "index2": 1,
+          "size": 5121,
+          "built": false,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+          "issuerId": 1,
+          "issuerName": "./ekko-lightbox.less",
+          "issuerPath": [
+            {
+              "id": 3,
+              "identifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "name": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "profile": {
+                "factory": 1,
+                "building": 1
+              }
+            },
+            {
+              "id": 1,
+              "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+              "name": "./ekko-lightbox.less",
+              "profile": {
+                "factory": 153,
+                "building": 558
+              }
+            }
+          ],
+          "profile": {
+            "factory": 0,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+              "module": "./ekko-lightbox.less",
+              "moduleName": "./ekko-lightbox.less"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 2
+        },
+        {
+          "id": 1,
+          "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+          "name": "./ekko-lightbox.less",
+          "index": 2,
+          "index2": 2,
+          "size": 39,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "issuerId": 3,
+          "issuerName": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "issuerPath": [
+            {
+              "id": 3,
+              "identifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "name": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "profile": {
+                "factory": 1,
+                "building": 1
+              }
+            }
+          ],
+          "profile": {
+            "factory": 153,
+            "building": 558
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "module": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "moduleName": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "type": "single entry",
+              "userRequest": "./ekko-lightbox.less",
+              "loc": "main:100001"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1,
+          "source": "// extracted by mini-css-extract-plugin"
+        },
+        {
+          "id": 2,
+          "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\babel-loader\\lib\\index.js??ref--5!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.js",
+          "name": "./ekko-lightbox.js",
+          "index": 1,
+          "index2": 0,
+          "size": 43944,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "issuerId": 3,
+          "issuerName": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "issuerPath": [
+            {
+              "id": 3,
+              "identifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "name": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "profile": {
+                "factory": 1,
+                "building": 1
+              }
+            }
+          ],
+          "profile": {
+            "factory": 153,
+            "building": 558
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "module": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "moduleName": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+              "type": "single entry",
+              "userRequest": "./ekko-lightbox.js",
+              "loc": "main:100000"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1,
+          "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _typeof = typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Lightbox = function ($) {\n\n    /* Added in v.5.5.0-dhymik:\r\n     * (search for \"added by DhyMik\")\r\n     * \r\n     * 1. auto max data dimensions to max screen dimensions\r\n     * \r\n     *    This solves issues with svg displayed too small\r\n     *    and images / video frames not filling the screen\r\n     * \r\n     * 2. skip resizing and adding inline size styles when\r\n     *    'lightboxFullSize' css class is added to the lighbox <a> tag\r\n     *    \r\n     *    Use this if\r\n     * \r\n     * Changed in 5.5.1-dhymik (2023-04-02):\r\n     * - Vimeo player url will not break if url contains querystring parameters\r\n     * \r\n     * Changed in 5.5.2-dhymik\r\n     * - added support for webstream.eu videos\r\n     */\n\n    var NAME = 'ekkoLightbox';\n    var JQUERY_NO_CONFLICT = $.fn[NAME];\n\n    var Default = {\n        debug: 0, // 0: no debug, 1: on-screen info, 2: on-screen plus pop-ups\n        title: '',\n        footer: '',\n        maxWidth: 9999,\n        maxHeight: 9999,\n        showArrows: true, //display the left / right arrows or not\n        hideArrowsOnVideo: false, //hide the left / right arrows for videos\n        wrapping: true, //if true, gallery loops infinitely\n        type: null, //force the lightbox into image / youtube mode. if null, or not image|youtube|vimeo; detect it\n        alwaysShowClose: false, //always show the close button, even if there is no title\n        fade: true, // fade in or not\n        verticalAlignCenter: false, // vertically centered modal\n        loadingMessage: '<div class=\"ekko-lightbox-loader\"><div><div></div><div></div></div></div>', // http://tobiasahlin.com/spinkit/\n        leftArrow: '<span>&#10094;</span>',\n        rightArrow: '<span>&#10095;</span>',\n        strings: {\n            close: 'Close',\n            fail: 'Failed to load image:',\n            type: 'Could not detect remote target type. Force the type using data-type'\n        },\n        doc: document, // if in an iframe can specify top.document\n        onShow: function onShow() {},\n        onShown: function onShown() {},\n        onHide: function onHide() {},\n        onHidden: function onHidden() {},\n        onNavigate: function onNavigate() {},\n        onContentLoaded: function onContentLoaded() {}\n    };\n\n    var Lightbox = function () {\n        _createClass(Lightbox, null, [{\n            key: 'Default',\n\n\n            /**\r\n              Class properties:\r\n               _$element: null -> the <a> element currently being displayed\r\n             _$modal: The bootstrap modal generated\r\n                _$modalDialog: The .modal-dialog\r\n                _$modalContent: The .modal-content\r\n                _$modalBody: The .modal-body\r\n                _$modalHeader: The .modal-header\r\n                _$modalFooter: The .modal-footer\r\n             _$lightboxContainerOne: Container of the first lightbox element\r\n             _$lightboxContainerTwo: Container of the second lightbox element\r\n             _$lightboxContainerCurrent: the container in use\r\n             _$lightboxContainerUnUsed: the currently unused container\r\n             _$lightboxBody: First element in the container\r\n             _$modalNavLayer: The navigation container, overlaid for images, underlaid for videos\r\n             _$modalArrows: The overlayed arrows container, always overlaid\r\n               _$galleryItems: Other <a>'s available for this gallery\r\n             _galleryName: Name of the current data('gallery') showing\r\n             _galleryIndex: The current index of the _$galleryItems being shown\r\n               _config: {} the options for the modal\r\n             _modalId: unique id for the current lightbox\r\n               */\n\n            get: function get() {\n                return Default;\n            }\n        }]);\n\n        function Lightbox($element, config) {\n            var _this = this;\n\n            _classCallCheck(this, Lightbox);\n\n            this._config = $.extend({}, Default, config);\n            this._$modalNavLayer = null;\n            this._$modalArrows = null;\n            this._$debugInfo = null;\n            this._galleryIndex = 0;\n            this._galleryName = null;\n            this._titleIsShown = false;\n            this._footerIsShown = false;\n            this._wantedWidth = 0;\n            this._wantedHeight = 0;\n            this._touchstartX = 0;\n            this._touchendX = 0;\n\n            this._modalId = 'ekkoLightbox-' + Math.floor(Math.random() * 1000 + 1);\n            this._$element = $element instanceof jQuery ? $element : $($element);\n\n            this._isBootstrap3 = $.fn.modal.Constructor.VERSION[0] == 3;\n\n            var h4 = '<h4 class=\"modal-title\">' + (this._config.title || \"&nbsp;\") + '</h4>';\n            var btn = '<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"' + this._config.strings.close + '\"><span aria-hidden=\"true\">&times;</span></button>';\n\n            var fade = this._config.fade ? 'fade in' : '';\n            var vertical = this._config.verticalAlignCenter ? 'modal-dialog-centered' : '';\n\n            var header = '<div class=\"modal-header' + (this._config.title || this._config.alwaysShowClose ? '' : ' hide') + '\">' + (this._isBootstrap3 ? btn + h4 : h4 + btn) + '</div>';\n            var footer = '<div class=\"modal-footer' + (this._config.footer ? '' : ' hide') + '\">' + (this._config.footer || \"&nbsp;\") + '</div>';\n            var body = '<div class=\"modal-body\"><div class=\"ekko-lightbox-container\"><div class=\"ekko-lightbox-item ' + fade + ' show\"></div><div class=\"ekko-lightbox-item fade\"></div></div></div>';\n            var dialog = '<div class=\"modal-dialog ' + vertical + '\" role=\"document\"><div class=\"modal-content\">' + header + body + footer + '</div></div>';\n            $(this._config.doc.body).append('<div id=\"' + this._modalId + '\" class=\"ekko-lightbox modal fade\" tabindex=\"-1\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">' + dialog + '</div>');\n\n            this._$modal = $('#' + this._modalId, this._config.doc);\n\n            if (this._config.debug > 0) this._$modal.append('<div class=\"modal-debug-info\"></div>');\n            this._$debugInfo = this._$modal.find('.modal-debug-info').first();\n\n            this._$modalDialog = this._$modal.find('.modal-dialog').first();\n            this._$modalContent = this._$modal.find('.modal-content').first();\n            this._$modalBody = this._$modal.find('.modal-body').first();\n            this._$modalHeader = this._$modal.find('.modal-header').first();\n            this._$modalFooter = this._$modal.find('.modal-footer').first();\n\n            this._$lightboxContainer = this._$modalBody.find('.ekko-lightbox-container').first();\n            this._$lightboxBodyOne = this._$lightboxContainer.find('> div:first-child').first();\n            this._$lightboxBodyTwo = this._$lightboxContainer.find('> div:last-child').first();\n            this._$lightboxContainerCurrent = this._$lightboxBodyOne;\n            this._$lightboxContainerUnUsed = this._$lightboxBodyTwo;\n\n            this._galleryName = this._$element.data('gallery');\n            if (this._galleryName) {\n                this._$galleryItems = $(document.body).find('*[data-gallery=\"' + this._galleryName + '\"]');\n                this._galleryIndex = this._$galleryItems.index(this._$element);\n                $(document).on('keydown.ekkoLightbox', this._navigationalBinder.bind(this));\n\n                // add the directional arrows to the modal\n                if (this._config.showArrows && this._$galleryItems.length > 1) {\n\n                    // add the navigation layer with full surface links\n                    this._$lightboxContainer.prepend('<div class=\"ekko-lightbox-nav-overlay\"><a href=\"#\"></a><a href=\"#\"></a></div>');\n                    this._$modalNavLayer = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay').first();\n\n                    // add the link arrows suitable also for video overlay\n                    this._$lightboxContainer.append('<div class=\"ekko-lightbox-nav-arrows\"><a href=\"#\">' + this._config.leftArrow + '</a><a href=\"#\">' + this._config.rightArrow + '</a></div>');\n                    this._$modalArrows = this._$lightboxContainer.find('div.ekko-lightbox-nav-arrows').first();\n\n                    // add the click event handlers to all links\n                    this._$lightboxContainer.on('click', 'a:first-child', function (event) {\n                        event.preventDefault();\n                        return _this.navigateLeft();\n                    });\n                    this._$lightboxContainer.on('click', 'a:last-child', function (event) {\n                        event.preventDefault();\n                        return _this.navigateRight();\n                    });\n\n                    // add the hover event handlers to nav surface links, adding hover class to arrow links\n                    this._$modalNavLayer.find('a:first-child').hover(function () {\n                        _this._$modalArrows.find('a:first-child').addClass('hover');\n                    }, function () {\n                        _this._$modalArrows.find('a:first-child').removeClass('hover').filter('[class=\"\"]').removeAttr('class');\n                    });\n                    this._$modalNavLayer.find('a:last-child').hover(function () {\n                        _this._$modalArrows.find('a:last-child').addClass('hover');\n                    }, function () {\n                        _this._$modalArrows.find('a:last-child').removeClass('hover').filter('[class=\"\"]').removeAttr('class');\n                    });\n\n                    this.updateNavigation();\n                }\n            }\n\n            this._$modal.on('show.bs.modal', this._config.onShow.bind(this)).on('shown.bs.modal', function () {\n                _this._toggleLoading(true);\n                _this._handle();\n                return _this._config.onShown.call(_this);\n            }).on('hide.bs.modal', this._config.onHide.bind(this)).on('hidden.bs.modal', function () {\n                if (_this._galleryName) {\n                    $(document).off('keydown.ekkoLightbox');\n                    $(window).off('resize.ekkoLightbox');\n                }\n                _this._$modal.remove();\n                return _this._config.onHidden.call(_this);\n            }).modal(this._config);\n\n            $(window).on('resize.ekkoLightbox', function () {\n                _this._resize(_this._wantedWidth, _this._wantedHeight);\n            });\n\n            this._$lightboxContainer.on('touchstart', function () {\n                _this._touchstartX = event.changedTouches[0].screenX;\n            }).on('touchend', function () {\n                _this._touchendX = event.changedTouches[0].screenX;\n                _this._swipeGesure();\n            });\n        }\n\n        _createClass(Lightbox, [{\n            key: 'element',\n            value: function element() {\n                return this._$element;\n            }\n        }, {\n            key: 'modal',\n            value: function modal() {\n                return this._$modal;\n            }\n        }, {\n            key: 'navigateTo',\n            value: function navigateTo(index) {\n\n                if (index < 0 || index > this._$galleryItems.length - 1) return this;\n\n                this._galleryIndex = index;\n\n                this.updateNavigation();\n\n                this._$element = $(this._$galleryItems.get(this._galleryIndex));\n                this._handle();\n            }\n        }, {\n            key: 'navigateLeft',\n            value: function navigateLeft() {\n\n                if (!this._$galleryItems) return;\n\n                if (this._$galleryItems.length === 1) return;\n\n                if (this._galleryIndex === 0) {\n                    if (this._config.wrapping) this._galleryIndex = this._$galleryItems.length - 1;else return;\n                } else //circular\n                    this._galleryIndex--;\n\n                this._config.onNavigate.call(this, 'left', this._galleryIndex);\n                return this.navigateTo(this._galleryIndex);\n            }\n        }, {\n            key: 'navigateRight',\n            value: function navigateRight() {\n\n                if (!this._$galleryItems) return;\n\n                if (this._$galleryItems.length === 1) return;\n\n                if (this._galleryIndex === this._$galleryItems.length - 1) {\n                    if (this._config.wrapping) this._galleryIndex = 0;else return;\n                } else //circular\n                    this._galleryIndex++;\n\n                this._config.onNavigate.call(this, 'right', this._galleryIndex);\n                return this.navigateTo(this._galleryIndex);\n            }\n        }, {\n            key: 'updateNavigation',\n            value: function updateNavigation() {\n                if (!this._config.wrapping) {\n                    var $nav = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay');\n                    if (this._galleryIndex === 0) $nav.find('a:first-child').addClass('disabled');else $nav.find('a:first-child').removeClass('disabled');\n\n                    if (this._galleryIndex === this._$galleryItems.length - 1) $nav.find('a:last-child').addClass('disabled');else $nav.find('a:last-child').removeClass('disabled');\n                }\n            }\n        }, {\n            key: 'close',\n            value: function close() {\n                return this._$modal.modal('hide');\n            }\n\n            // helper private methods\n\n        }, {\n            key: '_navigationalBinder',\n            value: function _navigationalBinder(event) {\n                event = event || window.event;\n                if (event.keyCode === 39) return this.navigateRight();\n                if (event.keyCode === 37) return this.navigateLeft();\n            }\n\n            // type detection private methods\n\n        }, {\n            key: '_detectRemoteType',\n            value: function _detectRemoteType(src, type) {\n\n                type = type || false;\n\n                if (!type && this._isImage(src)) type = 'image';\n                if (!type && this._getWebstreamId(src)) type = 'webstream';\n                if (!type && this._getYoutubeId(src)) type = 'youtube';\n                if (!type && this._getVimeoId(src)) type = 'vimeo';\n                if (!type && this._getInstagramId(src)) type = 'instagram';\n                if (type == 'audio' || type == 'video' || !type && this._isMedia(src)) type = 'media';\n                if (!type || ['image', 'webstream', 'youtube', 'vimeo', 'instagram', 'media', 'url'].indexOf(type) < 0) type = 'url';\n\n                return type;\n            }\n        }, {\n            key: '_getRemoteContentType',\n            value: function _getRemoteContentType(src) {\n                var response = $.ajax({\n                    type: 'HEAD',\n                    url: src,\n                    async: false\n                });\n                var contentType = response.getResponseHeader('Content-Type');\n                return contentType;\n            }\n        }, {\n            key: '_isImage',\n            value: function _isImage(string) {\n                return string && string.match(/(^data:image\\/.*,)|(\\.(jp(e|g|eg)|gif|png|bmp|webp|svg)((\\?|#).*)?$)/i);\n            }\n        }, {\n            key: '_isMedia',\n            value: function _isMedia(string) {\n                return string && string.match(/(\\.(mp3|mp4|ogg|webm|wav)((\\?|#).*)?$)/i);\n            }\n        }, {\n            key: '_switchContainers',\n            value: function _switchContainers() {\n\n                var $newCurrent = this._$lightboxContainerUnUsed;\n                this._$lightboxContainerUnUsed = this._$lightboxContainerCurrent;\n                this._$lightboxContainerCurrent = $newCurrent;\n\n                // switch z-index\n                this._$lightboxContainerCurrent.css(\"z-index\", this._$lightboxContainerUnUsed.css(\"z-index\") + 1);\n                this._$lightboxContainerUnUsed.css(\"z-index\", \"auto\");\n                this._$lightboxContainerCurrent.css(\"z-index\", 1);\n\n                this._$lightboxContainerUnUsed.removeClass('in show');\n                this._$lightboxContainerCurrent.addClass('in show');\n\n                return;\n            }\n        }, {\n            key: '_handle',\n            value: function _handle() {\n\n                // ### Added by DhyMik in v.5.5.0-dhymik:\n\n                // remove css added in '_preloadImage'\n                this._$modalDialog.removeClass(\"imageLoading\");\n                this._$modalDialog.removeClass(\"imageLoaded\");\n                this._$modalDialog.removeClass(\"imageStretched\");\n                this._$modalDialog.removeClass(\"isVideo\");\n\n                // ### End added by DhyMik in v.5.5.0-dhymik:\n\n                var $toUse = this._$lightboxContainerUnUsed;\n\n                // fade out header and footer\n                this._$modalHeader.css(\"opacity\", 0);\n                this._$modalFooter.css(\"opacity\", 0);\n\n                this._updateTitleAndFooter();\n                this._switchContainers();\n\n                var currentRemote = this._$element.attr('data-remote') || this._$element.attr('href');\n                var currentType = this._detectRemoteType(currentRemote, this._$element.attr('data-type') || false);\n\n                if (['image', 'webstream', 'youtube', 'vimeo', 'instagram', 'media', 'url'].indexOf(currentType) < 0) return this._error(this._config.strings.type);\n\n                switch (currentType) {\n                    case 'image':\n                        var altTag = this._$element.attr('data-alt') || '';\n                        this._preloadImage(currentRemote, altTag, $toUse);\n                        this._preloadImageByIndex(this._galleryIndex, 3);\n                        break;\n                    case 'webstream':\n                        this._showWebstreamVideo(this._getWebstreamId(currentRemote), $toUse);\n                        break;\n                    case 'youtube':\n                        this._showYoutubeVideo(currentRemote, $toUse);\n                        break;\n                    case 'vimeo':\n                        this._showVimeoVideo(this._getVimeoId(currentRemote), $toUse);\n                        break;\n                    case 'instagram':\n                        this._showInstagramVideo(this._getInstagramId(currentRemote), $toUse);\n                        break;\n                    case 'media':\n                        this._showHtml5Media(currentRemote, $toUse);\n                        break;\n                    default:\n                        // url\n                        this._loadRemoteContent(currentRemote, $toUse);\n                        break;\n                }\n\n                var thisLightbox = this;\n\n                // fade in header and footer after a delay and delete old content\n                setTimeout(function () {\n                    thisLightbox._$modalHeader.css(\"opacity\", 1);\n                    thisLightbox._$modalFooter.css(\"opacity\", 1);\n                    thisLightbox._$lightboxContainerUnUsed.empty();\n                }, 250);\n\n                return this;\n            }\n        }, {\n            key: '_getWebstreamId',\n            value: function _getWebstreamId(string) {\n                /* id is the entire url fetched from data-remote or href attribute */\n                return string && string.indexOf('webstream.eu') > 0 ? string : false;\n            }\n        }, {\n            key: '_getYoutubeId',\n            value: function _getYoutubeId(string) {\n                /* Youtube id here is just the 11 character video id of the url */\n                if (!string) return false;\n                var matches = string.match(/^.*(youtu.be\\/|v\\/|u\\/\\w\\/|embed\\/|watch\\?v=|\\&v=)([^#\\&\\?]*).*/);\n                return matches && matches[2].length === 11 ? matches[2] : false;\n            }\n        }, {\n            key: '_getVimeoId',\n            value: function _getVimeoId(string) {\n                /* id is the entire url fetched from data-remote or href attribute */\n                return string && string.indexOf('vimeo') > 0 ? string : false;\n            }\n        }, {\n            key: '_getInstagramId',\n            value: function _getInstagramId(string) {\n                /* id is the entire url fetched from data-remote or href attribute */\n                return string && string.indexOf('instagram') > 0 ? string : false;\n            }\n\n            // layout private methods\n\n        }, {\n            key: '_toggleLoading',\n            value: function _toggleLoading(show) {\n                show = show || false;\n                if (show) {\n                    this._$modalDialog.css('display', 'none');\n                    this._$modal.removeClass('in show');\n                    $('.modal-backdrop').append(this._config.loadingMessage);\n                } else {\n                    this._$modalDialog.css('display', this._config.verticalAlignCenter ? 'flex' : 'block');\n                    this._$modal.addClass('in show');\n                    $('.modal-backdrop').find('.ekko-lightbox-loader').remove();\n                }\n                return this;\n            }\n        }, {\n            key: '_calculateScaleFactor',\n            value: function _calculateScaleFactor(width, height) {\n                /* 'calculateScaleFactor' is the size factor to be applied to an image's or video#s dimensions\r\n                 * so it will fill the entire screen if browser window is maximized or full-screened.\r\n                 * \r\n                 * Added in v.5.5.0-dhymik\r\n                 * */\n                var screenWidth = window.screen.width; // these are the hardware screen dimensions,\n                var screenHeight = window.screen.height; // not the browser window\n\n                var videoMaxDimension = Math.max(width, height);\n                var screenMaxDimension = Math.max(screenWidth, screenHeight);\n\n                return screenMaxDimension / videoMaxDimension;\n            }\n        }, {\n            key: '_updateTitleAndFooter',\n            value: function _updateTitleAndFooter() {\n                var title = this._$element.data('title') || \"\";\n                var caption = this._$element.data('footer') || \"\";\n\n                this._titleIsShown = false;\n                if (title || this._config.alwaysShowClose) {\n                    this._titleIsShown = true;\n                    this._$modalHeader.css('display', '').find('.modal-title').html(title || \"&nbsp;\");\n                    this._$modalDialog.addClass(\"headerIsShown\");\n                } else {\n                    this._$modalHeader.css('display', 'none');\n                    this._$modalDialog.removeClass(\"headerIsShown\");\n                }\n\n                this._footerIsShown = false;\n                if (caption) {\n                    this._footerIsShown = true;\n                    this._$modalFooter.css('display', '').html(caption);\n                    this._$modalDialog.addClass(\"footerIsShown\");\n                } else {\n                    this._$modalFooter.css('display', 'none');\n                    this._$modalDialog.removeClass(\"footerIsShown\");\n                }\n\n                return this;\n            }\n        }, {\n            key: '_showWebstreamVideo',\n            value: function _showWebstreamVideo(id, $containerForElement) {\n                var width = this._$element.data('width') || 500;\n                var height = this._$element.data('height') || width / (560 / 315);\n                return this._showVideoIframe(id + \"/embed\" + (id.includes(\"?\") ? '&' : '?') + 'autoplay=1', width, height, $containerForElement);\n            }\n        }, {\n            key: '_showYoutubeVideo',\n            value: function _showYoutubeVideo(remote, $containerForElement) {\n                var id = this._getYoutubeId(remote);\n                var query = remote.indexOf('&') > 0 ? remote.substr(remote.indexOf('&')) : '';\n                var width = this._$element.data('width') || 560;\n                var height = this._$element.data('height') || width / (560 / 315);\n                return this._showVideoIframe('//www.youtube.com/embed/' + id + '?badge=0&autoplay=1&html5=1' + query, width, height, $containerForElement);\n            }\n        }, {\n            key: '_showVimeoVideo',\n            value: function _showVimeoVideo(id, $containerForElement) {\n                var width = this._$element.data('width') || 500;\n                var height = this._$element.data('height') || width / (560 / 315);\n                return this._showVideoIframe(id + (id.includes(\"?\") ? '&' : '?') + 'autoplay=1', width, height, $containerForElement);\n            }\n        }, {\n            key: '_showInstagramVideo',\n            value: function _showInstagramVideo(id, $containerForElement) {\n                // instagram load their content into iframes so this can be put straight into the element\n                var width = this._$element.data('width') || 612;\n                var height = width + 80;\n                id = id.substr(-1) !== '/' ? id + '/' : id; // ensure id has trailing slash\n                $containerForElement.html('<iframe width=\"' + width + '\" height=\"' + height + '\" src=\"' + id + 'embed/\" frameborder=\"0\" allowfullscreen></iframe>');\n                this._resize(width, height);\n                this._config.onContentLoaded.call(this);\n                if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');\n                this._$modalDialog.addClass(\"isVideo\");\n                this._toggleLoading(false);\n                return this;\n            }\n        }, {\n            key: '_showVideoIframe',\n            value: function _showVideoIframe(url, width, height, $containerForElement) {\n                // should be used for videos only. for remote content use loadRemoteContent (data-type=url)\n                height = height || width; // default to square\n\n                // Added in v.5.5.0-dhymik:\n                var scalingFactor = this._calculateScaleFactor(width, height);\n                width = width * scalingFactor;\n                height = height * scalingFactor;\n                // added end.\n\n                $containerForElement.html('<div class=\"embed-responsive embed-responsive-16by9\"><iframe width=\"' + width + '\" height=\"' + height + '\" src=\"' + url + '\" frameborder=\"0\" allow=\"autoplay; picture-in-picture\" allowfullscreen class=\"embed-responsive-item\"></iframe></div>');\n                this._resize(width, height);\n                this._config.onContentLoaded.call(this);\n                if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');\n                this._$modalDialog.addClass(\"isVideo\");\n                this._toggleLoading(false);\n                return this;\n            }\n        }, {\n            key: '_showHtml5Media',\n            value: function _showHtml5Media(url, $containerForElement) {\n                // should be used for videos only. for remote content use loadRemoteContent (data-type=url)\n                var contentType = this._getRemoteContentType(url);\n                if (!contentType) {\n                    return this._error(this._config.strings.type);\n                }\n                var mediaType = '';\n                if (contentType.indexOf('audio') > 0) {\n                    mediaType = 'audio';\n                } else {\n                    mediaType = 'video';\n                }\n                var width = this._$element.data('width') || 560;\n                var height = this._$element.data('height') || width / (560 / 315);\n\n                // ### Added by DhyMik in v.5.5.0-dhymik:\n                var scalingFactor = this._calculateScaleFactor(width, height);\n                width = width * scalingFactor;\n                height = height * scalingFactor;\n                // ### added end.\n\n                $containerForElement.html('<div class=\"embed-responsive embed-responsive-16by9\"><' + mediaType + ' width=\"' + width + '\" height=\"' + height + '\" preload=\"auto\" autoplay controls class=\"embed-responsive-item\"><source src=\"' + url + '\" type=\"' + contentType + '\">' + this._config.strings.type + '</' + mediaType + '></div>');\n                this._resize(width, height);\n                this._config.onContentLoaded.call(this);\n                if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');\n                this._$modalDialog.addClass(\"isVideo\");\n                this._toggleLoading(false);\n                return this;\n            }\n        }, {\n            key: '_loadRemoteContent',\n            value: function _loadRemoteContent(url, $containerForElement) {\n                var _this2 = this;\n\n                var width = this._$element.data('width') || 560;\n                var height = this._$element.data('height') || 560;\n\n                var disableExternalCheck = this._$element.data('disableExternalCheck') || false;\n                this._toggleLoading(false);\n\n                // ### Added by DhyMik in v.5.5.0-dhymik:\n                var scalingFactor = this._calculateScaleFactor(width, height);\n                width = width * scalingFactor;\n                height = height * scalingFactor;\n                // ### added end.\n\n                // external urls are loading into an iframe\n                // local ajax can be loaded into the container itself\n                if (!disableExternalCheck && !this._isExternal(url)) {\n                    $containerForElement.load(url, $.proxy(function () {\n                        return _this2._$element.trigger('loaded.bs.modal');\n                    }));\n                } else {\n                    $containerForElement.html('<iframe src=\"' + url + '\" frameborder=\"0\" allowfullscreen></iframe>');\n                    this._config.onContentLoaded.call(this);\n                }\n\n                if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');\n                this._$modalDialog.addClass(\"isVideo\");\n\n                this._resize(width, height);\n                return this;\n            }\n        }, {\n            key: '_isExternal',\n            value: function _isExternal(url) {\n                var match = url.match(/^([^:\\/?#]+:)?(?:\\/\\/([^\\/?#]*))?([^?#]+)?(\\?[^#]*)?(#.*)?/);\n                if (typeof match[1] === \"string\" && match[1].length > 0 && match[1].toLowerCase() !== location.protocol) return true;\n\n                if (typeof match[2] === \"string\" && match[2].length > 0 && match[2].replace(new RegExp(':(' + {\n                    \"http:\": 80,\n                    \"https:\": 443\n                }[location.protocol] + ')?$'), \"\") !== location.host) return true;\n\n                return false;\n            }\n        }, {\n            key: '_error',\n            value: function _error(message) {\n                console.error(message);\n                this._$lightboxContainerCurrent.html(message);\n                this._resize(300, 300);\n                return this;\n            }\n        }, {\n            key: '_preloadImageByIndex',\n            value: function _preloadImageByIndex(startIndex, numberOfTimes) {\n\n                if (!this._$galleryItems) return;\n\n                var next = $(this._$galleryItems.get(startIndex), false);\n                if (typeof next == 'undefined') return;\n\n                var src = next.attr('data-remote') || next.attr('href');\n                if (next.attr('data-type') === 'image' || this._isImage(src)) this._preloadImage(src, '', false);\n\n                if (numberOfTimes > 0) return this._preloadImageByIndex(startIndex + 1, numberOfTimes - 1);\n            }\n        }, {\n            key: '_preloadImage',\n            value: function _preloadImage(src, altTag, $containerForImage) {\n                var _this3 = this;\n\n                $containerForImage = $containerForImage || false;\n\n                var img = new Image();\n                var loadingTimeout = null;\n                if ($containerForImage) {\n                    // if loading takes > 200ms show a loader\n                    loadingTimeout = setTimeout(function () {\n                        $containerForImage.append(_this3._config.loadingMessage);\n                    }, 200);\n                }\n\n                img.onload = function () {\n                    if ($containerForImage) {\n\n                        if (loadingTimeout) clearTimeout(loadingTimeout);\n                        loadingTimeout = null;\n\n                        var image = $('<img />');\n                        image.attr('src', img.src);\n                        image.attr('alt', altTag);\n                        image.addClass('img-fluid');\n\n                        // backward compatibility for bootstrap v3\n                        image.css('width', '100% !important');\n\n                        // if the \"data-markup\" attribute is set on the <a> tag...\n                        if (_this3._$element[0].hasAttribute(\"data-markup\")) {\n\n                            // ...then the \"data-markup\" attribute value provides the repalcement markup\n                            var markup = _this3._$element.attr(\"data-markup\");\n                            $containerForImage.html(markup);\n                        } else {\n                            $containerForImage.html(image);\n                        }\n\n                        if (_this3._$modalNavLayer) _this3._$modalNavLayer.css('display', '');\n\n                        /* ***** determine image dimensions ****\r\n                         * \r\n                         * If image dimensions can be determined \r\n                         * - a max-width inline style is added to .modal-dialog element\r\n                         * - a height inline style is added to .ekko-lightbox-container element\r\n                         * inside of _resize() function.\r\n                         * \r\n                         * In this case, a black backddrop is used behind images to prevent\r\n                         * background bleed during image transitions\r\n                         * \r\n                         * If image dimensions cannot be determined, images are stretched\r\n                         * to maximum dimensions by maximizing all parent containers.\r\n                         * In this case\r\n                         * - 'imageStretched' css class is added to .modal-dialog element\r\n                         * - black backdrop is not being used, to prevent backdrop from\r\n                         *   extending over entire screen regardless of image size.\r\n                         * */\n\n                        _this3._$modalDialog.css('display', _this3._config.verticalAlignCenter ? 'flex' : 'block');\n\n                        _this3._$modalDialog.addClass(\"imageLoading\");\n                        // temporarily stretches img parent containers so image dimensions can be determined.\n\n                        var clientWidth = 0;\n                        var clientHeight = 0;\n\n                        // this works in Firefox etc. for jpg AND svg:\n                        var imageWidth = $containerForImage.find(\"img\")[0].width;\n                        var imageHeight = $containerForImage.find(\"img\")[0].height;\n\n                        // this works in Chrome etc. for jpg AND svg:\n                        var imgWidth = img.width;\n                        var imgHeight = img.height;\n\n                        if (imageWidth > 0 && imageHeight > 0) {\n                            clientWidth = imageWidth;\n                            clientHeight = imageHeight;\n                        } else if (imgWidth > 0 && imgHeight > 0) {\n                            clientWidth = imgWidth;\n                            clientHeight = imgHeight;\n                        }\n\n                        _this3._$modalDialog.removeClass(\"imageLoading\");\n                        // remove temporary parent container stretch\n\n                        if (clientWidth > 0 && clientHeight > 0) {\n                            // we found image dimensions...\n                            if (_this3._config.debug > 1) alert(\"imageWidth: \" + imageWidth + \", \\\\n\" + \"imageHeight: \" + imageHeight + \", \\\\n\" + \"imgWidth: \" + imgWidth + \", \\\\n\" + \"imgHeight: \" + imgHeight + \".\");\n                            // ...resize the parent containers accordingly:\n                            _this3._resize(clientWidth, clientHeight);\n                        } else {\n                            // we did not find image dimensions, use stretch method by css:\n                            _this3._$modalDialog.addClass(\"imageStretched\");\n                            if (_this3._config.debug > 1) alert(\"imageStretched\");\n                            if (window.console) console.log(\"ekko lightbox: using 'imageStretched' mode for \" + img.src);\n                        }\n\n                        _this3._$modalDialog.addClass(\"imageLoaded\");\n\n                        _this3._toggleLoading(false);\n                        return _this3._config.onContentLoaded.call(_this3);\n                    }\n                };\n\n                if ($containerForImage) {\n                    img.onerror = function () {\n                        _this3._toggleLoading(false);\n                        return _this3._error(_this3._config.strings.fail + ('  ' + src));\n                    };\n                }\n\n                img.src = src;\n                return img;\n            }\n        }, {\n            key: '_swipeGesure',\n            value: function _swipeGesure() {\n                if (this._touchendX < this._touchstartX) {\n                    return this.navigateRight();\n                }\n                if (this._touchendX > this._touchstartX) {\n                    return this.navigateLeft();\n                }\n            }\n        }, {\n            key: '_resize',\n            value: function _resize(width, height) {\n\n                height = height || width;\n\n                var scalingFactor = this._calculateScaleFactor(width, height);\n                width = width * scalingFactor;\n                height = height * scalingFactor;\n\n                this._wantedWidth = width;\n                this._wantedHeight = height;\n\n                if (this._config.debug > 1) alert(\"wanted width: \" + this._wantedWidth + \", wanted height: \" + this._wantedHeight);\n\n                var imageAspecRatio = width / height;\n\n                this._$modalDialog.addClass(\"imageLoading\");\n                // temporarily stretches img parent containers so element dimensions can be determined.\n\n                var modalDialogOuterWidthExcludingMargins = this._$modalDialog.outerWidth(false);\n                var modalImageContainerInnerWidth = this._$lightboxContainer.innerWidth();\n\n                var modalDialogOuterHeightExcludingMargins = this._$modalDialog.outerHeight(false);\n                var modalDialogOuterHeightIncludingMargins = this._$modalDialog.outerHeight(true);\n                var modalImageContainerInnerHeight = this._$lightboxContainer.innerHeight();\n\n                this._$modalDialog.removeClass(\"imageLoading\");\n\n                // the width difference between image container and .modal-dialog element (excluding its margin), which gets the 'max-width' inline style added\n                var widthInnerSpacing = modalDialogOuterWidthExcludingMargins - modalImageContainerInnerWidth;\n\n                // the height difference between .moda-dialog element (excluding its margins) and the image container element, which gets the 'height' inline style added\n                var heightInnerSpacing = modalDialogOuterHeightExcludingMargins - modalImageContainerInnerHeight;\n                var heightOuterSpacing = modalDialogOuterHeightIncludingMargins - modalImageContainerInnerHeight;\n\n                var maxWidth = Math.min(modalDialogOuterWidthExcludingMargins, this._config.doc.body.clientWidth, this._config.maxWidth);\n\n                // if width > the available space, scale down the expected width and height\n\n                if (width + widthInnerSpacing > maxWidth) {\n                    height = (maxWidth - widthInnerSpacing) / imageAspecRatio;\n                    width = maxWidth;\n                } else width = width + widthInnerSpacing;\n\n                var headerHeight = 0,\n                    footerHeight = 0;\n\n                // as the resize is performed the modal is show, the calculate might fail\n                // if so, default to the default sizes\n                if (this._footerIsShown) footerHeight = this._$modalFooter.outerHeight(true) || 55;\n\n                if (this._titleIsShown) headerHeight = this._$modalHeader.outerHeight(true) || 67;\n\n                var maxHeight = Math.min(height, window.innerHeight - heightOuterSpacing - headerHeight - footerHeight, this._config.maxHeight - heightInnerSpacing - headerHeight - footerHeight);\n\n                if (height > maxHeight) {\n                    // if height > the available height, scale down the width\n                    width = Math.ceil(maxHeight * imageAspecRatio) + widthInnerSpacing;\n                }\n\n                this._$lightboxContainer.css('height', maxHeight);\n                this._$modalDialog.css('flex', '1').css('maxWidth', width);\n\n                if (this._config.debug > 0 && this._$debugInfo) {\n                    var message = \"window width: \" + $(window).width() + \",\\nwindow height: \" + $(window).height() + \",\\nwindow screen width: \" + window.screen.width + \",\\nwindow screen height: \" + window.screen.height + \",\\nwindow inner width: \" + window.innerWidth + \",\\nwindow inner height: \" + window.innerHeight + \",\\n maxheight: \" + maxHeight;\n\n                    this._$debugInfo.text(message);\n                }\n\n                var modal = this._$modal.data('bs.modal');\n                if (modal) {\n                    // v4 method is mistakenly protected\n                    try {\n                        modal._handleUpdate();\n                    } catch (Exception) {\n                        modal.handleUpdate();\n                    }\n                }\n                return this;\n            }\n        }], [{\n            key: '_jQueryInterface',\n            value: function _jQueryInterface(config) {\n                var _this4 = this;\n\n                config = config || {};\n                return this.each(function () {\n                    var $this = $(_this4);\n                    var _config = $.extend({}, Lightbox.Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);\n\n                    new Lightbox(_this4, _config);\n                });\n            }\n        }]);\n\n        return Lightbox;\n    }();\n\n    $.fn[NAME] = Lightbox._jQueryInterface;\n    $.fn[NAME].Constructor = Lightbox;\n    $.fn[NAME].noConflict = function () {\n        $.fn[NAME] = JQUERY_NO_CONFLICT;\n        return Lightbox._jQueryInterface;\n    };\n\n    return Lightbox;\n}(jQuery);\n\nexports.default = Lightbox;"
+        },
+        {
+          "id": 3,
+          "identifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "name": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "index": 0,
+          "index2": 3,
+          "size": 40,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 1,
+            "building": 1
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "multi entry"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 0
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "css C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less 0",
+      "name": "css ./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+      "index": 3,
+      "index2": 1,
+      "size": 5121,
+      "built": false,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+      "issuerId": 1,
+      "issuerName": "./ekko-lightbox.less",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "name": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "profile": {
+            "factory": 1,
+            "building": 1
+          }
+        },
+        {
+          "id": 1,
+          "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+          "name": "./ekko-lightbox.less",
+          "profile": {
+            "factory": 153,
+            "building": 558
+          }
+        }
+      ],
+      "profile": {
+        "factory": 0,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+          "module": "./ekko-lightbox.less",
+          "moduleName": "./ekko-lightbox.less"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 2
+    },
+    {
+      "id": 1,
+      "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\mini-css-extract-plugin\\dist\\loader.js!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+      "name": "./ekko-lightbox.less",
+      "index": 2,
+      "index2": 2,
+      "size": 39,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+      "issuerId": 3,
+      "issuerName": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "name": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "profile": {
+            "factory": 1,
+            "building": 1
+          }
+        }
+      ],
+      "profile": {
+        "factory": 153,
+        "building": 558
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "module": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "moduleName": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "type": "single entry",
+          "userRequest": "./ekko-lightbox.less",
+          "loc": "main:100001"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 1,
+      "source": "// extracted by mini-css-extract-plugin"
+    },
+    {
+      "id": 2,
+      "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\babel-loader\\lib\\index.js??ref--5!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.js",
+      "name": "./ekko-lightbox.js",
+      "index": 1,
+      "index2": 0,
+      "size": 43944,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+      "issuerId": 3,
+      "issuerName": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "name": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "profile": {
+            "factory": 1,
+            "building": 1
+          }
+        }
+      ],
+      "profile": {
+        "factory": 153,
+        "building": 558
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "module": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "moduleName": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+          "type": "single entry",
+          "userRequest": "./ekko-lightbox.js",
+          "loc": "main:100000"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 1,
+      "source": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _typeof = typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; };\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Lightbox = function ($) {\n\n    /* Added in v.5.5.0-dhymik:\r\n     * (search for \"added by DhyMik\")\r\n     * \r\n     * 1. auto max data dimensions to max screen dimensions\r\n     * \r\n     *    This solves issues with svg displayed too small\r\n     *    and images / video frames not filling the screen\r\n     * \r\n     * 2. skip resizing and adding inline size styles when\r\n     *    'lightboxFullSize' css class is added to the lighbox <a> tag\r\n     *    \r\n     *    Use this if\r\n     * \r\n     * Changed in 5.5.1-dhymik (2023-04-02):\r\n     * - Vimeo player url will not break if url contains querystring parameters\r\n     * \r\n     * Changed in 5.5.2-dhymik\r\n     * - added support for webstream.eu videos\r\n     */\n\n    var NAME = 'ekkoLightbox';\n    var JQUERY_NO_CONFLICT = $.fn[NAME];\n\n    var Default = {\n        debug: 0, // 0: no debug, 1: on-screen info, 2: on-screen plus pop-ups\n        title: '',\n        footer: '',\n        maxWidth: 9999,\n        maxHeight: 9999,\n        showArrows: true, //display the left / right arrows or not\n        hideArrowsOnVideo: false, //hide the left / right arrows for videos\n        wrapping: true, //if true, gallery loops infinitely\n        type: null, //force the lightbox into image / youtube mode. if null, or not image|youtube|vimeo; detect it\n        alwaysShowClose: false, //always show the close button, even if there is no title\n        fade: true, // fade in or not\n        verticalAlignCenter: false, // vertically centered modal\n        loadingMessage: '<div class=\"ekko-lightbox-loader\"><div><div></div><div></div></div></div>', // http://tobiasahlin.com/spinkit/\n        leftArrow: '<span>&#10094;</span>',\n        rightArrow: '<span>&#10095;</span>',\n        strings: {\n            close: 'Close',\n            fail: 'Failed to load image:',\n            type: 'Could not detect remote target type. Force the type using data-type'\n        },\n        doc: document, // if in an iframe can specify top.document\n        onShow: function onShow() {},\n        onShown: function onShown() {},\n        onHide: function onHide() {},\n        onHidden: function onHidden() {},\n        onNavigate: function onNavigate() {},\n        onContentLoaded: function onContentLoaded() {}\n    };\n\n    var Lightbox = function () {\n        _createClass(Lightbox, null, [{\n            key: 'Default',\n\n\n            /**\r\n              Class properties:\r\n               _$element: null -> the <a> element currently being displayed\r\n             _$modal: The bootstrap modal generated\r\n                _$modalDialog: The .modal-dialog\r\n                _$modalContent: The .modal-content\r\n                _$modalBody: The .modal-body\r\n                _$modalHeader: The .modal-header\r\n                _$modalFooter: The .modal-footer\r\n             _$lightboxContainerOne: Container of the first lightbox element\r\n             _$lightboxContainerTwo: Container of the second lightbox element\r\n             _$lightboxContainerCurrent: the container in use\r\n             _$lightboxContainerUnUsed: the currently unused container\r\n             _$lightboxBody: First element in the container\r\n             _$modalNavLayer: The navigation container, overlaid for images, underlaid for videos\r\n             _$modalArrows: The overlayed arrows container, always overlaid\r\n               _$galleryItems: Other <a>'s available for this gallery\r\n             _galleryName: Name of the current data('gallery') showing\r\n             _galleryIndex: The current index of the _$galleryItems being shown\r\n               _config: {} the options for the modal\r\n             _modalId: unique id for the current lightbox\r\n               */\n\n            get: function get() {\n                return Default;\n            }\n        }]);\n\n        function Lightbox($element, config) {\n            var _this = this;\n\n            _classCallCheck(this, Lightbox);\n\n            this._config = $.extend({}, Default, config);\n            this._$modalNavLayer = null;\n            this._$modalArrows = null;\n            this._$debugInfo = null;\n            this._galleryIndex = 0;\n            this._galleryName = null;\n            this._titleIsShown = false;\n            this._footerIsShown = false;\n            this._wantedWidth = 0;\n            this._wantedHeight = 0;\n            this._touchstartX = 0;\n            this._touchendX = 0;\n\n            this._modalId = 'ekkoLightbox-' + Math.floor(Math.random() * 1000 + 1);\n            this._$element = $element instanceof jQuery ? $element : $($element);\n\n            this._isBootstrap3 = $.fn.modal.Constructor.VERSION[0] == 3;\n\n            var h4 = '<h4 class=\"modal-title\">' + (this._config.title || \"&nbsp;\") + '</h4>';\n            var btn = '<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"' + this._config.strings.close + '\"><span aria-hidden=\"true\">&times;</span></button>';\n\n            var fade = this._config.fade ? 'fade in' : '';\n            var vertical = this._config.verticalAlignCenter ? 'modal-dialog-centered' : '';\n\n            var header = '<div class=\"modal-header' + (this._config.title || this._config.alwaysShowClose ? '' : ' hide') + '\">' + (this._isBootstrap3 ? btn + h4 : h4 + btn) + '</div>';\n            var footer = '<div class=\"modal-footer' + (this._config.footer ? '' : ' hide') + '\">' + (this._config.footer || \"&nbsp;\") + '</div>';\n            var body = '<div class=\"modal-body\"><div class=\"ekko-lightbox-container\"><div class=\"ekko-lightbox-item ' + fade + ' show\"></div><div class=\"ekko-lightbox-item fade\"></div></div></div>';\n            var dialog = '<div class=\"modal-dialog ' + vertical + '\" role=\"document\"><div class=\"modal-content\">' + header + body + footer + '</div></div>';\n            $(this._config.doc.body).append('<div id=\"' + this._modalId + '\" class=\"ekko-lightbox modal fade\" tabindex=\"-1\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">' + dialog + '</div>');\n\n            this._$modal = $('#' + this._modalId, this._config.doc);\n\n            if (this._config.debug > 0) this._$modal.append('<div class=\"modal-debug-info\"></div>');\n            this._$debugInfo = this._$modal.find('.modal-debug-info').first();\n\n            this._$modalDialog = this._$modal.find('.modal-dialog').first();\n            this._$modalContent = this._$modal.find('.modal-content').first();\n            this._$modalBody = this._$modal.find('.modal-body').first();\n            this._$modalHeader = this._$modal.find('.modal-header').first();\n            this._$modalFooter = this._$modal.find('.modal-footer').first();\n\n            this._$lightboxContainer = this._$modalBody.find('.ekko-lightbox-container').first();\n            this._$lightboxBodyOne = this._$lightboxContainer.find('> div:first-child').first();\n            this._$lightboxBodyTwo = this._$lightboxContainer.find('> div:last-child').first();\n            this._$lightboxContainerCurrent = this._$lightboxBodyOne;\n            this._$lightboxContainerUnUsed = this._$lightboxBodyTwo;\n\n            this._galleryName = this._$element.data('gallery');\n            if (this._galleryName) {\n                this._$galleryItems = $(document.body).find('*[data-gallery=\"' + this._galleryName + '\"]');\n                this._galleryIndex = this._$galleryItems.index(this._$element);\n                $(document).on('keydown.ekkoLightbox', this._navigationalBinder.bind(this));\n\n                // add the directional arrows to the modal\n                if (this._config.showArrows && this._$galleryItems.length > 1) {\n\n                    // add the navigation layer with full surface links\n                    this._$lightboxContainer.prepend('<div class=\"ekko-lightbox-nav-overlay\"><a href=\"#\"></a><a href=\"#\"></a></div>');\n                    this._$modalNavLayer = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay').first();\n\n                    // add the link arrows suitable also for video overlay\n                    this._$lightboxContainer.append('<div class=\"ekko-lightbox-nav-arrows\"><a href=\"#\">' + this._config.leftArrow + '</a><a href=\"#\">' + this._config.rightArrow + '</a></div>');\n                    this._$modalArrows = this._$lightboxContainer.find('div.ekko-lightbox-nav-arrows').first();\n\n                    // add the click event handlers to all links\n                    this._$lightboxContainer.on('click', 'a:first-child', function (event) {\n                        event.preventDefault();\n                        return _this.navigateLeft();\n                    });\n                    this._$lightboxContainer.on('click', 'a:last-child', function (event) {\n                        event.preventDefault();\n                        return _this.navigateRight();\n                    });\n\n                    // add the hover event handlers to nav surface links, adding hover class to arrow links\n                    this._$modalNavLayer.find('a:first-child').hover(function () {\n                        _this._$modalArrows.find('a:first-child').addClass('hover');\n                    }, function () {\n                        _this._$modalArrows.find('a:first-child').removeClass('hover').filter('[class=\"\"]').removeAttr('class');\n                    });\n                    this._$modalNavLayer.find('a:last-child').hover(function () {\n                        _this._$modalArrows.find('a:last-child').addClass('hover');\n                    }, function () {\n                        _this._$modalArrows.find('a:last-child').removeClass('hover').filter('[class=\"\"]').removeAttr('class');\n                    });\n\n                    this.updateNavigation();\n                }\n            }\n\n            this._$modal.on('show.bs.modal', this._config.onShow.bind(this)).on('shown.bs.modal', function () {\n                _this._toggleLoading(true);\n                _this._handle();\n                return _this._config.onShown.call(_this);\n            }).on('hide.bs.modal', this._config.onHide.bind(this)).on('hidden.bs.modal', function () {\n                if (_this._galleryName) {\n                    $(document).off('keydown.ekkoLightbox');\n                    $(window).off('resize.ekkoLightbox');\n                }\n                _this._$modal.remove();\n                return _this._config.onHidden.call(_this);\n            }).modal(this._config);\n\n            $(window).on('resize.ekkoLightbox', function () {\n                _this._resize(_this._wantedWidth, _this._wantedHeight);\n            });\n\n            this._$lightboxContainer.on('touchstart', function () {\n                _this._touchstartX = event.changedTouches[0].screenX;\n            }).on('touchend', function () {\n                _this._touchendX = event.changedTouches[0].screenX;\n                _this._swipeGesure();\n            });\n        }\n\n        _createClass(Lightbox, [{\n            key: 'element',\n            value: function element() {\n                return this._$element;\n            }\n        }, {\n            key: 'modal',\n            value: function modal() {\n                return this._$modal;\n            }\n        }, {\n            key: 'navigateTo',\n            value: function navigateTo(index) {\n\n                if (index < 0 || index > this._$galleryItems.length - 1) return this;\n\n                this._galleryIndex = index;\n\n                this.updateNavigation();\n\n                this._$element = $(this._$galleryItems.get(this._galleryIndex));\n                this._handle();\n            }\n        }, {\n            key: 'navigateLeft',\n            value: function navigateLeft() {\n\n                if (!this._$galleryItems) return;\n\n                if (this._$galleryItems.length === 1) return;\n\n                if (this._galleryIndex === 0) {\n                    if (this._config.wrapping) this._galleryIndex = this._$galleryItems.length - 1;else return;\n                } else //circular\n                    this._galleryIndex--;\n\n                this._config.onNavigate.call(this, 'left', this._galleryIndex);\n                return this.navigateTo(this._galleryIndex);\n            }\n        }, {\n            key: 'navigateRight',\n            value: function navigateRight() {\n\n                if (!this._$galleryItems) return;\n\n                if (this._$galleryItems.length === 1) return;\n\n                if (this._galleryIndex === this._$galleryItems.length - 1) {\n                    if (this._config.wrapping) this._galleryIndex = 0;else return;\n                } else //circular\n                    this._galleryIndex++;\n\n                this._config.onNavigate.call(this, 'right', this._galleryIndex);\n                return this.navigateTo(this._galleryIndex);\n            }\n        }, {\n            key: 'updateNavigation',\n            value: function updateNavigation() {\n                if (!this._config.wrapping) {\n                    var $nav = this._$lightboxContainer.find('div.ekko-lightbox-nav-overlay');\n                    if (this._galleryIndex === 0) $nav.find('a:first-child').addClass('disabled');else $nav.find('a:first-child').removeClass('disabled');\n\n                    if (this._galleryIndex === this._$galleryItems.length - 1) $nav.find('a:last-child').addClass('disabled');else $nav.find('a:last-child').removeClass('disabled');\n                }\n            }\n        }, {\n            key: 'close',\n            value: function close() {\n                return this._$modal.modal('hide');\n            }\n\n            // helper private methods\n\n        }, {\n            key: '_navigationalBinder',\n            value: function _navigationalBinder(event) {\n                event = event || window.event;\n                if (event.keyCode === 39) return this.navigateRight();\n                if (event.keyCode === 37) return this.navigateLeft();\n            }\n\n            // type detection private methods\n\n        }, {\n            key: '_detectRemoteType',\n            value: function _detectRemoteType(src, type) {\n\n                type = type || false;\n\n                if (!type && this._isImage(src)) type = 'image';\n                if (!type && this._getWebstreamId(src)) type = 'webstream';\n                if (!type && this._getYoutubeId(src)) type = 'youtube';\n                if (!type && this._getVimeoId(src)) type = 'vimeo';\n                if (!type && this._getInstagramId(src)) type = 'instagram';\n                if (type == 'audio' || type == 'video' || !type && this._isMedia(src)) type = 'media';\n                if (!type || ['image', 'webstream', 'youtube', 'vimeo', 'instagram', 'media', 'url'].indexOf(type) < 0) type = 'url';\n\n                return type;\n            }\n        }, {\n            key: '_getRemoteContentType',\n            value: function _getRemoteContentType(src) {\n                var response = $.ajax({\n                    type: 'HEAD',\n                    url: src,\n                    async: false\n                });\n                var contentType = response.getResponseHeader('Content-Type');\n                return contentType;\n            }\n        }, {\n            key: '_isImage',\n            value: function _isImage(string) {\n                return string && string.match(/(^data:image\\/.*,)|(\\.(jp(e|g|eg)|gif|png|bmp|webp|svg)((\\?|#).*)?$)/i);\n            }\n        }, {\n            key: '_isMedia',\n            value: function _isMedia(string) {\n                return string && string.match(/(\\.(mp3|mp4|ogg|webm|wav)((\\?|#).*)?$)/i);\n            }\n        }, {\n            key: '_switchContainers',\n            value: function _switchContainers() {\n\n                var $newCurrent = this._$lightboxContainerUnUsed;\n                this._$lightboxContainerUnUsed = this._$lightboxContainerCurrent;\n                this._$lightboxContainerCurrent = $newCurrent;\n\n                // switch z-index\n                this._$lightboxContainerCurrent.css(\"z-index\", this._$lightboxContainerUnUsed.css(\"z-index\") + 1);\n                this._$lightboxContainerUnUsed.css(\"z-index\", \"auto\");\n                this._$lightboxContainerCurrent.css(\"z-index\", 1);\n\n                this._$lightboxContainerUnUsed.removeClass('in show');\n                this._$lightboxContainerCurrent.addClass('in show');\n\n                return;\n            }\n        }, {\n            key: '_handle',\n            value: function _handle() {\n\n                // ### Added by DhyMik in v.5.5.0-dhymik:\n\n                // remove css added in '_preloadImage'\n                this._$modalDialog.removeClass(\"imageLoading\");\n                this._$modalDialog.removeClass(\"imageLoaded\");\n                this._$modalDialog.removeClass(\"imageStretched\");\n                this._$modalDialog.removeClass(\"isVideo\");\n\n                // ### End added by DhyMik in v.5.5.0-dhymik:\n\n                var $toUse = this._$lightboxContainerUnUsed;\n\n                // fade out header and footer\n                this._$modalHeader.css(\"opacity\", 0);\n                this._$modalFooter.css(\"opacity\", 0);\n\n                this._updateTitleAndFooter();\n                this._switchContainers();\n\n                var currentRemote = this._$element.attr('data-remote') || this._$element.attr('href');\n                var currentType = this._detectRemoteType(currentRemote, this._$element.attr('data-type') || false);\n\n                if (['image', 'webstream', 'youtube', 'vimeo', 'instagram', 'media', 'url'].indexOf(currentType) < 0) return this._error(this._config.strings.type);\n\n                switch (currentType) {\n                    case 'image':\n                        var altTag = this._$element.attr('data-alt') || '';\n                        this._preloadImage(currentRemote, altTag, $toUse);\n                        this._preloadImageByIndex(this._galleryIndex, 3);\n                        break;\n                    case 'webstream':\n                        this._showWebstreamVideo(this._getWebstreamId(currentRemote), $toUse);\n                        break;\n                    case 'youtube':\n                        this._showYoutubeVideo(currentRemote, $toUse);\n                        break;\n                    case 'vimeo':\n                        this._showVimeoVideo(this._getVimeoId(currentRemote), $toUse);\n                        break;\n                    case 'instagram':\n                        this._showInstagramVideo(this._getInstagramId(currentRemote), $toUse);\n                        break;\n                    case 'media':\n                        this._showHtml5Media(currentRemote, $toUse);\n                        break;\n                    default:\n                        // url\n                        this._loadRemoteContent(currentRemote, $toUse);\n                        break;\n                }\n\n                var thisLightbox = this;\n\n                // fade in header and footer after a delay and delete old content\n                setTimeout(function () {\n                    thisLightbox._$modalHeader.css(\"opacity\", 1);\n                    thisLightbox._$modalFooter.css(\"opacity\", 1);\n                    thisLightbox._$lightboxContainerUnUsed.empty();\n                }, 250);\n\n                return this;\n            }\n        }, {\n            key: '_getWebstreamId',\n            value: function _getWebstreamId(string) {\n                /* id is the entire url fetched from data-remote or href attribute */\n                return string && string.indexOf('webstream.eu') > 0 ? string : false;\n            }\n        }, {\n            key: '_getYoutubeId',\n            value: function _getYoutubeId(string) {\n                /* Youtube id here is just the 11 character video id of the url */\n                if (!string) return false;\n                var matches = string.match(/^.*(youtu.be\\/|v\\/|u\\/\\w\\/|embed\\/|watch\\?v=|\\&v=)([^#\\&\\?]*).*/);\n                return matches && matches[2].length === 11 ? matches[2] : false;\n            }\n        }, {\n            key: '_getVimeoId',\n            value: function _getVimeoId(string) {\n                /* id is the entire url fetched from data-remote or href attribute */\n                return string && string.indexOf('vimeo') > 0 ? string : false;\n            }\n        }, {\n            key: '_getInstagramId',\n            value: function _getInstagramId(string) {\n                /* id is the entire url fetched from data-remote or href attribute */\n                return string && string.indexOf('instagram') > 0 ? string : false;\n            }\n\n            // layout private methods\n\n        }, {\n            key: '_toggleLoading',\n            value: function _toggleLoading(show) {\n                show = show || false;\n                if (show) {\n                    this._$modalDialog.css('display', 'none');\n                    this._$modal.removeClass('in show');\n                    $('.modal-backdrop').append(this._config.loadingMessage);\n                } else {\n                    this._$modalDialog.css('display', this._config.verticalAlignCenter ? 'flex' : 'block');\n                    this._$modal.addClass('in show');\n                    $('.modal-backdrop').find('.ekko-lightbox-loader').remove();\n                }\n                return this;\n            }\n        }, {\n            key: '_calculateScaleFactor',\n            value: function _calculateScaleFactor(width, height) {\n                /* 'calculateScaleFactor' is the size factor to be applied to an image's or video#s dimensions\r\n                 * so it will fill the entire screen if browser window is maximized or full-screened.\r\n                 * \r\n                 * Added in v.5.5.0-dhymik\r\n                 * */\n                var screenWidth = window.screen.width; // these are the hardware screen dimensions,\n                var screenHeight = window.screen.height; // not the browser window\n\n                var videoMaxDimension = Math.max(width, height);\n                var screenMaxDimension = Math.max(screenWidth, screenHeight);\n\n                return screenMaxDimension / videoMaxDimension;\n            }\n        }, {\n            key: '_updateTitleAndFooter',\n            value: function _updateTitleAndFooter() {\n                var title = this._$element.data('title') || \"\";\n                var caption = this._$element.data('footer') || \"\";\n\n                this._titleIsShown = false;\n                if (title || this._config.alwaysShowClose) {\n                    this._titleIsShown = true;\n                    this._$modalHeader.css('display', '').find('.modal-title').html(title || \"&nbsp;\");\n                    this._$modalDialog.addClass(\"headerIsShown\");\n                } else {\n                    this._$modalHeader.css('display', 'none');\n                    this._$modalDialog.removeClass(\"headerIsShown\");\n                }\n\n                this._footerIsShown = false;\n                if (caption) {\n                    this._footerIsShown = true;\n                    this._$modalFooter.css('display', '').html(caption);\n                    this._$modalDialog.addClass(\"footerIsShown\");\n                } else {\n                    this._$modalFooter.css('display', 'none');\n                    this._$modalDialog.removeClass(\"footerIsShown\");\n                }\n\n                return this;\n            }\n        }, {\n            key: '_showWebstreamVideo',\n            value: function _showWebstreamVideo(id, $containerForElement) {\n                var width = this._$element.data('width') || 500;\n                var height = this._$element.data('height') || width / (560 / 315);\n                return this._showVideoIframe(id + \"/embed\" + (id.includes(\"?\") ? '&' : '?') + 'autoplay=1', width, height, $containerForElement);\n            }\n        }, {\n            key: '_showYoutubeVideo',\n            value: function _showYoutubeVideo(remote, $containerForElement) {\n                var id = this._getYoutubeId(remote);\n                var query = remote.indexOf('&') > 0 ? remote.substr(remote.indexOf('&')) : '';\n                var width = this._$element.data('width') || 560;\n                var height = this._$element.data('height') || width / (560 / 315);\n                return this._showVideoIframe('//www.youtube.com/embed/' + id + '?badge=0&autoplay=1&html5=1' + query, width, height, $containerForElement);\n            }\n        }, {\n            key: '_showVimeoVideo',\n            value: function _showVimeoVideo(id, $containerForElement) {\n                var width = this._$element.data('width') || 500;\n                var height = this._$element.data('height') || width / (560 / 315);\n                return this._showVideoIframe(id + (id.includes(\"?\") ? '&' : '?') + 'autoplay=1', width, height, $containerForElement);\n            }\n        }, {\n            key: '_showInstagramVideo',\n            value: function _showInstagramVideo(id, $containerForElement) {\n                // instagram load their content into iframes so this can be put straight into the element\n                var width = this._$element.data('width') || 612;\n                var height = width + 80;\n                id = id.substr(-1) !== '/' ? id + '/' : id; // ensure id has trailing slash\n                $containerForElement.html('<iframe width=\"' + width + '\" height=\"' + height + '\" src=\"' + id + 'embed/\" frameborder=\"0\" allowfullscreen></iframe>');\n                this._resize(width, height);\n                this._config.onContentLoaded.call(this);\n                if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');\n                this._$modalDialog.addClass(\"isVideo\");\n                this._toggleLoading(false);\n                return this;\n            }\n        }, {\n            key: '_showVideoIframe',\n            value: function _showVideoIframe(url, width, height, $containerForElement) {\n                // should be used for videos only. for remote content use loadRemoteContent (data-type=url)\n                height = height || width; // default to square\n\n                // Added in v.5.5.0-dhymik:\n                var scalingFactor = this._calculateScaleFactor(width, height);\n                width = width * scalingFactor;\n                height = height * scalingFactor;\n                // added end.\n\n                $containerForElement.html('<div class=\"embed-responsive embed-responsive-16by9\"><iframe width=\"' + width + '\" height=\"' + height + '\" src=\"' + url + '\" frameborder=\"0\" allow=\"autoplay; picture-in-picture\" allowfullscreen class=\"embed-responsive-item\"></iframe></div>');\n                this._resize(width, height);\n                this._config.onContentLoaded.call(this);\n                if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');\n                this._$modalDialog.addClass(\"isVideo\");\n                this._toggleLoading(false);\n                return this;\n            }\n        }, {\n            key: '_showHtml5Media',\n            value: function _showHtml5Media(url, $containerForElement) {\n                // should be used for videos only. for remote content use loadRemoteContent (data-type=url)\n                var contentType = this._getRemoteContentType(url);\n                if (!contentType) {\n                    return this._error(this._config.strings.type);\n                }\n                var mediaType = '';\n                if (contentType.indexOf('audio') > 0) {\n                    mediaType = 'audio';\n                } else {\n                    mediaType = 'video';\n                }\n                var width = this._$element.data('width') || 560;\n                var height = this._$element.data('height') || width / (560 / 315);\n\n                // ### Added by DhyMik in v.5.5.0-dhymik:\n                var scalingFactor = this._calculateScaleFactor(width, height);\n                width = width * scalingFactor;\n                height = height * scalingFactor;\n                // ### added end.\n\n                $containerForElement.html('<div class=\"embed-responsive embed-responsive-16by9\"><' + mediaType + ' width=\"' + width + '\" height=\"' + height + '\" preload=\"auto\" autoplay controls class=\"embed-responsive-item\"><source src=\"' + url + '\" type=\"' + contentType + '\">' + this._config.strings.type + '</' + mediaType + '></div>');\n                this._resize(width, height);\n                this._config.onContentLoaded.call(this);\n                if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');\n                this._$modalDialog.addClass(\"isVideo\");\n                this._toggleLoading(false);\n                return this;\n            }\n        }, {\n            key: '_loadRemoteContent',\n            value: function _loadRemoteContent(url, $containerForElement) {\n                var _this2 = this;\n\n                var width = this._$element.data('width') || 560;\n                var height = this._$element.data('height') || 560;\n\n                var disableExternalCheck = this._$element.data('disableExternalCheck') || false;\n                this._toggleLoading(false);\n\n                // ### Added by DhyMik in v.5.5.0-dhymik:\n                var scalingFactor = this._calculateScaleFactor(width, height);\n                width = width * scalingFactor;\n                height = height * scalingFactor;\n                // ### added end.\n\n                // external urls are loading into an iframe\n                // local ajax can be loaded into the container itself\n                if (!disableExternalCheck && !this._isExternal(url)) {\n                    $containerForElement.load(url, $.proxy(function () {\n                        return _this2._$element.trigger('loaded.bs.modal');\n                    }));\n                } else {\n                    $containerForElement.html('<iframe src=\"' + url + '\" frameborder=\"0\" allowfullscreen></iframe>');\n                    this._config.onContentLoaded.call(this);\n                }\n\n                if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');\n                this._$modalDialog.addClass(\"isVideo\");\n\n                this._resize(width, height);\n                return this;\n            }\n        }, {\n            key: '_isExternal',\n            value: function _isExternal(url) {\n                var match = url.match(/^([^:\\/?#]+:)?(?:\\/\\/([^\\/?#]*))?([^?#]+)?(\\?[^#]*)?(#.*)?/);\n                if (typeof match[1] === \"string\" && match[1].length > 0 && match[1].toLowerCase() !== location.protocol) return true;\n\n                if (typeof match[2] === \"string\" && match[2].length > 0 && match[2].replace(new RegExp(':(' + {\n                    \"http:\": 80,\n                    \"https:\": 443\n                }[location.protocol] + ')?$'), \"\") !== location.host) return true;\n\n                return false;\n            }\n        }, {\n            key: '_error',\n            value: function _error(message) {\n                console.error(message);\n                this._$lightboxContainerCurrent.html(message);\n                this._resize(300, 300);\n                return this;\n            }\n        }, {\n            key: '_preloadImageByIndex',\n            value: function _preloadImageByIndex(startIndex, numberOfTimes) {\n\n                if (!this._$galleryItems) return;\n\n                var next = $(this._$galleryItems.get(startIndex), false);\n                if (typeof next == 'undefined') return;\n\n                var src = next.attr('data-remote') || next.attr('href');\n                if (next.attr('data-type') === 'image' || this._isImage(src)) this._preloadImage(src, '', false);\n\n                if (numberOfTimes > 0) return this._preloadImageByIndex(startIndex + 1, numberOfTimes - 1);\n            }\n        }, {\n            key: '_preloadImage',\n            value: function _preloadImage(src, altTag, $containerForImage) {\n                var _this3 = this;\n\n                $containerForImage = $containerForImage || false;\n\n                var img = new Image();\n                var loadingTimeout = null;\n                if ($containerForImage) {\n                    // if loading takes > 200ms show a loader\n                    loadingTimeout = setTimeout(function () {\n                        $containerForImage.append(_this3._config.loadingMessage);\n                    }, 200);\n                }\n\n                img.onload = function () {\n                    if ($containerForImage) {\n\n                        if (loadingTimeout) clearTimeout(loadingTimeout);\n                        loadingTimeout = null;\n\n                        var image = $('<img />');\n                        image.attr('src', img.src);\n                        image.attr('alt', altTag);\n                        image.addClass('img-fluid');\n\n                        // backward compatibility for bootstrap v3\n                        image.css('width', '100% !important');\n\n                        // if the \"data-markup\" attribute is set on the <a> tag...\n                        if (_this3._$element[0].hasAttribute(\"data-markup\")) {\n\n                            // ...then the \"data-markup\" attribute value provides the repalcement markup\n                            var markup = _this3._$element.attr(\"data-markup\");\n                            $containerForImage.html(markup);\n                        } else {\n                            $containerForImage.html(image);\n                        }\n\n                        if (_this3._$modalNavLayer) _this3._$modalNavLayer.css('display', '');\n\n                        /* ***** determine image dimensions ****\r\n                         * \r\n                         * If image dimensions can be determined \r\n                         * - a max-width inline style is added to .modal-dialog element\r\n                         * - a height inline style is added to .ekko-lightbox-container element\r\n                         * inside of _resize() function.\r\n                         * \r\n                         * In this case, a black backddrop is used behind images to prevent\r\n                         * background bleed during image transitions\r\n                         * \r\n                         * If image dimensions cannot be determined, images are stretched\r\n                         * to maximum dimensions by maximizing all parent containers.\r\n                         * In this case\r\n                         * - 'imageStretched' css class is added to .modal-dialog element\r\n                         * - black backdrop is not being used, to prevent backdrop from\r\n                         *   extending over entire screen regardless of image size.\r\n                         * */\n\n                        _this3._$modalDialog.css('display', _this3._config.verticalAlignCenter ? 'flex' : 'block');\n\n                        _this3._$modalDialog.addClass(\"imageLoading\");\n                        // temporarily stretches img parent containers so image dimensions can be determined.\n\n                        var clientWidth = 0;\n                        var clientHeight = 0;\n\n                        // this works in Firefox etc. for jpg AND svg:\n                        var imageWidth = $containerForImage.find(\"img\")[0].width;\n                        var imageHeight = $containerForImage.find(\"img\")[0].height;\n\n                        // this works in Chrome etc. for jpg AND svg:\n                        var imgWidth = img.width;\n                        var imgHeight = img.height;\n\n                        if (imageWidth > 0 && imageHeight > 0) {\n                            clientWidth = imageWidth;\n                            clientHeight = imageHeight;\n                        } else if (imgWidth > 0 && imgHeight > 0) {\n                            clientWidth = imgWidth;\n                            clientHeight = imgHeight;\n                        }\n\n                        _this3._$modalDialog.removeClass(\"imageLoading\");\n                        // remove temporary parent container stretch\n\n                        if (clientWidth > 0 && clientHeight > 0) {\n                            // we found image dimensions...\n                            if (_this3._config.debug > 1) alert(\"imageWidth: \" + imageWidth + \", \\\\n\" + \"imageHeight: \" + imageHeight + \", \\\\n\" + \"imgWidth: \" + imgWidth + \", \\\\n\" + \"imgHeight: \" + imgHeight + \".\");\n                            // ...resize the parent containers accordingly:\n                            _this3._resize(clientWidth, clientHeight);\n                        } else {\n                            // we did not find image dimensions, use stretch method by css:\n                            _this3._$modalDialog.addClass(\"imageStretched\");\n                            if (_this3._config.debug > 1) alert(\"imageStretched\");\n                            if (window.console) console.log(\"ekko lightbox: using 'imageStretched' mode for \" + img.src);\n                        }\n\n                        _this3._$modalDialog.addClass(\"imageLoaded\");\n\n                        _this3._toggleLoading(false);\n                        return _this3._config.onContentLoaded.call(_this3);\n                    }\n                };\n\n                if ($containerForImage) {\n                    img.onerror = function () {\n                        _this3._toggleLoading(false);\n                        return _this3._error(_this3._config.strings.fail + ('  ' + src));\n                    };\n                }\n\n                img.src = src;\n                return img;\n            }\n        }, {\n            key: '_swipeGesure',\n            value: function _swipeGesure() {\n                if (this._touchendX < this._touchstartX) {\n                    return this.navigateRight();\n                }\n                if (this._touchendX > this._touchstartX) {\n                    return this.navigateLeft();\n                }\n            }\n        }, {\n            key: '_resize',\n            value: function _resize(width, height) {\n\n                height = height || width;\n\n                var scalingFactor = this._calculateScaleFactor(width, height);\n                width = width * scalingFactor;\n                height = height * scalingFactor;\n\n                this._wantedWidth = width;\n                this._wantedHeight = height;\n\n                if (this._config.debug > 1) alert(\"wanted width: \" + this._wantedWidth + \", wanted height: \" + this._wantedHeight);\n\n                var imageAspecRatio = width / height;\n\n                this._$modalDialog.addClass(\"imageLoading\");\n                // temporarily stretches img parent containers so element dimensions can be determined.\n\n                var modalDialogOuterWidthExcludingMargins = this._$modalDialog.outerWidth(false);\n                var modalImageContainerInnerWidth = this._$lightboxContainer.innerWidth();\n\n                var modalDialogOuterHeightExcludingMargins = this._$modalDialog.outerHeight(false);\n                var modalDialogOuterHeightIncludingMargins = this._$modalDialog.outerHeight(true);\n                var modalImageContainerInnerHeight = this._$lightboxContainer.innerHeight();\n\n                this._$modalDialog.removeClass(\"imageLoading\");\n\n                // the width difference between image container and .modal-dialog element (excluding its margin), which gets the 'max-width' inline style added\n                var widthInnerSpacing = modalDialogOuterWidthExcludingMargins - modalImageContainerInnerWidth;\n\n                // the height difference between .moda-dialog element (excluding its margins) and the image container element, which gets the 'height' inline style added\n                var heightInnerSpacing = modalDialogOuterHeightExcludingMargins - modalImageContainerInnerHeight;\n                var heightOuterSpacing = modalDialogOuterHeightIncludingMargins - modalImageContainerInnerHeight;\n\n                var maxWidth = Math.min(modalDialogOuterWidthExcludingMargins, this._config.doc.body.clientWidth, this._config.maxWidth);\n\n                // if width > the available space, scale down the expected width and height\n\n                if (width + widthInnerSpacing > maxWidth) {\n                    height = (maxWidth - widthInnerSpacing) / imageAspecRatio;\n                    width = maxWidth;\n                } else width = width + widthInnerSpacing;\n\n                var headerHeight = 0,\n                    footerHeight = 0;\n\n                // as the resize is performed the modal is show, the calculate might fail\n                // if so, default to the default sizes\n                if (this._footerIsShown) footerHeight = this._$modalFooter.outerHeight(true) || 55;\n\n                if (this._titleIsShown) headerHeight = this._$modalHeader.outerHeight(true) || 67;\n\n                var maxHeight = Math.min(height, window.innerHeight - heightOuterSpacing - headerHeight - footerHeight, this._config.maxHeight - heightInnerSpacing - headerHeight - footerHeight);\n\n                if (height > maxHeight) {\n                    // if height > the available height, scale down the width\n                    width = Math.ceil(maxHeight * imageAspecRatio) + widthInnerSpacing;\n                }\n\n                this._$lightboxContainer.css('height', maxHeight);\n                this._$modalDialog.css('flex', '1').css('maxWidth', width);\n\n                if (this._config.debug > 0 && this._$debugInfo) {\n                    var message = \"window width: \" + $(window).width() + \",\\nwindow height: \" + $(window).height() + \",\\nwindow screen width: \" + window.screen.width + \",\\nwindow screen height: \" + window.screen.height + \",\\nwindow inner width: \" + window.innerWidth + \",\\nwindow inner height: \" + window.innerHeight + \",\\n maxheight: \" + maxHeight;\n\n                    this._$debugInfo.text(message);\n                }\n\n                var modal = this._$modal.data('bs.modal');\n                if (modal) {\n                    // v4 method is mistakenly protected\n                    try {\n                        modal._handleUpdate();\n                    } catch (Exception) {\n                        modal.handleUpdate();\n                    }\n                }\n                return this;\n            }\n        }], [{\n            key: '_jQueryInterface',\n            value: function _jQueryInterface(config) {\n                var _this4 = this;\n\n                config = config || {};\n                return this.each(function () {\n                    var $this = $(_this4);\n                    var _config = $.extend({}, Lightbox.Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);\n\n                    new Lightbox(_this4, _config);\n                });\n            }\n        }]);\n\n        return Lightbox;\n    }();\n\n    $.fn[NAME] = Lightbox._jQueryInterface;\n    $.fn[NAME].Constructor = Lightbox;\n    $.fn[NAME].noConflict = function () {\n        $.fn[NAME] = JQUERY_NO_CONFLICT;\n        return Lightbox._jQueryInterface;\n    };\n\n    return Lightbox;\n}(jQuery);\n\nexports.default = Lightbox;"
+    },
+    {
+      "id": 3,
+      "identifier": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+      "name": "multi ./ekko-lightbox.js ./ekko-lightbox.less",
+      "index": 0,
+      "index2": 3,
+      "size": 40,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "profile": {
+        "factory": 1,
+        "building": 1
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "multi entry"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 0
+    }
+  ],
+  "filteredModules": 0,
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\dist",
+      "assetsByChunkName": {},
+      "assets": [],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "mini-css-extract-plugin": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "*"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 15979,
+          "names": [
+            "mini-css-extract-plugin"
+          ],
+          "files": [
+            "*"
+          ],
+          "hash": "7837628231eba65cc107",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "modules": [
+            {
+              "id": 0,
+              "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\lib\\css-base.js",
+              "name": "./node_modules/css-loader/lib/css-base.js",
+              "index": 1,
+              "index2": 0,
+              "size": 2260,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+              "issuerId": 1,
+              "issuerName": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+              "issuerPath": [
+                {
+                  "id": 1,
+                  "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+                  "name": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+                  "profile": {
+                    "factory": 1,
+                    "building": 536
+                  }
+                }
+              ],
+              "profile": {
+                "factory": 2,
+                "building": 2
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": 1,
+                  "moduleIdentifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+                  "module": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+                  "moduleName": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+                  "type": "cjs require",
+                  "userRequest": "./node_modules/css-loader/lib/css-base.js",
+                  "loc": "1:27-79"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Module is not an ECMAScript module"
+              ],
+              "depth": 1,
+              "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function(useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif(item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function(modules, mediaQuery) {\n\t\tif(typeof modules === \"string\")\n\t\t\tmodules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor(var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif(typeof id === \"number\")\n\t\t\t\talreadyImportedModules[id] = true;\n\t\t}\n\t\tfor(i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif(mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if(mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}\n"
+            },
+            {
+              "id": 1,
+              "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+              "name": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+              "index": 0,
+              "index2": 1,
+              "size": 13719,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "profile": {
+                "factory": 1,
+                "building": 536
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "!!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+                  "loc": "mini-css-extract-plugin"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Module is not an ECMAScript module"
+              ],
+              "depth": 0,
+              "source": "exports = module.exports = require(\"./node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".ekko-lightbox {\\n  display: -ms-flexbox !important;\\n  display: flex !important;\\n  padding-right: 0px !important;\\n  /* end added for v.5.5.0-dhymik*/\\n}\\n.ekko-lightbox-container {\\n  position: relative;\\n}\\n.ekko-lightbox-container > div.ekko-lightbox-item {\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  bottom: 0;\\n  right: 0;\\n  width: 100%;\\n  opacity: 0;\\n}\\n.ekko-lightbox-container > div.ekko-lightbox-item.show {\\n  opacity: 1;\\n}\\n.ekko-lightbox iframe {\\n  width: 100%;\\n  height: 100%;\\n}\\n.ekko-lightbox .modal-dialog:not(.isVideo) .ekko-lightbox-nav-overlay {\\n  z-index: 100;\\n}\\n.ekko-lightbox-nav-arrows {\\n  position: fixed;\\n  height: 0;\\n  width: 100%;\\n  top: 50%;\\n  left: 0;\\n  z-index: 101;\\n}\\n.ekko-lightbox-nav-arrows a {\\n  -ms-flex-align: center;\\n      align-items: center;\\n  opacity: 0;\\n  transition: opacity 0.5s;\\n  color: #fff;\\n  font-size: 30px;\\n}\\n.ekko-lightbox-nav-arrows a > * {\\n  -ms-flex-positive: 1;\\n      flex-grow: 1;\\n}\\n.ekko-lightbox-nav-arrows a > *:focus {\\n  outline: none;\\n}\\n.ekko-lightbox-nav-arrows a span {\\n  padding: 0 30px;\\n}\\n.ekko-lightbox-nav-arrows a:last-child span {\\n  text-align: right;\\n}\\n.ekko-lightbox-nav-arrows a:hover {\\n  text-decoration: none;\\n}\\n.ekko-lightbox-nav-arrows a:focus {\\n  outline: none;\\n}\\n.ekko-lightbox-nav-arrows a.disabled {\\n  cursor: default;\\n  visibility: hidden;\\n}\\n.ekko-lightbox-nav-overlay {\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  width: 100%;\\n  height: 100%;\\n  display: -ms-flexbox;\\n  display: flex;\\n}\\n.ekko-lightbox-nav-overlay a {\\n  -ms-flex: 1;\\n      flex: 1;\\n  display: -ms-flexbox;\\n  display: flex;\\n  -ms-flex-align: center;\\n      align-items: center;\\n  opacity: 0;\\n  transition: opacity 0.5s;\\n  color: #fff;\\n  font-size: 30px;\\n}\\n.ekko-lightbox a:hover,\\n.ekko-lightbox a.hover {\\n  opacity: 1;\\n  text-decoration: none;\\n}\\n.ekko-lightbox .modal-dialog {\\n  display: none;\\n  /* begin added for v.5.5.0-dhymik*/\\n}\\n.ekko-lightbox .modal-dialog,\\n.ekko-lightbox .modal-dialog .modal-content,\\n.ekko-lightbox .modal-dialog .modal-body,\\n.ekko-lightbox .modal-dialog .ekko-lightbox-container,\\n.ekko-lightbox .modal-dialog .ekko-lightbox-item.fade,\\n.ekko-lightbox .modal-dialog .ekko-lightbox-item.fade picture,\\n.ekko-lightbox .modal-dialog .ekko-lightbox-item.fade img {\\n  overflow: hidden !important;\\n}\\n.ekko-lightbox .modal-dialog .modal-content .modal-body .ekko-lightbox-container .ekko-lightbox-item.fade img,\\n.ekko-lightbox .modal-dialog .modal-content .modal-body .ekko-lightbox-container .ekko-lightbox-item.fade img[data-sizes=\\\"auto\\\"] {\\n  max-width: 100% !important;\\n  max-height: 100% !important;\\n  object-fit: contain;\\n  display: block;\\n}\\n.ekko-lightbox .modal-dialog .modal-content .modal-body .ekko-lightbox-container .ekko-lightbox-item.fade.in.show img,\\n.ekko-lightbox .modal-dialog .modal-content .modal-body .ekko-lightbox-container .ekko-lightbox-item.fade.in.show img[data-sizes=\\\"auto\\\"] {\\n  width: 100%;\\n  height: auto !important;\\n  margin: 0 auto;\\n}\\n.ekko-lightbox .modal-dialog.imageLoading,\\n.ekko-lightbox .modal-dialog.imageStretched {\\n  display: block !important;\\n  max-width: 100% !important;\\n}\\n.ekko-lightbox .modal-dialog.imageLoading,\\n.ekko-lightbox .modal-dialog.imageStretched,\\n.ekko-lightbox .modal-dialog.imageLoading .modal-content,\\n.ekko-lightbox .modal-dialog.imageStretched .modal-content,\\n.ekko-lightbox .modal-dialog.imageLoading .modal-body,\\n.ekko-lightbox .modal-dialog.imageStretched .modal-body,\\n.ekko-lightbox .modal-dialog.imageLoading .ekko-lightbox-container,\\n.ekko-lightbox .modal-dialog.imageStretched .ekko-lightbox-container {\\n  width: 100% !important;\\n  height: 100% !important;\\n  display: block !important;\\n}\\n.ekko-lightbox .modal-dialog.imageLoading .modal-content .modal-body,\\n.ekko-lightbox .modal-dialog.imageStretched .modal-content .modal-body {\\n  background-color: transparent !important;\\n}\\n.ekko-lightbox .modal-footer {\\n  text-align: left;\\n}\\n.ekko-lightbox-loader {\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  bottom: 0;\\n  right: 0;\\n  width: 100%;\\n  display: -ms-flexbox;\\n  display: flex;\\n  /* establish flex container */\\n  -ms-flex-direction: column;\\n      flex-direction: column;\\n  /* make main axis vertical */\\n  -ms-flex-pack: center;\\n      justify-content: center;\\n  /* center items vertically, in this case */\\n  -ms-flex-align: center;\\n      align-items: center;\\n}\\n.ekko-lightbox-loader > div {\\n  width: 40px;\\n  height: 40px;\\n  position: relative;\\n  text-align: center;\\n}\\n.ekko-lightbox-loader > div > div {\\n  width: 100%;\\n  height: 100%;\\n  border-radius: 50%;\\n  background-color: #fff;\\n  opacity: 0.6;\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  animation: sk-bounce 2s infinite ease-in-out;\\n}\\n.ekko-lightbox-loader > div > div:last-child {\\n  animation-delay: -1s;\\n}\\n.modal-dialog .ekko-lightbox-loader > div > div {\\n  background-color: #333;\\n}\\n@keyframes sk-bounce {\\n  0%,\\n  100% {\\n    transform: scale(0);\\n    -webkit-transform: scale(0);\\n  }\\n  50% {\\n    transform: scale(1);\\n    -webkit-transform: scale(1);\\n  }\\n}\\n.ekko-lightbox .modal-debug-info {\\n  position: absolute;\\n  top: 5px;\\n  left: 5px;\\n  background-color: gray;\\n  color: #fff;\\n  padding: 10px;\\n  white-space: pre-line;\\n  z-index: 2000;\\n}\\n\", \"\", {\"version\":3,\"sources\":[\"C:/Users/Mikael/Source/Projects/lightbox/C:/Users/Mikael/Source/Projects/lightbox/ekko-lightbox.less\"],\"names\":[],\"mappings\":\"AAAA;EACI,gCAAA;EAAA,yBAAA;EACA,8BAAA;EACF,iCAAiC;CAClC;AAAG;EACI,mBAAA;CAEP;AAHG;EAIQ,mBAAA;EACA,OAAA;EACA,QAAA;EACA,UAAA;EACA,SAAA;EACA,YAAA;EACA,WAAA;CAEX;AAAW;EACI,WAAA;CAEf;AAnBD;EAuBQ,YAAA;EACA,aAAA;CADP;AAIG;EAEI,aAAA;CAHP;AAMG;EACI,gBAAA;EACA,UAAA;EACA,YAAA;EACA,SAAA;EACA,QAAA;EACA,aAAA;CAJP;AAFG;EASQ,uBAAA;MAAA,oBAAA;EACA,WAAA;EACA,yBAAA;EACA,YAAA;EACA,gBAAA;CAJX;AATG;EAgBY,qBAAA;MAAA,aAAA;CAJf;AAMe;EACI,cAAA;CAJnB;AAfG;EAwBY,gBAAA;CANf;AASW;EACI,kBAAA;CAPf;AAUW;EACI,sBAAA;CARf;AAWW;EACI,cAAA;CATf;AAYW;EACI,gBAAA;EACA,mBAAA;CAVf;AAeG;EACI,mBAAA;EACA,OAAA;EACA,QAAA;EACA,YAAA;EACA,aAAA;EACA,qBAAA;EAAA,cAAA;CAbP;AAOG;EASQ,YAAA;MAAA,QAAA;EACA,qBAAA;EAAA,cAAA;EACA,uBAAA;MAAA,oBAAA;EACA,WAAA;EACA,yBAAA;EACA,YAAA;EACA,gBAAA;CAbX;AAhFD;;EAkGQ,WAAA;EACA,sBAAA;CAdP;AArFD;EAuGQ,cAAA;EAfN,mCAAmC;CACpC;AAgBO;;;;;;;EAOI,4BAAA;CAdX;AAlGD;;EAwH4B,2BAAA;EACA,4BAAA;EACA,oBAAA;EACA,eAAA;CAlB3B;AAqBuB;;EAEQ,YAAA;EACA,wBAAA;EAEA,eAAA;CApB/B;AA4BO;;EACI,0BAAA;EACA,2BAAA;CAzBX;AA2BW;;;;;;;;EAMI,uBAAA;EACA,wBAAA;EACA,0BAAA;CAvBf;AA0BW;;EAIQ,yCAAA;CA1BnB;AApID;EAgLQ,iBAAA;CAzCP;AA4CG;EACI,mBAAA;EACA,OAAA;EACA,QAAA;EACA,UAAA;EACA,SAAA;EACA,YAAA;EACA,qBAAA;EAAA,cAAA;EA1CN,8BAA8B;EA2CxB,2BAAA;MAAA,uBAAA;EAzCN,6BAA6B;EA0CvB,sBAAA;MAAA,wBAAA;EAxCN,2CAA2C;EAyCrC,uBAAA;MAAA,oBAAA;CAvCP;AA6BG;EAaQ,YAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;CAvCX;AAuBG;EAmBY,YAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,aAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;EACA,6CAAA;CAvCf;AAyCe;EACI,qBAAA;CAvCnB;AA6CG;EAEQ,uBAAA;CA5CX;AA0DG;EACI;;IACI,oBAAA;IACA,4BAAA;GA9CT;EAiDK;IACI,oBAAA;IACA,4BAAA;GA/CT;CACF;AAjMD;EAoPQ,mBAAA;EACA,SAAA;EACA,UAAA;EACA,uBAAA;EACA,YAAA;EACA,cAAA;EACA,sBAAA;EACA,cAAA;CAhDP\",\"file\":\"ekko-lightbox.less\",\"sourcesContent\":[\".ekko-lightbox {\\n    display: flex !important;\\n    padding-right: 0px !important;\\n\\n    &-container {\\n        position: relative;\\n\\n        > div.ekko-lightbox-item {\\n            position: absolute;\\n            top: 0;\\n            left: 0;\\n            bottom: 0;\\n            right: 0;\\n            width: 100%;\\n            opacity: 0;\\n\\n            &.show {\\n                opacity: 1;\\n            }\\n        }\\n    }\\n\\n    iframe {\\n        width: 100%;\\n        height: 100%;\\n    }\\n\\n    & .modal-dialog:not(.isVideo) &-nav-overlay {\\n        // if not video, overlay is over image\\n        z-index: 100;\\n    }\\n\\n    &-nav-arrows {\\n        position: fixed;\\n        height: 0;\\n        width: 100%;\\n        top: 50%;\\n        left: 0;\\n        z-index: 101; // arrows are always over image and video\\n\\n        a {\\n            align-items: center;\\n            opacity: 0;\\n            transition: opacity 0.5s;\\n            color: #fff;\\n            font-size: 30px;\\n\\n            > * {\\n                flex-grow: 1;\\n\\n                &:focus {\\n                    outline: none;\\n                }\\n            }\\n\\n            span {\\n                padding: 0 30px;\\n            }\\n\\n            &:last-child span {\\n                text-align: right;\\n            }\\n\\n            &:hover {\\n                text-decoration: none;\\n            }\\n\\n            &:focus {\\n                outline: none;\\n            }\\n\\n            &.disabled {\\n                cursor: default;\\n                visibility: hidden;\\n            }\\n        }\\n    }\\n\\n    &-nav-overlay {\\n        position: absolute;\\n        top: 0;\\n        left: 0;\\n        width: 100%;\\n        height: 100%;\\n        display: flex;\\n\\n        a {\\n            flex: 1;\\n            display: flex;\\n            align-items: center;\\n            opacity: 0;\\n            transition: opacity 0.5s;\\n            color: #fff;\\n            font-size: 30px;\\n        }\\n    }\\n\\n    a:hover, a.hover {\\n        opacity: 1;\\n        text-decoration: none;\\n    }\\n\\n    .modal-dialog {\\n        display: none;\\n        /* begin added for v.5.5.0-dhymik*/\\n        &,\\n        & .modal-content,\\n        & .modal-body,\\n        & .ekko-lightbox-container,\\n        & .ekko-lightbox-item.fade,\\n        & .ekko-lightbox-item.fade picture,\\n        & .ekko-lightbox-item.fade img {\\n            overflow: hidden !important; // we don't want scrollbars\\n        }\\n\\n        .modal-content {\\n            .modal-body {\\n                .ekko-lightbox-container {\\n                    .ekko-lightbox-item.fade {\\n                        img, img[data-sizes=\\\"auto\\\"] {\\n                            max-width: 100% !important;\\n                            max-height: 100% !important;\\n                            object-fit: contain;\\n                            display: block;\\n                        }\\n\\n                        &.in.show {\\n                            img, img[data-sizes=\\\"auto\\\"] {\\n                                width: 100%;\\n                                height: auto !important;\\n                                //height: 100%;\\n                                margin: 0 auto;\\n                            }\\n                        }\\n                    }\\n                }\\n            }\\n        }\\n\\n        &.imageLoading, &.imageStretched {\\n            display: block !important;\\n            max-width: 100% !important;\\n\\n            &,\\n            & .modal-content,\\n            & .modal-body,\\n            & .ekko-lightbox-container {\\n                // max dimensions of containers so script can properly\\n                // calculate image dimensions (needed for Firefox etc.)\\n                width: 100% !important;\\n                height: 100% !important;\\n                display: block !important;\\n            }\\n\\n            & .modal-content {\\n                .modal-body {\\n                    // remove black backdrop during loading and when in stretch mode\\n                    // to avoid black frames\\n                    background-color: transparent !important;\\n                }\\n            }\\n        }\\n\\n        &.imageLoaded {\\n            & .modal-content {\\n                .modal-body {\\n                    .ekko-lightbox-item.fade.in.show {\\n                        //height: 100%;\\n                    }\\n                }\\n            }\\n        }\\n    }\\n    /* end added for v.5.5.0-dhymik*/\\n\\n    .modal-footer {\\n        text-align: left;\\n    }\\n    // http://tobiasahlin.com/spinkit/\\n    &-loader {\\n        position: absolute;\\n        top: 0;\\n        left: 0;\\n        bottom: 0;\\n        right: 0;\\n        width: 100%;\\n        display: flex; /* establish flex container */\\n        flex-direction: column; /* make main axis vertical */\\n        justify-content: center; /* center items vertically, in this case */\\n        align-items: center;\\n\\n        > div {\\n            width: 40px;\\n            height: 40px;\\n            position: relative;\\n            text-align: center;\\n\\n            > div {\\n                width: 100%;\\n                height: 100%;\\n                border-radius: 50%;\\n                background-color: #fff;\\n                opacity: 0.6;\\n                position: absolute;\\n                top: 0;\\n                left: 0;\\n                animation: sk-bounce 2.0s infinite ease-in-out;\\n\\n                &:last-child {\\n                    animation-delay: -1.0s;\\n                }\\n            }\\n        }\\n    }\\n\\n    .modal-dialog &-loader {\\n        > div > div {\\n            background-color: #333;\\n        }\\n    }\\n\\n    @-webkit-keyframes sk-bounce {\\n        0%, 100% {\\n            -webkit-transform: scale(0.0)\\n        }\\n\\n        50% {\\n            -webkit-transform: scale(1.0)\\n        }\\n    }\\n\\n    @keyframes sk-bounce {\\n        0%, 100% {\\n            transform: scale(0.0);\\n            -webkit-transform: scale(0.0);\\n        }\\n\\n        50% {\\n            transform: scale(1.0);\\n            -webkit-transform: scale(1.0);\\n        }\\n    }\\n\\n    .modal-debug-info {\\n        position: absolute;\\n        top: 5px;\\n        left: 5px;\\n        background-color: gray;\\n        color: #fff;\\n        padding: 10px;\\n        white-space: pre-line;\\n        z-index: 2000;\\n    }\\n}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\n"
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "mini-css-extract-plugin",
+              "request": "!!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\lib\\css-base.js",
+          "name": "./node_modules/css-loader/lib/css-base.js",
+          "index": 1,
+          "index2": 0,
+          "size": 2260,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+          "issuerId": 1,
+          "issuerName": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+          "issuerPath": [
+            {
+              "id": 1,
+              "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+              "name": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+              "profile": {
+                "factory": 1,
+                "building": 536
+              }
+            }
+          ],
+          "profile": {
+            "factory": 2,
+            "building": 2
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+              "module": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+              "moduleName": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+              "type": "cjs require",
+              "userRequest": "./node_modules/css-loader/lib/css-base.js",
+              "loc": "1:27-79"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1,
+          "source": "/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\nmodule.exports = function(useSourceMap) {\n\tvar list = [];\n\n\t// return the list of modules as css string\n\tlist.toString = function toString() {\n\t\treturn this.map(function (item) {\n\t\t\tvar content = cssWithMappingToString(item, useSourceMap);\n\t\t\tif(item[2]) {\n\t\t\t\treturn \"@media \" + item[2] + \"{\" + content + \"}\";\n\t\t\t} else {\n\t\t\t\treturn content;\n\t\t\t}\n\t\t}).join(\"\");\n\t};\n\n\t// import a list of modules into the list\n\tlist.i = function(modules, mediaQuery) {\n\t\tif(typeof modules === \"string\")\n\t\t\tmodules = [[null, modules, \"\"]];\n\t\tvar alreadyImportedModules = {};\n\t\tfor(var i = 0; i < this.length; i++) {\n\t\t\tvar id = this[i][0];\n\t\t\tif(typeof id === \"number\")\n\t\t\t\talreadyImportedModules[id] = true;\n\t\t}\n\t\tfor(i = 0; i < modules.length; i++) {\n\t\t\tvar item = modules[i];\n\t\t\t// skip already imported module\n\t\t\t// this implementation is not 100% perfect for weird media query combinations\n\t\t\t//  when a module is imported multiple times with different media queries.\n\t\t\t//  I hope this will never occur (Hey this way we have smaller bundles)\n\t\t\tif(typeof item[0] !== \"number\" || !alreadyImportedModules[item[0]]) {\n\t\t\t\tif(mediaQuery && !item[2]) {\n\t\t\t\t\titem[2] = mediaQuery;\n\t\t\t\t} else if(mediaQuery) {\n\t\t\t\t\titem[2] = \"(\" + item[2] + \") and (\" + mediaQuery + \")\";\n\t\t\t\t}\n\t\t\t\tlist.push(item);\n\t\t\t}\n\t\t}\n\t};\n\treturn list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n\tvar content = item[1] || '';\n\tvar cssMapping = item[3];\n\tif (!cssMapping) {\n\t\treturn content;\n\t}\n\n\tif (useSourceMap && typeof btoa === 'function') {\n\t\tvar sourceMapping = toComment(cssMapping);\n\t\tvar sourceURLs = cssMapping.sources.map(function (source) {\n\t\t\treturn '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'\n\t\t});\n\n\t\treturn [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n\t}\n\n\treturn [content].join('\\n');\n}\n\n// Adapted from convert-source-map (MIT)\nfunction toComment(sourceMap) {\n\t// eslint-disable-next-line no-undef\n\tvar base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n\tvar data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;\n\n\treturn '/*# ' + data + ' */';\n}\n"
+        },
+        {
+          "id": 1,
+          "identifier": "C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+          "name": "./node_modules/css-loader??ref--4-1!./node_modules/postcss-loader/lib??postcss!./node_modules/less-loader/dist/cjs.js??ref--4-3!./ekko-lightbox.less",
+          "index": 0,
+          "index2": 1,
+          "size": 13719,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 1,
+            "building": 536
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "!!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\css-loader\\index.js??ref--4-1!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\postcss-loader\\lib\\index.js??postcss!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\node_modules\\less-loader\\dist\\cjs.js??ref--4-3!C:\\Users\\Mikael\\Source\\Projects\\lightbox\\ekko-lightbox.less",
+              "loc": "mini-css-extract-plugin"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 0,
+          "source": "exports = module.exports = require(\"./node_modules/css-loader/lib/css-base.js\")(true);\n// imports\n\n\n// module\nexports.push([module.id, \".ekko-lightbox {\\n  display: -ms-flexbox !important;\\n  display: flex !important;\\n  padding-right: 0px !important;\\n  /* end added for v.5.5.0-dhymik*/\\n}\\n.ekko-lightbox-container {\\n  position: relative;\\n}\\n.ekko-lightbox-container > div.ekko-lightbox-item {\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  bottom: 0;\\n  right: 0;\\n  width: 100%;\\n  opacity: 0;\\n}\\n.ekko-lightbox-container > div.ekko-lightbox-item.show {\\n  opacity: 1;\\n}\\n.ekko-lightbox iframe {\\n  width: 100%;\\n  height: 100%;\\n}\\n.ekko-lightbox .modal-dialog:not(.isVideo) .ekko-lightbox-nav-overlay {\\n  z-index: 100;\\n}\\n.ekko-lightbox-nav-arrows {\\n  position: fixed;\\n  height: 0;\\n  width: 100%;\\n  top: 50%;\\n  left: 0;\\n  z-index: 101;\\n}\\n.ekko-lightbox-nav-arrows a {\\n  -ms-flex-align: center;\\n      align-items: center;\\n  opacity: 0;\\n  transition: opacity 0.5s;\\n  color: #fff;\\n  font-size: 30px;\\n}\\n.ekko-lightbox-nav-arrows a > * {\\n  -ms-flex-positive: 1;\\n      flex-grow: 1;\\n}\\n.ekko-lightbox-nav-arrows a > *:focus {\\n  outline: none;\\n}\\n.ekko-lightbox-nav-arrows a span {\\n  padding: 0 30px;\\n}\\n.ekko-lightbox-nav-arrows a:last-child span {\\n  text-align: right;\\n}\\n.ekko-lightbox-nav-arrows a:hover {\\n  text-decoration: none;\\n}\\n.ekko-lightbox-nav-arrows a:focus {\\n  outline: none;\\n}\\n.ekko-lightbox-nav-arrows a.disabled {\\n  cursor: default;\\n  visibility: hidden;\\n}\\n.ekko-lightbox-nav-overlay {\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  width: 100%;\\n  height: 100%;\\n  display: -ms-flexbox;\\n  display: flex;\\n}\\n.ekko-lightbox-nav-overlay a {\\n  -ms-flex: 1;\\n      flex: 1;\\n  display: -ms-flexbox;\\n  display: flex;\\n  -ms-flex-align: center;\\n      align-items: center;\\n  opacity: 0;\\n  transition: opacity 0.5s;\\n  color: #fff;\\n  font-size: 30px;\\n}\\n.ekko-lightbox a:hover,\\n.ekko-lightbox a.hover {\\n  opacity: 1;\\n  text-decoration: none;\\n}\\n.ekko-lightbox .modal-dialog {\\n  display: none;\\n  /* begin added for v.5.5.0-dhymik*/\\n}\\n.ekko-lightbox .modal-dialog,\\n.ekko-lightbox .modal-dialog .modal-content,\\n.ekko-lightbox .modal-dialog .modal-body,\\n.ekko-lightbox .modal-dialog .ekko-lightbox-container,\\n.ekko-lightbox .modal-dialog .ekko-lightbox-item.fade,\\n.ekko-lightbox .modal-dialog .ekko-lightbox-item.fade picture,\\n.ekko-lightbox .modal-dialog .ekko-lightbox-item.fade img {\\n  overflow: hidden !important;\\n}\\n.ekko-lightbox .modal-dialog .modal-content .modal-body .ekko-lightbox-container .ekko-lightbox-item.fade img,\\n.ekko-lightbox .modal-dialog .modal-content .modal-body .ekko-lightbox-container .ekko-lightbox-item.fade img[data-sizes=\\\"auto\\\"] {\\n  max-width: 100% !important;\\n  max-height: 100% !important;\\n  object-fit: contain;\\n  display: block;\\n}\\n.ekko-lightbox .modal-dialog .modal-content .modal-body .ekko-lightbox-container .ekko-lightbox-item.fade.in.show img,\\n.ekko-lightbox .modal-dialog .modal-content .modal-body .ekko-lightbox-container .ekko-lightbox-item.fade.in.show img[data-sizes=\\\"auto\\\"] {\\n  width: 100%;\\n  height: auto !important;\\n  margin: 0 auto;\\n}\\n.ekko-lightbox .modal-dialog.imageLoading,\\n.ekko-lightbox .modal-dialog.imageStretched {\\n  display: block !important;\\n  max-width: 100% !important;\\n}\\n.ekko-lightbox .modal-dialog.imageLoading,\\n.ekko-lightbox .modal-dialog.imageStretched,\\n.ekko-lightbox .modal-dialog.imageLoading .modal-content,\\n.ekko-lightbox .modal-dialog.imageStretched .modal-content,\\n.ekko-lightbox .modal-dialog.imageLoading .modal-body,\\n.ekko-lightbox .modal-dialog.imageStretched .modal-body,\\n.ekko-lightbox .modal-dialog.imageLoading .ekko-lightbox-container,\\n.ekko-lightbox .modal-dialog.imageStretched .ekko-lightbox-container {\\n  width: 100% !important;\\n  height: 100% !important;\\n  display: block !important;\\n}\\n.ekko-lightbox .modal-dialog.imageLoading .modal-content .modal-body,\\n.ekko-lightbox .modal-dialog.imageStretched .modal-content .modal-body {\\n  background-color: transparent !important;\\n}\\n.ekko-lightbox .modal-footer {\\n  text-align: left;\\n}\\n.ekko-lightbox-loader {\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  bottom: 0;\\n  right: 0;\\n  width: 100%;\\n  display: -ms-flexbox;\\n  display: flex;\\n  /* establish flex container */\\n  -ms-flex-direction: column;\\n      flex-direction: column;\\n  /* make main axis vertical */\\n  -ms-flex-pack: center;\\n      justify-content: center;\\n  /* center items vertically, in this case */\\n  -ms-flex-align: center;\\n      align-items: center;\\n}\\n.ekko-lightbox-loader > div {\\n  width: 40px;\\n  height: 40px;\\n  position: relative;\\n  text-align: center;\\n}\\n.ekko-lightbox-loader > div > div {\\n  width: 100%;\\n  height: 100%;\\n  border-radius: 50%;\\n  background-color: #fff;\\n  opacity: 0.6;\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  animation: sk-bounce 2s infinite ease-in-out;\\n}\\n.ekko-lightbox-loader > div > div:last-child {\\n  animation-delay: -1s;\\n}\\n.modal-dialog .ekko-lightbox-loader > div > div {\\n  background-color: #333;\\n}\\n@keyframes sk-bounce {\\n  0%,\\n  100% {\\n    transform: scale(0);\\n    -webkit-transform: scale(0);\\n  }\\n  50% {\\n    transform: scale(1);\\n    -webkit-transform: scale(1);\\n  }\\n}\\n.ekko-lightbox .modal-debug-info {\\n  position: absolute;\\n  top: 5px;\\n  left: 5px;\\n  background-color: gray;\\n  color: #fff;\\n  padding: 10px;\\n  white-space: pre-line;\\n  z-index: 2000;\\n}\\n\", \"\", {\"version\":3,\"sources\":[\"C:/Users/Mikael/Source/Projects/lightbox/C:/Users/Mikael/Source/Projects/lightbox/ekko-lightbox.less\"],\"names\":[],\"mappings\":\"AAAA;EACI,gCAAA;EAAA,yBAAA;EACA,8BAAA;EACF,iCAAiC;CAClC;AAAG;EACI,mBAAA;CAEP;AAHG;EAIQ,mBAAA;EACA,OAAA;EACA,QAAA;EACA,UAAA;EACA,SAAA;EACA,YAAA;EACA,WAAA;CAEX;AAAW;EACI,WAAA;CAEf;AAnBD;EAuBQ,YAAA;EACA,aAAA;CADP;AAIG;EAEI,aAAA;CAHP;AAMG;EACI,gBAAA;EACA,UAAA;EACA,YAAA;EACA,SAAA;EACA,QAAA;EACA,aAAA;CAJP;AAFG;EASQ,uBAAA;MAAA,oBAAA;EACA,WAAA;EACA,yBAAA;EACA,YAAA;EACA,gBAAA;CAJX;AATG;EAgBY,qBAAA;MAAA,aAAA;CAJf;AAMe;EACI,cAAA;CAJnB;AAfG;EAwBY,gBAAA;CANf;AASW;EACI,kBAAA;CAPf;AAUW;EACI,sBAAA;CARf;AAWW;EACI,cAAA;CATf;AAYW;EACI,gBAAA;EACA,mBAAA;CAVf;AAeG;EACI,mBAAA;EACA,OAAA;EACA,QAAA;EACA,YAAA;EACA,aAAA;EACA,qBAAA;EAAA,cAAA;CAbP;AAOG;EASQ,YAAA;MAAA,QAAA;EACA,qBAAA;EAAA,cAAA;EACA,uBAAA;MAAA,oBAAA;EACA,WAAA;EACA,yBAAA;EACA,YAAA;EACA,gBAAA;CAbX;AAhFD;;EAkGQ,WAAA;EACA,sBAAA;CAdP;AArFD;EAuGQ,cAAA;EAfN,mCAAmC;CACpC;AAgBO;;;;;;;EAOI,4BAAA;CAdX;AAlGD;;EAwH4B,2BAAA;EACA,4BAAA;EACA,oBAAA;EACA,eAAA;CAlB3B;AAqBuB;;EAEQ,YAAA;EACA,wBAAA;EAEA,eAAA;CApB/B;AA4BO;;EACI,0BAAA;EACA,2BAAA;CAzBX;AA2BW;;;;;;;;EAMI,uBAAA;EACA,wBAAA;EACA,0BAAA;CAvBf;AA0BW;;EAIQ,yCAAA;CA1BnB;AApID;EAgLQ,iBAAA;CAzCP;AA4CG;EACI,mBAAA;EACA,OAAA;EACA,QAAA;EACA,UAAA;EACA,SAAA;EACA,YAAA;EACA,qBAAA;EAAA,cAAA;EA1CN,8BAA8B;EA2CxB,2BAAA;MAAA,uBAAA;EAzCN,6BAA6B;EA0CvB,sBAAA;MAAA,wBAAA;EAxCN,2CAA2C;EAyCrC,uBAAA;MAAA,oBAAA;CAvCP;AA6BG;EAaQ,YAAA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;CAvCX;AAuBG;EAmBY,YAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,aAAA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;EACA,6CAAA;CAvCf;AAyCe;EACI,qBAAA;CAvCnB;AA6CG;EAEQ,uBAAA;CA5CX;AA0DG;EACI;;IACI,oBAAA;IACA,4BAAA;GA9CT;EAiDK;IACI,oBAAA;IACA,4BAAA;GA/CT;CACF;AAjMD;EAoPQ,mBAAA;EACA,SAAA;EACA,UAAA;EACA,uBAAA;EACA,YAAA;EACA,cAAA;EACA,sBAAA;EACA,cAAA;CAhDP\",\"file\":\"ekko-lightbox.less\",\"sourcesContent\":[\".ekko-lightbox {\\n    display: flex !important;\\n    padding-right: 0px !important;\\n\\n    &-container {\\n        position: relative;\\n\\n        > div.ekko-lightbox-item {\\n            position: absolute;\\n            top: 0;\\n            left: 0;\\n            bottom: 0;\\n            right: 0;\\n            width: 100%;\\n            opacity: 0;\\n\\n            &.show {\\n                opacity: 1;\\n            }\\n        }\\n    }\\n\\n    iframe {\\n        width: 100%;\\n        height: 100%;\\n    }\\n\\n    & .modal-dialog:not(.isVideo) &-nav-overlay {\\n        // if not video, overlay is over image\\n        z-index: 100;\\n    }\\n\\n    &-nav-arrows {\\n        position: fixed;\\n        height: 0;\\n        width: 100%;\\n        top: 50%;\\n        left: 0;\\n        z-index: 101; // arrows are always over image and video\\n\\n        a {\\n            align-items: center;\\n            opacity: 0;\\n            transition: opacity 0.5s;\\n            color: #fff;\\n            font-size: 30px;\\n\\n            > * {\\n                flex-grow: 1;\\n\\n                &:focus {\\n                    outline: none;\\n                }\\n            }\\n\\n            span {\\n                padding: 0 30px;\\n            }\\n\\n            &:last-child span {\\n                text-align: right;\\n            }\\n\\n            &:hover {\\n                text-decoration: none;\\n            }\\n\\n            &:focus {\\n                outline: none;\\n            }\\n\\n            &.disabled {\\n                cursor: default;\\n                visibility: hidden;\\n            }\\n        }\\n    }\\n\\n    &-nav-overlay {\\n        position: absolute;\\n        top: 0;\\n        left: 0;\\n        width: 100%;\\n        height: 100%;\\n        display: flex;\\n\\n        a {\\n            flex: 1;\\n            display: flex;\\n            align-items: center;\\n            opacity: 0;\\n            transition: opacity 0.5s;\\n            color: #fff;\\n            font-size: 30px;\\n        }\\n    }\\n\\n    a:hover, a.hover {\\n        opacity: 1;\\n        text-decoration: none;\\n    }\\n\\n    .modal-dialog {\\n        display: none;\\n        /* begin added for v.5.5.0-dhymik*/\\n        &,\\n        & .modal-content,\\n        & .modal-body,\\n        & .ekko-lightbox-container,\\n        & .ekko-lightbox-item.fade,\\n        & .ekko-lightbox-item.fade picture,\\n        & .ekko-lightbox-item.fade img {\\n            overflow: hidden !important; // we don't want scrollbars\\n        }\\n\\n        .modal-content {\\n            .modal-body {\\n                .ekko-lightbox-container {\\n                    .ekko-lightbox-item.fade {\\n                        img, img[data-sizes=\\\"auto\\\"] {\\n                            max-width: 100% !important;\\n                            max-height: 100% !important;\\n                            object-fit: contain;\\n                            display: block;\\n                        }\\n\\n                        &.in.show {\\n                            img, img[data-sizes=\\\"auto\\\"] {\\n                                width: 100%;\\n                                height: auto !important;\\n                                //height: 100%;\\n                                margin: 0 auto;\\n                            }\\n                        }\\n                    }\\n                }\\n            }\\n        }\\n\\n        &.imageLoading, &.imageStretched {\\n            display: block !important;\\n            max-width: 100% !important;\\n\\n            &,\\n            & .modal-content,\\n            & .modal-body,\\n            & .ekko-lightbox-container {\\n                // max dimensions of containers so script can properly\\n                // calculate image dimensions (needed for Firefox etc.)\\n                width: 100% !important;\\n                height: 100% !important;\\n                display: block !important;\\n            }\\n\\n            & .modal-content {\\n                .modal-body {\\n                    // remove black backdrop during loading and when in stretch mode\\n                    // to avoid black frames\\n                    background-color: transparent !important;\\n                }\\n            }\\n        }\\n\\n        &.imageLoaded {\\n            & .modal-content {\\n                .modal-body {\\n                    .ekko-lightbox-item.fade.in.show {\\n                        //height: 100%;\\n                    }\\n                }\\n            }\\n        }\\n    }\\n    /* end added for v.5.5.0-dhymik*/\\n\\n    .modal-footer {\\n        text-align: left;\\n    }\\n    // http://tobiasahlin.com/spinkit/\\n    &-loader {\\n        position: absolute;\\n        top: 0;\\n        left: 0;\\n        bottom: 0;\\n        right: 0;\\n        width: 100%;\\n        display: flex; /* establish flex container */\\n        flex-direction: column; /* make main axis vertical */\\n        justify-content: center; /* center items vertically, in this case */\\n        align-items: center;\\n\\n        > div {\\n            width: 40px;\\n            height: 40px;\\n            position: relative;\\n            text-align: center;\\n\\n            > div {\\n                width: 100%;\\n                height: 100%;\\n                border-radius: 50%;\\n                background-color: #fff;\\n                opacity: 0.6;\\n                position: absolute;\\n                top: 0;\\n                left: 0;\\n                animation: sk-bounce 2.0s infinite ease-in-out;\\n\\n                &:last-child {\\n                    animation-delay: -1.0s;\\n                }\\n            }\\n        }\\n    }\\n\\n    .modal-dialog &-loader {\\n        > div > div {\\n            background-color: #333;\\n        }\\n    }\\n\\n    @-webkit-keyframes sk-bounce {\\n        0%, 100% {\\n            -webkit-transform: scale(0.0)\\n        }\\n\\n        50% {\\n            -webkit-transform: scale(1.0)\\n        }\\n    }\\n\\n    @keyframes sk-bounce {\\n        0%, 100% {\\n            transform: scale(0.0);\\n            -webkit-transform: scale(0.0);\\n        }\\n\\n        50% {\\n            transform: scale(1.0);\\n            -webkit-transform: scale(1.0);\\n        }\\n    }\\n\\n    .modal-debug-info {\\n        position: absolute;\\n        top: 5px;\\n        left: 5px;\\n        background-color: gray;\\n        color: #fff;\\n        padding: 10px;\\n        white-space: pre-line;\\n        z-index: 2000;\\n    }\\n}\\n\"],\"sourceRoot\":\"\"}]);\n\n// exports\n"
+        }
+      ],
+      "filteredModules": 0,
+      "children": [],
+      "name": "mini-css-extract-plugin node_modules/css-loader/index.js??ref--4-1!node_modules/postcss-loader/lib/index.js??postcss!node_modules/less-loader/dist/cjs.js??ref--4-3!ekko-lightbox.less"
+    }
+  ]
+}

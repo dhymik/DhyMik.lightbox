@@ -70,7 +70,8 @@ if (!devMode) {
     prod.plugins.push(
         new webpack.BannerPlugin({
             banner:
-                'Lightbox for Bootstrap by @ashleydw\n' +
+                'Lightbox for Bootstrap v5.5.2-dhymik by @dhymik\n\n' +
+                'based on:\nLightbox for Bootstrap by @ashleydw\n' +
                 'https://github.com/ashleydw/lightbox\n' +
                 '\n' +
                 'License: https://github.com/ashleydw/lightbox/blob/master/LICENSE\n',
