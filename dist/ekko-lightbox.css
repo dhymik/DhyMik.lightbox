@@ -2,7 +2,6 @@
   display: -ms-flexbox !important;
   display: flex !important;
   padding-right: 0px !important;
-  /* end added for v.5.5.0-dhymik*/
 }
 .ekko-lightbox-container {
   position: relative;
@@ -93,7 +92,6 @@
 }
 .ekko-lightbox .modal-dialog {
   display: none;
-  /* begin added for v.5.5.0-dhymik*/
 }
 .ekko-lightbox .modal-dialog,
 .ekko-lightbox .modal-dialog .modal-content,

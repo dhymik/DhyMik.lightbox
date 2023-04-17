@@ -180,9 +180,11 @@ var Lightbox = function ($) {
         }]);
 
         function Lightbox($element, config) {
-            var _this = this;
+            var _this2 = this;
 
             _classCallCheck(this, Lightbox);
+
+            var _this = this;
 
             this._config = $.extend({}, Default, config);
             this._$modalNavLayer = null;
@@ -248,24 +250,42 @@ var Lightbox = function ($) {
                     this._$lightboxContainer.append('<div class="ekko-lightbox-nav-arrows"><a href="#">' + this._config.leftArrow + '</a><a href="#">' + this._config.rightArrow + '</a></div>');
                     this._$modalArrows = this._$lightboxContainer.find('div.ekko-lightbox-nav-arrows').first();
 
+                    // show highlighted nav arrows...
+                    this._$modalArrows.find('a').addClass('init');
+
+                    // ...and remove the highlight after 5 seconds,
+                    // or when hover or navigation happens, see below.
+                    var initTimer = window.setTimeout(function () {
+                        clearInit(_this._$modalArrows);
+                    }, 5000);
+
+                    var clearInit = function clearInit() {
+                        clearTimeout(initTimer);
+                        this._$modalArrows.find('a').removeClass('init');
+                    };
+
                     // add the click event handlers to all links
                     this._$lightboxContainer.on('click', 'a:first-child', function (event) {
                         event.preventDefault();
+                        clearInit(_this2._$modalArrows);
                         return _this.navigateLeft();
                     });
                     this._$lightboxContainer.on('click', 'a:last-child', function (event) {
                         event.preventDefault();
+                        clearInit(_this2._$modalArrows);
                         return _this.navigateRight();
                     });
 
                     // add the hover event handlers to nav surface links, adding hover class to arrow links
                     this._$modalNavLayer.find('a:first-child').hover(function () {
                         _this._$modalArrows.find('a:first-child').addClass('hover');
+                        clearInit(_this2._$modalArrows);
                     }, function () {
                         _this._$modalArrows.find('a:first-child').removeClass('hover').filter('[class=""]').removeAttr('class');
                     });
                     this._$modalNavLayer.find('a:last-child').hover(function () {
                         _this._$modalArrows.find('a:last-child').addClass('hover');
+                        clearInit(_this2._$modalArrows);
                     }, function () {
                         _this._$modalArrows.find('a:last-child').removeClass('hover').filter('[class=""]').removeAttr('class');
                     });
@@ -277,14 +297,14 @@ var Lightbox = function ($) {
             this._$modal.on('show.bs.modal', this._config.onShow.bind(this)).on('shown.bs.modal', function () {
                 _this._toggleLoading(true);
                 _this._handle();
-                return _this._config.onShown.call(_this);
+                return _this._config.onShown.call(_this2);
             }).on('hide.bs.modal', this._config.onHide.bind(this)).on('hidden.bs.modal', function () {
                 if (_this._galleryName) {
                     $(document).off('keydown.ekkoLightbox');
                     $(window).off('resize.ekkoLightbox');
                 }
                 _this._$modal.remove();
-                return _this._config.onHidden.call(_this);
+                return _this2._config.onHidden.call(_this2);
             }).modal(this._config);
 
             $(window).on('resize.ekkoLightbox', function () {
@@ -296,6 +316,7 @@ var Lightbox = function ($) {
             }).on('touchend', function () {
                 _this._touchendX = event.changedTouches[0].screenX;
                 _this._swipeGesure();
+                _this._$modalArrows.find('a').blur();
             });
         }
 
@@ -596,7 +617,8 @@ var Lightbox = function ($) {
             value: function _showWebstreamVideo(id, $containerForElement) {
                 var width = this._$element.data('width') || 500;
                 var height = this._$element.data('height') || width / (560 / 315);
-                return this._showVideoIframe(id + "/embed" + (id.includes("?") ? '&' : '?') + 'autoplay=1', width, height, $containerForElement);
+                return this._showVideoIframe(id + (id.includes("?") ? '&' : '?') + 'autoplay=1', width, height, $containerForElement, 500 // webstream shows white flash on iframe load, therefore, add 500ms delay before switching div's
+                );
             }
         }, {
             key: '_showYoutubeVideo',
@@ -631,7 +653,9 @@ var Lightbox = function ($) {
             }
         }, {
             key: '_showVideoIframe',
-            value: function _showVideoIframe(url, width, height, $containerForElement) {
+            value: function _showVideoIframe(url, width, height, $containerForElement, delay) {
+                var _this3 = this;
+
                 // should be used for videos only. for remote content use loadRemoteContent (data-type=url)
                 height = height || width; // default to square
 
@@ -642,11 +666,21 @@ var Lightbox = function ($) {
                 // added end.
 
                 $containerForElement.html('<div class="embed-responsive embed-responsive-16by9"><iframe width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen class="embed-responsive-item"></iframe></div>');
+                var iFrame = $containerForElement.find("iframe");
+                iFrame.ready(function () {
+                    if (delay) {
+                        setTimeout(function () {
+                            _this3._toggleLoading(false);
+                        }, delay);
+                    } else {
+                        _this3._toggleLoading(false);
+                    }
+                }); // bring forward once the iframe has loaded (https://stackoverflow.com/a/9249734/11035069)
                 this._resize(width, height);
                 this._config.onContentLoaded.call(this);
                 if (this._$modalNavLayer) this._$modalNavLayer.css('display', !this._config.hideArrowsOnVideo ? '' : 'none');
                 this._$modalDialog.addClass("isVideo");
-                this._toggleLoading(false);
+
                 return this;
             }
         }, {
@@ -683,7 +717,7 @@ var Lightbox = function ($) {
         }, {
             key: '_loadRemoteContent',
             value: function _loadRemoteContent(url, $containerForElement) {
-                var _this2 = this;
+                var _this4 = this;
 
                 var width = this._$element.data('width') || 560;
                 var height = this._$element.data('height') || 560;
@@ -701,7 +735,7 @@ var Lightbox = function ($) {
                 // local ajax can be loaded into the container itself
                 if (!disableExternalCheck && !this._isExternal(url)) {
                     $containerForElement.load(url, $.proxy(function () {
-                        return _this2._$element.trigger('loaded.bs.modal');
+                        return _this4._$element.trigger('loaded.bs.modal');
                     }));
                 } else {
                     $containerForElement.html('<iframe src="' + url + '" frameborder="0" allowfullscreen></iframe>');
@@ -752,7 +786,7 @@ var Lightbox = function ($) {
         }, {
             key: '_preloadImage',
             value: function _preloadImage(src, altTag, $containerForImage) {
-                var _this3 = this;
+                var _this5 = this;
 
                 $containerForImage = $containerForImage || false;
 
@@ -761,7 +795,7 @@ var Lightbox = function ($) {
                 if ($containerForImage) {
                     // if loading takes > 200ms show a loader
                     loadingTimeout = setTimeout(function () {
-                        $containerForImage.append(_this3._config.loadingMessage);
+                        $containerForImage.append(_this5._config.loadingMessage);
                     }, 200);
                 }
 
@@ -780,16 +814,16 @@ var Lightbox = function ($) {
                         image.css('width', '100% !important');
 
                         // if the "data-markup" attribute is set on the <a> tag...
-                        if (_this3._$element[0].hasAttribute("data-markup")) {
+                        if (_this5._$element[0].hasAttribute("data-markup")) {
 
                             // ...then the "data-markup" attribute value provides the repalcement markup
-                            var markup = _this3._$element.attr("data-markup");
+                            var markup = _this5._$element.attr("data-markup");
                             $containerForImage.html(markup);
                         } else {
                             $containerForImage.html(image);
                         }
 
-                        if (_this3._$modalNavLayer) _this3._$modalNavLayer.css('display', '');
+                        if (_this5._$modalNavLayer) _this5._$modalNavLayer.css('display', '');
 
                         /* ***** determine image dimensions ****
                          * 
@@ -809,9 +843,9 @@ var Lightbox = function ($) {
                          *   extending over entire screen regardless of image size.
                          * */
 
-                        _this3._$modalDialog.css('display', _this3._config.verticalAlignCenter ? 'flex' : 'block');
+                        _this5._$modalDialog.css('display', _this5._config.verticalAlignCenter ? 'flex' : 'block');
 
-                        _this3._$modalDialog.addClass("imageLoading");
+                        _this5._$modalDialog.addClass("imageLoading");
                         // temporarily stretches img parent containers so image dimensions can be determined.
 
                         var clientWidth = 0;
@@ -833,32 +867,32 @@ var Lightbox = function ($) {
                             clientHeight = imgHeight;
                         }
 
-                        _this3._$modalDialog.removeClass("imageLoading");
+                        _this5._$modalDialog.removeClass("imageLoading");
                         // remove temporary parent container stretch
 
                         if (clientWidth > 0 && clientHeight > 0) {
                             // we found image dimensions...
-                            if (_this3._config.debug > 1) alert("imageWidth: " + imageWidth + ", \\n" + "imageHeight: " + imageHeight + ", \\n" + "imgWidth: " + imgWidth + ", \\n" + "imgHeight: " + imgHeight + ".");
+                            if (_this5._config.debug > 1) alert("imageWidth: " + imageWidth + ", \\n" + "imageHeight: " + imageHeight + ", \\n" + "imgWidth: " + imgWidth + ", \\n" + "imgHeight: " + imgHeight + ".");
                             // ...resize the parent containers accordingly:
-                            _this3._resize(clientWidth, clientHeight);
+                            _this5._resize(clientWidth, clientHeight);
                         } else {
                             // we did not find image dimensions, use stretch method by css:
-                            _this3._$modalDialog.addClass("imageStretched");
-                            if (_this3._config.debug > 1) alert("imageStretched");
+                            _this5._$modalDialog.addClass("imageStretched");
+                            if (_this5._config.debug > 1) alert("imageStretched");
                             if (window.console) console.log("ekko lightbox: using 'imageStretched' mode for " + img.src);
                         }
 
-                        _this3._$modalDialog.addClass("imageLoaded");
+                        _this5._$modalDialog.addClass("imageLoaded");
 
-                        _this3._toggleLoading(false);
-                        return _this3._config.onContentLoaded.call(_this3);
+                        _this5._toggleLoading(false);
+                        return _this5._config.onContentLoaded.call(_this5);
                     }
                 };
 
                 if ($containerForImage) {
                     img.onerror = function () {
-                        _this3._toggleLoading(false);
-                        return _this3._error(_this3._config.strings.fail + ('  ' + src));
+                        _this5._toggleLoading(false);
+                        return _this5._error(_this5._config.strings.fail + ('  ' + src));
                     };
                 }
 
@@ -959,14 +993,14 @@ var Lightbox = function ($) {
         }], [{
             key: '_jQueryInterface',
             value: function _jQueryInterface(config) {
-                var _this4 = this;
+                var _this6 = this;
 
                 config = config || {};
                 return this.each(function () {
-                    var $this = $(_this4);
+                    var $this = $(_this6);
                     var _config = $.extend({}, Lightbox.Default, $this.data(), (typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object' && config);
 
-                    new Lightbox(_this4, _config);
+                    new Lightbox(_this6, _config);
                 });
             }
         }]);

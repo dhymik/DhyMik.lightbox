@@ -4,11 +4,10 @@ module.exports = function (grunt) {
     grunt.initConfig({
         banner:
             '/*!\n' +
-			' * Lightbox for Bootstrap by @ashleydw\n' +
-			' * Ekko Lightbox v.5.5.0-dhymik' +
+			' * Ekko Lightbox v.5.5.2-dhymik' +
 			' * https://github.com/dhymik/lightbox\n' +
 			' * based on:' +
-			' * Ekko Lightbox v.5.5.0-dhymik' +
+			' * Ekko Lightbox v.5.3.0' +
             ' * https://github.com/ashleydw/lightbox\n' +
             ' *\n' +
             ' * License: https://github.com/ashleydw/lightbox/blob/master/LICENSE\n' +

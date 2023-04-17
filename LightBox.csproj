@@ -43,6 +43,8 @@
     <Content Include="dist\ekko-lightbox.css" />
     <Content Include="dist\ekko-lightbox.js" />
     <Content Include="dist\ekko-lightbox.min.js" />
+    <Content Include="dist\main.css" />
+    <Content Include="dist\main.js" />
     <Content Include="ekko-lightbox.js" />
     <Content Include="examples\bs3.html" />
     <Content Include="Gruntfile.js" />
@@ -105,8 +107,11 @@
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
     <None Include="bower.json" />
+    <None Include="dist\ekko-lightbox.css.map" />
     <None Include="dist\ekko-lightbox.js.map" />
     <None Include="dist\ekko-lightbox.min.js.map" />
+    <None Include="dist\main.css.map" />
+    <None Include="dist\main.js.map" />
     <None Include="ekko-lightbox.less" />
     <None Include="ISSUE_TEMPLATE.md" />
     <None Include="package.json" />
