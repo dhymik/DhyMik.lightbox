@@ -47,6 +47,7 @@
     <Content Include="dist\main.js" />
     <Content Include="ekko-lightbox.js" />
     <Content Include="examples\bs3.html" />
+    <Content Include="fromKE.js" />
     <Content Include="Gruntfile.js" />
     <Content Include="index.html" />
     <Content Include="webpack.config.js" />

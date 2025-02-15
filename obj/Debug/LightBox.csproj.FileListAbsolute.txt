@@ -1,0 +1,6 @@
+C:\Users\Mikael\Source\Projects\lightbox\bin\Debug\ClassLibrary.dll
+C:\Users\Mikael\Source\Projects\lightbox\bin\Debug\ClassLibrary.pdb
+C:\Users\Mikael\Source\Projects\lightbox\obj\Debug\LightBox.csproj.AssemblyReference.cache
+C:\Users\Mikael\Source\Projects\lightbox\obj\Debug\LightBox.csproj.CoreCompileInputs.cache
+C:\Users\Mikael\Source\Projects\lightbox\obj\Debug\ClassLibrary.dll
+C:\Users\Mikael\Source\Projects\lightbox\obj\Debug\ClassLibrary.pdb

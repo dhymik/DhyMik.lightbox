@@ -1,0 +1,148 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\lightbox\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|d:\\projects\\lightbox\\ekko-lightbox.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|solutionrelative:ekko-lightbox.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|D:\\Projects\\lightbox\\gruntfile.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|solutionrelative:gruntfile.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|D:\\Projects\\lightbox\\webpack.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|solutionrelative:webpack.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|d:\\projects\\lightbox\\fromke.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|solutionrelative:fromke.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|D:\\Projects\\lightbox\\dist\\ekko-lightbox.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|solutionrelative:dist\\ekko-lightbox.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|D:\\Projects\\lightbox\\ekko-lightbox.less||{28C69EDA-EDF9-4CA8-9EBE-443348B6D916}",
+      "RelativeMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|solutionrelative:ekko-lightbox.less||{28C69EDA-EDF9-4CA8-9EBE-443348B6D916}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|D:\\Projects\\lightbox\\readme.md||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{9182D2D0-CF4F-4548-A20A-C648BB75A02A}|LightBox.csproj|solutionrelative:readme.md||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 147,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 214,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Gruntfile.js",
+              "DocumentMoniker": "D:\\Projects\\lightbox\\Gruntfile.js",
+              "RelativeDocumentMoniker": "Gruntfile.js",
+              "ToolTip": "D:\\Projects\\lightbox\\Gruntfile.js",
+              "RelativeToolTip": "Gruntfile.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-15T08:33:57.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "webpack.config.js",
+              "DocumentMoniker": "D:\\Projects\\lightbox\\webpack.config.js",
+              "RelativeDocumentMoniker": "webpack.config.js",
+              "ToolTip": "D:\\Projects\\lightbox\\webpack.config.js",
+              "RelativeToolTip": "webpack.config.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-15T08:33:57.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ekko-lightbox.less",
+              "DocumentMoniker": "D:\\Projects\\lightbox\\ekko-lightbox.less",
+              "RelativeDocumentMoniker": "ekko-lightbox.less",
+              "ToolTip": "D:\\Projects\\lightbox\\ekko-lightbox.less",
+              "RelativeToolTip": "ekko-lightbox.less",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAGgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001682|",
+              "WhenOpened": "2025-02-15T08:33:57.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ekko-lightbox.js",
+              "DocumentMoniker": "D:\\Projects\\lightbox\\ekko-lightbox.js",
+              "RelativeDocumentMoniker": "ekko-lightbox.js",
+              "ToolTip": "D:\\Projects\\lightbox\\ekko-lightbox.js",
+              "RelativeToolTip": "ekko-lightbox.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-15T08:33:57.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\Projects\\lightbox\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "D:\\Projects\\lightbox\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-02-15T08:33:57.686Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 188,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ekko-lightbox.css",
+              "DocumentMoniker": "D:\\Projects\\lightbox\\dist\\ekko-lightbox.css",
+              "RelativeDocumentMoniker": "dist\\ekko-lightbox.css",
+              "ToolTip": "D:\\Projects\\lightbox\\dist\\ekko-lightbox.css",
+              "RelativeToolTip": "dist\\ekko-lightbox.css",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAwwM4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-15T08:33:57.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fromKE.js",
+              "DocumentMoniker": "D:\\Projects\\lightbox\\fromKE.js",
+              "RelativeDocumentMoniker": "fromKE.js",
+              "ToolTip": "D:\\Projects\\lightbox\\fromKE.js",
+              "RelativeToolTip": "fromKE.js",
+              "ViewState": "AgIAAE4CAAAAAAAAAAAAANcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-15T08:33:57.693Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
